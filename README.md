@@ -17,19 +17,26 @@ sudo apt install libsqlite3-mod-spatialite
 
 2. Setup virtual environment
 
-````shell script
+```shell script
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
-````
+```
 
-3. Generate the local db
+3. Create a new `.env` from `example.env` and populate the values
+
+```shell script
+cp example.env .env
+# Edit the .env file according to your needs
+```
+
+4. Generate the local db
 
 ```shell script
 python manage.py migrate
 ```
 
-4. To access the admin pages - create a super user
+5. To access the admin pages - create a super user
 
 ```shell script
 python manage.py createsuperuser
