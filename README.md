@@ -4,7 +4,7 @@ A crowd-sourcing platform for the Covid-19 Pandemic
 
 ## Workflow
 
-![FlowChart](docs/CovidCrowd Workflow.png)
+![FlowChart](https://github.com/tecoholic/CovidCrowd/raw/master/docs/CovidCrowd-Workflow.png)
 
 
 ## Development
