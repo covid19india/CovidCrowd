@@ -1,0 +1,68 @@
+{% extends "patients/_base.html" %}
+{% block content %}
+  <h2 class="mt-3">Report #{{ report.id }}</h2>
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <tbody>
+        <tr>
+          <td>Reported on</td>
+          <td>{{ report.reported_time }}</td>
+        </tr>
+        <tr>
+          <th colspan="2">
+            Patient Details
+          </th>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>{{ report.state }}</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>{{ report.gender }}</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>{{ report.age }}</td>
+        </tr>
+        <tr>
+          <td>Detected Location</td>
+          <td>{{ report.detected_location }}</td>
+        </tr>
+        <tr>
+          <td>Current Location</td>
+          <td>{{ report.current_location }}</td>
+        </tr>
+        <tr>
+          <td>Patient Status</td>
+          <td>{{ report.current_status }}</td>
+        </tr>
+        <tr>
+          <td>Travel Mode</td>
+          <td>{{ report.travel_mode }}</td>
+        </tr>
+        <tr>
+          <td>Source</td>
+          <td>{{ report.source }}</td>
+        </tr>
+        <tr>
+          <td>Notes</td>
+          <td>{{ report.notes }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <a href="#" class="btn btn-primary">Add New Patient </a>
+    </div>
+    <div class="col-3">
+      <a href="#" class="btn btn-info">Mark as duplicate</a>
+    </div>
+    <div class="col-6">
+      <a href="#" class="btn btn-danger">Insufficient Information</a>
+    </div>
+  </div>
+{% endblock %}

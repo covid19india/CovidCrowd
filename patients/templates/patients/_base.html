@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'patients/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'patients/css/argon-design-system.min.css' %}" />
 
     <title>Covid-19 India - CovidCrowd</title>
   </head>
@@ -21,6 +22,11 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="{% url 'patients:index' %}">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="{% url 'patients:report' %}">Report Patient</a>
+        {% if user.is_authenticated %}
+          <a class="nav-item nav-link" href="{% url "patients:logout" %}">Logout</a>
+        {% else %}
+          <a class="nav-item nav-link" href="{% url "patients:login-form" %}">Login</a>
+        {% endif %}
       </div>
     </div>
   </nav>

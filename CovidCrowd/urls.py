@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('', include('patients.urls')),
+    path('', include('social_django.urls', namespace='social')),
     path('admin/', admin.site.urls),
 ]
