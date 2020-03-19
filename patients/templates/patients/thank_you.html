@@ -1,0 +1,11 @@
+{% extends "patients/_base.html" %}
+{% block content %}
+  <div class="jumbotron jumbotron-fluid mt-5">
+  <div class="container">
+    <h1 class="display-4">Thank you</h1>
+    <p class="lead">Your report has been submitted. A moderator will review the details and update the database.</p>
+    <a href="{% url 'patients:index' %}" class="btn btn-primary">Go Home</a>
+  </div>
+  </div>
+
+{% endblock %}
