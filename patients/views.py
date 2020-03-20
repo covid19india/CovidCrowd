@@ -11,6 +11,10 @@ def index(request):
     return render(request, "patients/index.html")
 
 
+def new_report(request):
+    return render(request, "patients/new_report.html")
+
+
 def report(request):
     if request.method == "POST":
         form = ReportForm(request.POST)

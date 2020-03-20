@@ -4,7 +4,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
 
-from .models import Report, Patient
+from .models import Report, Patient, StatusUpdate
 
 
 class ReportForm(forms.ModelForm):

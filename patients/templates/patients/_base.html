@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="{% url 'patients:report' %}">Report Incident</a>
+        <a class="nav-item nav-link" href="{% url 'patients:new-report' %}">Report Incident</a>
         {% if user.is_authenticated %}
           <a class="nav-item nav-link" href="{% url 'patients:review' %}">Review Queue</a>
           <a class="nav-item nav-link" href="{% url "patients:logout" %}">Logout</a>
