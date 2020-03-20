@@ -24,64 +24,59 @@ class ReportForm(forms.ModelForm):
             "notes",
         ]
         widgets = {
-            'source': forms.Textarea(attrs={'rows': 2, 'cols': 15}),
-            'notes': forms.Textarea(attrs={'rows': 2, 'cols': 15}),
-            'onset_date': forms.DateInput(attrs={'type': 'date'}),
-            'diagnosed_date': forms.DateInput(attrs={'type': 'date'}),
+            "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
+            "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
+            "onset_date": forms.DateInput(attrs={"type": "date"}),
+            "diagnosed_date": forms.DateInput(attrs={"type": "date"}),
         }
 
     def __init__(self, *args, **kwargs):
         super(ReportForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
-        self.helper.form_class = 'form-horizontal mt-4'
-        self.helper.wrapper_class = 'row'
-        self.helper.label_class = 'col-md-2'
-        self.helper.field_class = 'col-md-10'
+        self.helper.form_class = "form-horizontal mt-4"
+        self.helper.wrapper_class = "row"
+        self.helper.label_class = "col-md-2"
+        self.helper.field_class = "col-md-10"
 
-        self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.add_input(Submit("submit", "Submit"))
 
 
 class PatientForm(forms.ModelForm):
     class Meta:
         model = Patient
         fields = [
-            'age',
-            'gender',
-            'current_status',
-            'onset_date',
-            'diagnosed_date',
-            'state',
-            'district',
-            'detected_location',
-            'detected_location_pt',
-            'current_location',
-            'current_location_pt',
-            'travel_mode',
-            'notes',
+            "age",
+            "gender",
+            "current_status",
+            "onset_date",
+            "diagnosed_date",
+            "state",
+            "district",
+            "detected_location",
+            "detected_location_pt",
+            "current_location",
+            "current_location_pt",
+            "travel_mode",
+            "notes",
         ]
         widgets = {
-            'detected_location_pt': geoforms.OSMWidget(attrs={
-                "default_zoom": 5
-            }),
-            'current_location_pt': geoforms.OSMWidget(attrs={
-                "default_zoom": 5
-            }),
-            'source': forms.Textarea(attrs={'rows': 2, 'cols': 15}),
-            'travel_mode': forms.Textarea(attrs={'rows': 2, 'cols': 15}),
-            'notes': forms.Textarea(attrs={'rows': 2, 'cols': 15}),
-            'onset_date': forms.DateInput(attrs={'type': 'date'}),
-            'diagnosed_date': forms.DateInput(attrs={'type': 'date'}),
+            "detected_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
+            "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
+            "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
+            "travel_mode": forms.Textarea(attrs={"rows": 2, "cols": 15}),
+            "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
+            "onset_date": forms.DateInput(attrs={"type": "date"}),
+            "diagnosed_date": forms.DateInput(attrs={"type": "date"}),
         }
 
     def __init__(self, *args, **kwargs):
         super(PatientForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
-        self.helper.form_class = 'form-horizontal mt-4'
-        self.helper.wrapper_class = 'row'
-        self.helper.label_class = 'col-md-2'
-        self.helper.field_class = 'col-md-10'
+        self.helper.form_class = "form-horizontal mt-4"
+        self.helper.wrapper_class = "row"
+        self.helper.label_class = "col-md-2"
+        self.helper.field_class = "col-md-10"
 
-        self.helper.add_input(Submit('submit', 'Add new Patient'))
-
+        self.helper.add_input(Submit("submit", "Add new Patient"))

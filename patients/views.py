@@ -11,14 +11,14 @@ def index(request):
 
 
 def report(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ReportForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("patients:thank_you")
     else:
         form = ReportForm()
-    return render(request, "patients/report.html", {'form': form})
+    return render(request, "patients/report.html", {"form": form})
 
 
 def thank_you(request):
@@ -66,7 +66,8 @@ def add_patient(request):
             return redirect("patients:review")
     else:
         form = PatientForm(instance=patient)
-    return render(request, "patients/add_patient.html", {"patient": patient, "form": form, "report_id": report_id})
-
-
-
+    return render(
+        request,
+        "patients/add_patient.html",
+        {"patient": patient, "form": form, "report_id": report_id},
+    )
