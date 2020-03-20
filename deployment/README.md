@@ -48,7 +48,10 @@ without sudo:
 sudo mkdir /opt/apps
 cd /opt/apps
 sudo git clone https://github.com/covid19india/CovidCrowd.git
+sudo chown -R apps:apps CovidCrowd  # set the ownership of this directory to apps user
 ```
+
+**Heads Up:** You might need to do chown and a chmod 755 to this whole dir later if things break due to permissions
 
 ### Setup Virtual Environment
 
