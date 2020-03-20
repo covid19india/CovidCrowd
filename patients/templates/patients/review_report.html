@@ -62,7 +62,7 @@
       <a href="#" class="btn btn-info">Mark as duplicate</a>
     </div>
     <div class="col-6">
-      <a href="#" class="btn btn-danger">Insufficient Information</a>
+      <a href="{% url "patients:report-invalid" %}" class="btn btn-danger">Insufficient Information</a>
     </div>
   </div>
 {% endblock %}

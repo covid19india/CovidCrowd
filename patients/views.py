@@ -27,7 +27,7 @@ def thank_you(request):
 
 @login_required
 def review(request):
-    reports = Report.objects.all()
+    reports = Report.objects.filter(report_state=Report.REPORTED)
     return render(request, "patients/review.html", {"reports": reports})
 
 
@@ -61,8 +61,15 @@ def add_patient(request):
     if request.method == "POST":
         form = PatientForm(request.POST)
         if form.is_valid():
-            form.save()
             ## TODO add messages
+            if "submit" in request.POST:
+                form.save()
+                report.report_state = report.PATIENT_ADDED
+                report.save()
+            elif "mark_verified" in request.POST:
+                report.report_state = report.VERIFIED
+                report.save()
+            del request.session["reviewing_report"]
             return redirect("patients:review")
     else:
         form = PatientForm(instance=patient)
@@ -71,3 +78,17 @@ def add_patient(request):
         "patients/add_patient.html",
         {"patient": patient, "form": form, "report_id": report_id},
     )
+
+@login_required
+def mark_report_invalid(request):
+    report_id = request.session.get("reviewing_report", None)
+    if not report_id:
+        return redirect("patients:review")
+
+    report = get_object_or_404(Report, pk=report_id)
+    report.report_state = Report.INVALID
+    report.save()
+    # TODO post a message
+    del request.session["reviewing_report"]
+
+    return render(request, "patients/review.html")

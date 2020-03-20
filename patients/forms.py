@@ -80,3 +80,4 @@ class PatientForm(forms.ModelForm):
         self.helper.field_class = "col-md-10"
 
         self.helper.add_input(Submit("submit", "Add new Patient"))
+        self.helper.add_input(Submit("mark_verified", "Mark Report Verified", css_class="btn-default float-right"))

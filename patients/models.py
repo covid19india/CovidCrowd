@@ -43,13 +43,20 @@ STATES = (
 
 
 class Report(models.Model):
+    REPORTED = "R"
+    VERIFIED = "V"
+    DUPLICATE = "D"
+    PATIENT_ADDED = "P"
+    INVALID = "I"
+
     GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
     STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
     REPORT_STATE_CHOICES = (
-        ("R", "Reported"),
-        ("V", "Verified"),
-        ("D", "Duplicate"),
-        ("P", "Patient Added"),
+        (REPORTED, "Reported"),
+        (VERIFIED, "Verified"),
+        (DUPLICATE, "Duplicate"),
+        (PATIENT_ADDED, "Patient Added"),
+        (INVALID, "Invalid")
     )
     onset_date = models.DateField()
     diagnosed_date = models.DateField()
@@ -64,6 +71,7 @@ class Report(models.Model):
     state = models.CharField(max_length=150, choices=STATES, null=True)
     duplicate_of = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
     reported_time = models.DateTimeField(auto_now_add=True)
+    report_state = models.CharField(max_length=1, choices=REPORT_STATE_CHOICES, default="R")
 
 
 class Patient(geomodels.Model):
@@ -104,5 +112,6 @@ class Patient(geomodels.Model):
         p.travel_mode = report.travel_mode
         p.notes = report.notes
         p.source = report.source
+        p.state = report.state
         p.report = report
         return p
