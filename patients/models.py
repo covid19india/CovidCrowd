@@ -56,7 +56,7 @@ class Report(models.Model):
         (VERIFIED, "Verified"),
         (DUPLICATE, "Duplicate"),
         (PATIENT_ADDED, "Patient Added"),
-        (INVALID, "Invalid")
+        (INVALID, "Invalid"),
     )
     onset_date = models.DateField()
     diagnosed_date = models.DateField()
@@ -71,7 +71,9 @@ class Report(models.Model):
     state = models.CharField(max_length=150, choices=STATES, null=True)
     duplicate_of = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
     reported_time = models.DateTimeField(auto_now_add=True)
-    report_state = models.CharField(max_length=1, choices=REPORT_STATE_CHOICES, default="R")
+    report_state = models.CharField(
+        max_length=1, choices=REPORT_STATE_CHOICES, default="R"
+    )
 
 
 class Patient(geomodels.Model):

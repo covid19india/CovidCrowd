@@ -6,13 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('patients', '0001_initial'),
+        ("patients", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='report',
-            name='report_state',
-            field=models.CharField(choices=[('R', 'Reported'), ('V', 'Verified'), ('D', 'Duplicate'), ('P', 'Patient Added'), ('I', 'INVALID')], default='R', max_length=1),
+            model_name="report",
+            name="report_state",
+            field=models.CharField(
+                choices=[
+                    ("R", "Reported"),
+                    ("V", "Verified"),
+                    ("D", "Duplicate"),
+                    ("P", "Patient Added"),
+                    ("I", "INVALID"),
+                ],
+                default="R",
+                max_length=1,
+            ),
         ),
     ]

@@ -1,3 +1,7 @@
 .navbar {
     padding: 0 1rem;
 }
+
+.alert-error {
+    background-color: #e00b36;
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
+from django.contrib import messages
 
 from .forms import ReportForm, PatientForm
 from .models import Report, Patient
@@ -46,6 +47,7 @@ def logout(request):
 def review_report(request, report_id):
     report = get_object_or_404(Report, pk=report_id)
     request.session["reviewing_report"] = report_id
+    messages.error(request, "This is to test the message tags")
     return render(request, "patients/review_report.html", {"report": report})
 
 
@@ -61,14 +63,23 @@ def add_patient(request):
     if request.method == "POST":
         form = PatientForm(request.POST)
         if form.is_valid():
-            ## TODO add messages
             if "submit" in request.POST:
                 form.save()
                 report.report_state = report.PATIENT_ADDED
                 report.save()
+                messages.success(
+                    request,
+                    "A new patient has been added. Thank you for the contribution.",
+                )
             elif "mark_verified" in request.POST:
                 report.report_state = report.VERIFIED
                 report.save()
+                messages.info(
+                    request,
+                    "The report has been marked as verfied. "
+                    "One of the admins will review it shortly. Thank you for "
+                    "verifying the report.",
+                )
             del request.session["reviewing_report"]
             return redirect("patients:review")
     else:
@@ -79,6 +90,7 @@ def add_patient(request):
         {"patient": patient, "form": form, "report_id": report_id},
     )
 
+
 @login_required
 def mark_report_invalid(request):
     report_id = request.session.get("reviewing_report", None)
@@ -88,7 +100,9 @@ def mark_report_invalid(request):
     report = get_object_or_404(Report, pk=report_id)
     report.report_state = Report.INVALID
     report.save()
-    # TODO post a message
+    messages.success(
+        request, "The report has been marked as Invalid. Thank you for flagging it."
+    )
     del request.session["reviewing_report"]
 
     return render(request, "patients/review.html")
