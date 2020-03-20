@@ -11,5 +11,6 @@ urlpatterns = [
     path("review", views.review, name="review"),
     path("logout", views.logout, name="logout"),
     path("login-form", views.login_form, name="login-form"),
-    path("review-report/<int:report_id>/", views.review_report, name="review-report")
+    path("review-report/<int:report_id>/", views.review_report, name="review-report"),
+    path("add-patient", views.add_patient, name="add-patient"),
 ]

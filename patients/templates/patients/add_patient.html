@@ -1,0 +1,27 @@
+{% extends "patients/_base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <h3 class="heading-title text-warning">
+    <i class="fa fa-warning"></i> Important Note
+  </h3>
+  <p>
+    You are going to add a new patient to the system. The information for the
+    patient has been auto populated from the report <strong>#{{ report_id }}</strong>.
+    Kindly the review the information as diligently as possible and before
+    adding the patient to the system.
+  </p>
+  <p>
+    The following things will be affected once the patient is added to the system:
+  </p>
+  <ul>
+    <li>Patient counts</li>
+    <li>State wise distribution</li>
+    <li>Spread Cluster Map</li>
+  </ul>
+
+  <hr />
+
+  <h3 class="heading-title">Add New Patient</h3>
+  {% crispy form form.helper %}
+
+{% endblock %}

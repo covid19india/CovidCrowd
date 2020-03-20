@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 
-from .forms import ReportForm
-from .models import Report
+from .forms import ReportForm, PatientForm
+from .models import Report, Patient
 
 
 def index(request):
@@ -42,7 +42,31 @@ def logout(request):
     return redirect("patients:index")
 
 
+@login_required
 def review_report(request, report_id):
     report = get_object_or_404(Report, pk=report_id)
-    return render(request, "review_report.html", {"report": report})
+    request.session["reviewing_report"] = report_id
+    return render(request, "patients/review_report.html", {"report": report})
+
+
+@login_required
+def add_patient(request):
+    report_id = request.session.get("reviewing_report", None)
+    if not report_id:
+        return redirect("patients:review")
+
+    report = get_object_or_404(Report, pk=report_id)
+    patient = Patient.from_report(report)
+
+    if request.method == "POST":
+        form = PatientForm(request.POST)
+        if form.is_valid():
+            form.save()
+            ## TODO add messages
+            return redirect("patients:review")
+    else:
+        form = PatientForm(instance=patient)
+    return render(request, "patients/add_patient.html", {"patient": patient, "form": form, "report_id": report_id})
+
+
 

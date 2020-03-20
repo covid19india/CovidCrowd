@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.gis.db import models as geomodels
+from django.contrib.gis.geos import Point
 
 STATES = (
     ("Andaman and Nicobar Islands", "Andaman and Nicobar Islands"),
@@ -41,12 +42,6 @@ STATES = (
 )
 
 
-class Source(models.Model):
-    description = models.TextField()
-    url = models.URLField()
-    patient = models.ForeignKey("Patient", on_delete=models.CASCADE)
-
-
 class Report(models.Model):
     GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
     STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
@@ -74,17 +69,40 @@ class Report(models.Model):
 class Patient(geomodels.Model):
     GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
     STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
+
     onset_date = models.DateField()
     diagnosed_date = models.DateField()
     age = models.IntegerField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    detected_location = geomodels.PointField()
-    current_location = geomodels.PointField()
+    detected_location = models.CharField(max_length=150)
+    current_location = models.CharField(max_length=150)
+    detected_location_pt = geomodels.PointField()
+    current_location_pt = geomodels.PointField()
     current_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    contacts = models.ManyToManyField("self", blank=True)
     # TODO travel_mode might have to be changed to a char field with limited choices
     travel_mode = models.TextField()
     notes = models.TextField()
-    report = models.OneToOneField(Report, on_delete=models.SET_NULL, null=True)
     state = models.CharField(max_length=150, choices=STATES, null=True)
     district = models.CharField(max_length=150, null=True)
+    source = models.TextField()
+
+    contacts = models.ManyToManyField("self", blank=True)
+    report = models.OneToOneField(Report, on_delete=models.SET_NULL, null=True)
+
+    @staticmethod
+    def from_report(report):
+        p = Patient()
+        p.onset_date = report.onset_date
+        p.diagnosed_date = report.diagnosed_date
+        p.age = report.age
+        p.gender = report.gender
+        p.detected_location = report.detected_location
+        p.detected_location_pt = Point(80, 20)
+        p.current_location = report.current_location
+        p.current_location_pt = Point(80, 20)
+        p.current_status = report.current_status
+        p.travel_mode = report.travel_mode
+        p.notes = report.notes
+        p.source = report.source
+        p.report = report
+        return p
