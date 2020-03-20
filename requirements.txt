@@ -10,7 +10,11 @@ cryptography==2.8
 defusedxml==0.6.0
 Django==3.0.4
 django-crispy-forms==1.9.0
+django-filter==2.2.0
+djangorestframework==3.11.0
+gunicorn==20.0.4
 idna==2.9
+Markdown==3.2.1
 oauthlib==3.1.0
 pathspec==0.7.0
 pycparser==2.20
