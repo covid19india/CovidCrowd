@@ -58,17 +58,17 @@ class Report(models.Model):
         (CONVERTED, "Converted"),
         (INVALID, "Invalid"),
     )
-    diagnosed_date = models.DateField(null=True)
-    age = models.IntegerField(null=True)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True)
-    detected_city = models.CharField(max_length=150, null=True)
-    detected_district = models.CharField(max_length=150, null=True)
+    diagnosed_date = models.DateField(null=True, blank=True)
+    age = models.IntegerField(null=True, blank=True)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
+    detected_city = models.CharField(max_length=150, null=True, blank=True)
+    detected_district = models.CharField(max_length=150, null=True, blank=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
-    nationality = models.CharField(max_length=150, null=True)
+    nationality = models.CharField(max_length=150, null=True, blank=True)
     current_status = models.CharField(max_length=1, choices=STATUS_CHOICES, null=True)
-    notes = models.TextField(null=True)
-    current_location = models.CharField(max_length=150, null=True)
-    source = models.TextField(null=True)
+    notes = models.TextField(null=True, blank=True)
+    current_location = models.CharField(max_length=150, null=True, blank=True)
+    source = models.TextField(null=True, blank=True)
 
     # Meta fields
     reported_time = models.DateTimeField(auto_now_add=True)
