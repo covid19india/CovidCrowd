@@ -11,22 +11,21 @@ class ReportForm(forms.ModelForm):
     class Meta:
         model = Report
         fields = [
+            "diagnosed_date",
             "age",
             "gender",
-            "state",
+            "detected_city",
+            "detected_district",
+            "detected_state",
+            "nationality",
             "current_status",
-            "onset_date",
-            "diagnosed_date",
-            "detected_location",
-            "current_location",
-            "travel_mode",
-            "source",
             "notes",
+            "current_location",
+            "source",
         ]
         widgets = {
             "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
-            "onset_date": forms.DateInput(attrs={"type": "date"}),
             "diagnosed_date": forms.DateInput(attrs={"type": "date"}),
         }
 
@@ -46,27 +45,25 @@ class PatientForm(forms.ModelForm):
     class Meta:
         model = Patient
         fields = [
+            "diagnosed_date",
             "age",
             "gender",
+            "detected_city",
+            "detected_city_pt",
+            "detected_district",
+            "detected_state",
+            "nationality",
             "current_status",
-            "onset_date",
-            "diagnosed_date",
-            "state",
-            "district",
-            "detected_location",
-            "detected_location_pt",
+            "notes",
+            "source",
             "current_location",
             "current_location_pt",
-            "travel_mode",
-            "notes",
         ]
         widgets = {
-            "detected_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
+            "detected_city_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
             "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
             "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
-            "travel_mode": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
-            "onset_date": forms.DateInput(attrs={"type": "date"}),
             "diagnosed_date": forms.DateInput(attrs={"type": "date"}),
         }
 

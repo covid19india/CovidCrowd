@@ -46,7 +46,7 @@ class Report(models.Model):
     REPORTED = "R"
     VERIFIED = "V"
     DUPLICATE = "D"
-    PATIENT_ADDED = "P"
+    CONVERTED = "C"
     INVALID = "I"
 
     GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
@@ -55,65 +55,80 @@ class Report(models.Model):
         (REPORTED, "Reported"),
         (VERIFIED, "Verified"),
         (DUPLICATE, "Duplicate"),
-        (PATIENT_ADDED, "Patient Added"),
+        (CONVERTED, "Converted"),
         (INVALID, "Invalid"),
     )
-    onset_date = models.DateField()
-    diagnosed_date = models.DateField()
-    age = models.IntegerField()
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    detected_location = models.CharField(max_length=150)
-    current_location = models.CharField(max_length=150)
-    current_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    travel_mode = models.CharField(max_length=150)
-    source = models.TextField()
-    notes = models.TextField()
-    state = models.CharField(max_length=150, choices=STATES, null=True)
-    duplicate_of = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
+    diagnosed_date = models.DateField(null=True)
+    age = models.IntegerField(null=True)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True)
+    detected_city = models.CharField(max_length=150, null=True)
+    detected_district = models.CharField(max_length=150, null=True)
+    detected_state = models.CharField(max_length=150, choices=STATES, null=True)
+    nationality = models.CharField(max_length=150, null=True)
+    current_status = models.CharField(max_length=1, choices=STATUS_CHOICES, null=True)
+    notes = models.TextField(null=True)
+    current_location = models.CharField(max_length=150, null=True)
+    source = models.TextField(null=True)
+
+    # Meta fields
     reported_time = models.DateTimeField(auto_now_add=True)
     report_state = models.CharField(
         max_length=1, choices=REPORT_STATE_CHOICES, default="R"
     )
+    duplicate_of = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
+
+
+class StatusUpdate(models.Model):
+    STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
+
+    patient = models.ForeignKey("Patient", on_delete=models.CASCADE, null=False)
+    patient_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    source = models.TextField()
+
+    # Meta fields
+    updated_on = models.DateTimeField(auto_now_add=True, editable=False)
 
 
 class Patient(geomodels.Model):
     GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
     STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
 
-    onset_date = models.DateField()
     diagnosed_date = models.DateField()
-    age = models.IntegerField()
+    age = models.IntegerField(null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    detected_location = models.CharField(max_length=150)
-    current_location = models.CharField(max_length=150)
-    detected_location_pt = geomodels.PointField()
-    current_location_pt = geomodels.PointField()
+    detected_city = models.CharField(max_length=150)
+    detected_city_pt = geomodels.PointField()
+    detected_district = models.CharField(max_length=150, null=True)
+    detected_state = models.CharField(max_length=150, choices=STATES, null=True)
+    nationality = models.CharField(max_length=5)
     current_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    # TODO travel_mode might have to be changed to a char field with limited choices
-    travel_mode = models.TextField()
+    status_change_date = models.DateField()
     notes = models.TextField()
-    state = models.CharField(max_length=150, choices=STATES, null=True)
-    district = models.CharField(max_length=150, null=True)
+    current_location = models.CharField(max_length=150)
+    current_location_pt = geomodels.PointField()
     source = models.TextField()
 
     contacts = models.ManyToManyField("self", blank=True)
-    report = models.OneToOneField(Report, on_delete=models.SET_NULL, null=True)
+
+    # Meta Fields
+    created_on = models.DateTimeField(auto_now_add=True, editable=False)
+    updated_on = models.DateTimeField(auto_now=True, editable=False)
 
     @staticmethod
     def from_report(report):
         p = Patient()
-        p.onset_date = report.onset_date
         p.diagnosed_date = report.diagnosed_date
         p.age = report.age
         p.gender = report.gender
-        p.detected_location = report.detected_location
-        p.detected_location_pt = Point(80, 20)
+        p.detected_city = report.detected_location
+        p.detected_city_pt = Point(80, 20)
+        p.detected_district = report.detected_district
+        p.detected_state = report.detected_state
+        p.nationality = report.nationality
+        p.current_status = report.current_status
+        # p.status_change_date =
+        p.notes = report.notes
         p.current_location = report.current_location
         p.current_location_pt = Point(80, 20)
-        p.current_status = report.current_status
-        p.travel_mode = report.travel_mode
-        p.notes = report.notes
         p.source = report.source
-        p.state = report.state
-        p.report = report
         return p
