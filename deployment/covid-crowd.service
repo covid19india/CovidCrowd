@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn Server serving CovidCrowd Web Application
+After=network.target
+
+[Service]
+User=apps
+WorkingDirectory=/opt/apps/CovidCrowd
+RuntimeDirectory=CovidCrowd
+ExecStart=/bin/bash -c 'source /opt/virtualenv/bin/activate && gunicorn \
+  --workers 3 --bind unix:/var/run/covidcrowd/covidcrowd.sock \
+  --log-file /var/log/covidcrowd/error.log CovidCrowd.wsgi'
+
+[Install]
+WantedBy=multi-user.target

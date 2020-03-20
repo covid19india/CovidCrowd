@@ -9,10 +9,10 @@ A crowd-sourcing platform for the Covid-19 Pandemic
 
 ## Development
 
-1. Install SQLite3 and Spatialite
+1. Install Spatial Data Requirements
 
 ```shell script
-sudo apt install libsqlite3-mod-spatialite
+sudo apt install libsqlite3-mod-spatialite python-gdal
 ```
 
 2. Setup virtual environment
