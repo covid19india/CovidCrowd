@@ -17,16 +17,17 @@ def new_report(request):
         state = request.POST.get("state", None)
         if state:
             request.session["state"] = state
-            return redirect("patients:review")
+            return redirect("patients:select-patient")
     return render(request, "patients/new_report.html", {"states": states})
 
 
 def select_patient(request):
-    if "state" not in request.sesssion:
+    if "state" not in request.session:
         return redirect("patients:index")
     state = request.session.get("state")
     patients = Patient.objects.filter(detected_state=state)
     return render(request, "patients/select_patient.html", {"patients": patients})
+
 
 def report(request):
     if request.method == "POST":
