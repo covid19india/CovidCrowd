@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'social_django',
     'crispy_forms',
-    'map',
     'patients',
 ]
 
