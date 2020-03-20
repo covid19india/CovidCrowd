@@ -1,20 +1,58 @@
 {% extends "patients/_base.html" %}
 
 {% block content %}
-  <div class="row text-center mt-5">
-    <h1 class="display-2 p-3">I want to report</h1>
-  </div>
-  <div class="row mt-5">
-    <div class="col-12 col-md-6">
-      <a href="{% url "patients:report" %}" class="btn btn-primary btn-block">
-        A new patient
-      </a>
+  <div id="block_1">
+    <div class="row text-center mt-5">
+      <h1 class="display-2 p-3">I want to report</h1>
     </div>
-    <div class="col-12 col-sm-6">
-      <a href="#" class="btn btn-default btn-block">
-        An update about a patient
-      </a>
+    <div class="row mt-5">
+      <div class="col-12 col-md-6">
+        <a href="{% url "patients:report" %}" class="btn btn-primary btn-block">
+          A new patient
+        </a>
+      </div>
+      <div class="col-12 col-sm-6">
+        <a href="#" id="update_button" class="btn btn-default btn-block">
+          An update about a patient
+        </a>
+      </div>
     </div>
   </div>
+
+  <div id="block_2" style="display: none;">
+    <div class="row text-center mt-5">
+      <h1 class="display-2 p-3">Which state is the patient from?</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <form action="" method="post">
+
+          {% csrf_token %}
+          <div class="form-group">
+            <select class="form-control" id="state" name="state">
+              {% for state in states %}
+                <option value="{{ state }}">{{ state }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Show Patient List</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block JS %}
+  <script>
+    $(document).ready(function() {
+      $('#update_button').click(function() {
+        $('#block_1').hide();
+        $('#block_2').show();
+      });
+    });
+  </script>
 
 {% endblock %}

@@ -1,0 +1,13 @@
+{% extends "patients/_base.html" %}
+
+{% block content %}
+  <h1>TODO: Patient Selection Page</h1>
+  {% for patient in patients %}
+    <div class="patient">
+      State: {{ pa }}
+      City: {{ patient.detected_city }}
+
+    </div>
+  {% endfor %}
+
+{% endblock %}

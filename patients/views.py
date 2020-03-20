@@ -4,7 +4,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 
 from .forms import ReportForm, PatientForm
-from .models import Report, Patient
+from .models import Report, Patient, STATES
 
 
 def index(request):
@@ -12,8 +12,21 @@ def index(request):
 
 
 def new_report(request):
-    return render(request, "patients/new_report.html")
+    states = [s[0] for s in STATES]
+    if request.method == "POST":
+        state = request.POST.get("state", None)
+        if state:
+            request.session["state"] = state
+            return redirect("patients:review")
+    return render(request, "patients/new_report.html", {"states": states})
 
+
+def select_patient(request):
+    if "state" not in request.sesssion:
+        return redirect("patients:index")
+    state = request.session.get("state")
+    patients = Patient.objects.filter(detected_state=state)
+    return render(request, "patients/select_patient.html", {"patients": patients})
 
 def report(request):
     if request.method == "POST":
