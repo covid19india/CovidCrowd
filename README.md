@@ -28,6 +28,8 @@ pip install -r requirements.txt
 ```shell script
 cp example.env .env
 # Edit the .env file according to your needs
+
+sudo apt-get install libsqlite3-mod-spatialite
 ```
 
 4. Generate the local db
