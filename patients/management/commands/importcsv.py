@@ -47,19 +47,32 @@ class Command(BaseCommand):
             return
 
         counter = 0
+        skipped = 0
         with open(filepath, "r") as fp:
             reader = csv.DictReader(fp)
             for row in reader:
                 if not row["Date Announced"]:
+                    skipped += 1
                     continue
+                if row["Patient number"]:
+                    try:
+                        existing = Report.objects.get(patient_id=row["Patient number"])
+                    except Report.DoesNotExist:
+                        existing = None
+
+                    if existing:
+                        print(f"Report with patient number {row['Patient number']} already exits as Report #{existing.id}. Skipping.")
+                        skipped += 1
+                        continue
                 self._create_new_report(row)
                 counter += 1
-        print(f"SUCCESS: CSV File was imported. Created {counter} records")
+        print(f"SUCCESS: CSV File was imported. Reports created: {counter}, Skipped: {skipped}")
 
     @staticmethod
     def _create_new_report(row):
         report = Report()
 
+        report.patient_id = row["Patient number"]
         report.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
         if row["Age Bracket"].strip():
             report.age = int(row["Age Bracket"])

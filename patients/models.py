@@ -71,6 +71,7 @@ class Report(models.Model):
     notes = models.TextField(null=True, blank=True)
     current_location = models.CharField(max_length=150, null=True, blank=True)
     source = models.TextField(null=True, blank=True)
+    patient_id = models.CharField(max_length=10, null=True, blank=True)
 
     # Meta fields
     reported_time = models.DateTimeField(auto_now_add=True)
@@ -113,7 +114,7 @@ class Patient(geomodels.Model):
     current_location_pt = geomodels.PointField()
     source = models.TextField()
     unique_id = models.CharField(max_length=10)
-    government_id = models.CharField(max_length=20, null=True)
+    government_id = models.CharField(max_length=20, null=True, blank=True)
 
     contacts = models.ManyToManyField("self", blank=True)
 
@@ -148,6 +149,7 @@ class Patient(geomodels.Model):
         else:
             p.current_location_pt = p.detected_city_pt
         p.source = report.source
+        p.unique_id = report.patient_id
         return p
 
     @staticmethod

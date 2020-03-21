@@ -6,6 +6,12 @@
     <div class="col-12">
       <table class="table">
         <tbody>
+        {% if report.patient_id %}
+          <tr>
+          <td>Google Sheets Patient ID</td>
+          <td>{{ report.patient_id }}</td>
+          </tr>
+        {% endif %}
         <tr>
           <td>Reported on</td>
           <td>{{ report.reported_time }}</td>

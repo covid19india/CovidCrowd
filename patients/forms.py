@@ -45,6 +45,8 @@ class PatientForm(forms.ModelForm):
     class Meta:
         model = Patient
         fields = [
+            "unique_id",
+            "government_id",
             "diagnosed_date",
             "age",
             "gender",
