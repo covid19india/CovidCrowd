@@ -2,7 +2,7 @@ import requests
 
 from django.db import models
 from django.contrib.gis.db import models as geomodels
-from django.contrib.gis.geos import Point
+from django.contrib.gis.geos import Point, Polygon
 
 STATES = (
     ("Andaman and Nicobar Islands", "Andaman and Nicobar Islands"),
@@ -131,7 +131,9 @@ class Patient(geomodels.Model):
         p.age = report.age
         p.gender = report.gender
         p.detected_city = report.detected_city
-        p.detected_city_pt = Patient.get_point_for_location("city", report.detected_city)
+        p.detected_city_pt = Patient.get_point_for_location(
+            city=report.detected_city, state=report.detected_state
+        )
         p.detected_district = report.detected_district
         p.detected_state = report.detected_state
         p.nationality = report.nationality
@@ -140,29 +142,43 @@ class Patient(geomodels.Model):
         p.notes = report.notes
         p.current_location = report.current_location or report.detected_city
         if p.current_location != report.detected_city:
-            p.current_location_pt = Patient.get_point_for_location("city", report.current_location)
+            p.current_location_pt = Patient.get_point_for_location(
+                city=report.current_location
+            )
         else:
             p.current_location_pt = p.detected_city_pt
         p.source = report.source
         return p
 
     @staticmethod
-    def get_point_for_location(type, name):
+    def get_point_for_location(city=None, state=None):
         point = Point(80, 20)
+        india = Polygon.from_bbox((35.6745457, 6.2325274, 97.395561, 68.1113787, )).prepared
 
-        if type not in ["street", "city", "county", "state", "country"]:
+        if not (city or state):
             return point
 
         base_url = "https://nominatim.openstreetmap.org/search/"
-        payload = {"format": "json", type: name}
+        payload = {"format": "json"}
+        if city:
+            payload["city"] = city
+        if state:
+            payload["state"] = state
 
         resp = requests.get(base_url, params=payload)
         if resp.status_code != 200:
             return point
 
-        try:
-            data = resp.json()[0]
-            point = Point(float(data["lon"]), float(data["lat"]))
-        except:
-            pass
+        data = resp.json()
+        for loc in data:
+            print(loc)
+            try:
+                lon = float(loc["lon"])
+                lat = float(loc["lat"])
+            except:
+                continue
+            p = Point(lon, lat)
+            if india.contains(p):
+                point = p
+                break
         return point
