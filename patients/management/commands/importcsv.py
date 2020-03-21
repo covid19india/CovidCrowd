@@ -81,7 +81,11 @@ class Command(BaseCommand):
         report.detected_district = row["Detected District"]
         report.detected_state = row["Detected State"]
         report.nationality = ""
-        report.current_status = row["Current Status"]
+        if row["Current Status"]:
+            report.current_status = row["Current Status"].upper()[0]
+        else:
+            report.current_status = "H"
+
         report.notes = row["Notes"]
         report.source = "\n".join([row["Source_1"], row["Source_2"], row["Source_3"]])
 

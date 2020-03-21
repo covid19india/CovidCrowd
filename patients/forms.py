@@ -86,3 +86,16 @@ class PatientForm(forms.ModelForm):
                 css_class="btn-default float-right",
             )
         )
+
+
+class FilterForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(FilterForm, self).__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+        self.helper.form_method = "get"
+        self.helper.form_class = "form-horizontal"
+        self.helper.wrapper_class = "row"
+        self.helper.label_class = "col-md-2"
+        self.helper.field_class = "col-md-10"
+        self.helper.add_input(Submit("submit", "Apply Filters"))

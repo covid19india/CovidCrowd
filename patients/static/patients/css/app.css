@@ -5,3 +5,20 @@
 .alert-error {
     background-color: #e00b36;
 }
+
+th.orderable:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f0dc";
+    color: lightgray;
+}
+th.asc:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f160";
+    color: #5e72e4;
+}
+
+th.desc:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #5e72e4;
+    content: "\f161";
+}

@@ -2,31 +2,36 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
+from django.contrib.admin.views.decorators import staff_member_required
+from django.utils.decorators import method_decorator
+
+from django_tables2.views import SingleTableMixin
+from django_tables2.export.views import ExportMixin
+from django_filters.views import FilterView
+
 
 from .forms import ReportForm, PatientForm
 from .models import Report, Patient, STATES
+from .tables import ReportsTable, PatientsTable
+from .filters import ReportsTableFilter, PatientsTableFilter
 
 
-def index(request):
-    return render(request, "patients/index.html")
+@method_decorator(staff_member_required, name="dispatch")
+class ReportQueue(SingleTableMixin, FilterView):
+    model = Report
+    queryset = Report.objects.filter(report_state=Report.REPORTED)
+    table_class = ReportsTable
+    filterset_class = ReportsTableFilter
+
+    template_name = "patients/report_list.html"
 
 
-def new_report(request):
-    states = [s[0] for s in STATES]
-    if request.method == "POST":
-        state = request.POST.get("state", None)
-        if state:
-            request.session["state"] = state
-            return redirect("patients:select-patient")
-    return render(request, "patients/new_report.html", {"states": states})
-
-
-def select_patient(request):
-    if "state" not in request.session:
-        return redirect("patients:index")
-    state = request.session.get("state")
-    patients = Patient.objects.filter(detected_state=state)
-    return render(request, "patients/select_patient.html", {"patients": patients})
+class Index(SingleTableMixin, ExportMixin, FilterView):
+    model = Patient
+    table_class = PatientsTable
+    filterset_class = PatientsTableFilter
+    template_name = "patients/index.html"
+    export_formats = ["csv", "json", "latex", "tsv"]
 
 
 def report(request):
@@ -44,12 +49,6 @@ def thank_you(request):
     return render(request, "patients/thank_you.html")
 
 
-@login_required
-def review(request):
-    reports = Report.objects.filter(report_state=Report.REPORTED)
-    return render(request, "patients/review.html", {"reports": reports})
-
-
 def login_form(request):
     return render(request, "patients/login.html")
 
@@ -61,6 +60,7 @@ def logout(request):
     return redirect("patients:index")
 
 
+@staff_member_required
 @login_required
 def review_report(request, report_id):
     report = get_object_or_404(Report, pk=report_id)
@@ -68,11 +68,12 @@ def review_report(request, report_id):
     return render(request, "patients/review_report.html", {"report": report})
 
 
+@staff_member_required
 @login_required
 def add_patient(request):
     report_id = request.session.get("reviewing_report", None)
     if not report_id:
-        return redirect("patients:review")
+        return redirect("patients:report-queue")
 
     report = get_object_or_404(Report, pk=report_id)
     patient = Patient.from_report(report)
@@ -82,7 +83,7 @@ def add_patient(request):
         if form.is_valid():
             if "submit" in request.POST:
                 form.save()
-                report.report_state = report.PATIENT_ADDED
+                report.report_state = report.CONVERTED
                 report.save()
                 messages.success(
                     request,
@@ -98,7 +99,7 @@ def add_patient(request):
                     "verifying the report.",
                 )
             del request.session["reviewing_report"]
-            return redirect("patients:review")
+            return redirect("patients:report-queue")
     else:
         form = PatientForm(instance=patient)
     return render(
@@ -108,11 +109,12 @@ def add_patient(request):
     )
 
 
+@staff_member_required
 @login_required
 def mark_report_invalid(request):
     report_id = request.session.get("reviewing_report", None)
     if not report_id:
-        return redirect("patients:review")
+        return redirect("patients:report-queue")
 
     report = get_object_or_404(Report, pk=report_id)
     report.report_state = Report.INVALID
@@ -122,4 +124,4 @@ def mark_report_invalid(request):
     )
     del request.session["reviewing_report"]
 
-    return render(request, "patients/review.html")
+    return redirect("patients:report-queue")

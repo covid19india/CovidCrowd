@@ -36,15 +36,40 @@
           </div>
         </div>
       </div>
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="{% url 'patients:new-report' %}">Report Incident</a>
-        {% if user.is_authenticated %}
-          <a class="nav-item nav-link" href="{% url 'patients:review' %}">Review Queue</a>
-          <a class="nav-item nav-link" href="{% url "patients:logout" %}">Logout</a>
-        {% else %}
-          <a class="nav-item nav-link" href="{% url "patients:login-form" %}">Login</a>
-        {% endif %}
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{% url 'patients:report' %}">Report Incident</a>
       </div>
+      <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+          {% if user.is_staff %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'patients:report-queue' %}">Review Queue</a>
+            </li>
+          {% endif %}
+          <li class="nav-item dropdown show">
+            <a class="nav-link" href="#" id="user-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              {% if user.is_superuser %}
+                <span class="badge badge-pill badge-danger">Admin</span>
+              {% elif user.is_staff %}
+                <span class="badge badge-pill badge-primary">Moderator</span>
+              {% endif %}
+              Hi, {{ user.username }} <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-dropdown">
+              <!-- a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div -->
+              <a class="dropdown-item" href="{% url "patients:logout" %}">Logout</a>
+            </div>
+          </li>
+
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "patients:login-form" %}">Login</a>
+          </li>
+        {% endif %}
+      </ul>
+
     </div>
   </nav>
   <main>

@@ -11,6 +11,7 @@ defusedxml==0.6.0
 Django==3.0.4
 django-crispy-forms==1.9.0
 django-filter==2.2.0
+django-tables2==2.2.1
 djangorestframework==3.11.0
 gunicorn==20.0.4
 idna==2.9
@@ -29,6 +30,7 @@ six==1.14.0
 social-auth-app-django==3.1.0
 social-auth-core==3.3.0
 sqlparse==0.3.1
+tablib==1.1.0
 toml==0.10.0
 typed-ast==1.4.1
 Unidecode==1.1.1

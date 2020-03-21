@@ -43,3 +43,21 @@ python manage.py migrate
 ```shell script
 python manage.py createsuperuser
 ```
+
+## Populating the Database
+
+The Raw Data sheet from the Google Sheets is dumped as a CSV file into the `data`
+folder periodically and can be used for initializing or updating the database.
+
+```shell script
+python manage.py importcsv ./data/raw_data.csv
+```
+
+This will create a new report for every row that has a data entry. Mainly it looks
+to see if the `Date Announced` column has a value. If the `Patient number` is
+already present it will be skipped. So running multiple imports is not an issue.
+
+**Note:** It will only generate "Report" objects and not "Patient" objects. You
+ will have to manually create a patient based on the imported reports. Apologies
+ for inconvenience during setup. We emphasize on clarity of data over simplicity
+  of creating a patient record.
