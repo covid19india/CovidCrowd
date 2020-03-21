@@ -81,7 +81,14 @@ class Command(BaseCommand):
         report.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
         if row["Age Bracket"].strip():
             report.age = int(row["Age Bracket"])
-        report.gender = row["Gender"] or Gender.UNKNOWN
+        if row["Gender"] == "M":
+            report.gender = Gender.MALE
+        elif row["Gender"] == "F":
+            report.gender = Gender.FEMALE
+        elif row["Gender"]:
+            report.gender = Gender.OTHERS
+        else:
+            report.gender = Gender.UNKNOWN
         report.detected_city = row["Detected City"]
         report.detected_district = row["Detected District"]
         report.detected_state = row["Detected State"]
