@@ -88,9 +88,9 @@ class PatientForm(forms.ModelForm):
         )
 
 
-class ReportsFilterForm(forms.Form):
+class FilterForm(forms.Form):
     def __init__(self, *args, **kwargs):
-        super(ReportsFilterForm, self).__init__(*args, **kwargs)
+        super(FilterForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
         self.helper.form_method = "get"

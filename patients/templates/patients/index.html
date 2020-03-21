@@ -1,5 +1,56 @@
-{% extends 'patients/_base.html' %}
+{% extends "patients/_base.html" %}
+{% load render_table from django_tables2 %}
+{% load crispy_forms_tags %}
+{% load django_tables2 %}
 
 {% block content %}
-  <h1>Welcome to CovidCrowd app</h1>
+  {% if filter %}
+    <div class="row mt-3 mb-3">
+      <div class="col">
+        <h4 class="h4 text-uppercase">Affected People</h4>
+      </div>
+      <div class="col">
+        <button id="show-filters" class="btn btn-default float-right">
+          <i class="fa fa-filter"></i>
+          <span id="fBtnText">Filters</span>
+        </button>
+      </div>
+    </div>
+    <div id="filter-container" style="display: none;">
+      {% crispy filter.form filter.form.helper %}
+    </div>
+  {% endif %}
+  {% render_table table %}
+
+  <p class="text-right">
+    <small>
+    <strong>Download </strong>
+    {% for format in view.export_formats %}
+      <span class="ml-2">
+        <a href="{% export_url format %}">
+          <code>{{ format | upper }}</code>
+        </a>
+     </span>
+    {% endfor %}
+    </small>
+  </p>
+
+{% endblock %}
+
+{% block JS %}
+  <script>
+    $(document).ready(function() {
+      let btnText = $("#fBtnText");
+      $("#show-filters").click(function() {
+        console.log("showing filters");
+        $("#filter-container").toggle();
+        if (btnText.innerText === "Filters") {
+          btnText.innerText = "Close Filters"
+        } else {
+          btnText.innerText = "Filters"
+        }
+      });
+    });
+
+  </script>
 {% endblock %}
