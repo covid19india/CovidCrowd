@@ -7,10 +7,11 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Diagnosed Date</th>
-      <th scope="col">Detected Location</th>
       <th scope="col">Age</th>
       <th scope="col">Gender</th>
-      <th scope="col">Action</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -18,9 +19,10 @@
     <tr>
       <th scope="col">{{ report.id }}</th>
       <td>{{ report.diagnosed_date }}</td>
-      <td>{{ report.detected_location }}</td>
       <td>{{ report.age }}</td>
       <td>{{ report.gender }}</td>
+      <td>{{ report.detected_city }}</td>
+      <td>{{ report.detected_state }}</td>
       <td>
         <a href="{% url 'patients:review-report' report.id %}" class="btn btn-outline-default">Review</a>
       </td>
