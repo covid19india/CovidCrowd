@@ -43,7 +43,7 @@
         {% if user.is_authenticated %}
           {% if user.is_staff %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'patients:review' %}">Review Queue</a>
+              <a class="nav-link" href="{% url 'patients:report-queue' %}">Review Queue</a>
             </li>
           {% endif %}
           <li class="nav-item dropdown show">

@@ -4,6 +4,8 @@ from django.db import models
 from django.contrib.gis.db import models as geomodels
 from django.contrib.gis.geos import Point, Polygon
 
+from .constants import COUNTRIES
+
 STATES = (
     ("Andaman and Nicobar Islands", "Andaman and Nicobar Islands"),
     ("Andhra Pradesh", "Andhra Pradesh"),
@@ -98,6 +100,7 @@ class StatusUpdate(models.Model):
 class Patient(geomodels.Model):
     GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
     STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
+    NATIONALITY_CHOICES = [("Indian", "Indian"), ("Others", "Others")] + [(c, c) for c in COUNTRIES]
 
     diagnosed_date = models.DateField()
     age = models.IntegerField(null=True)
@@ -106,7 +109,7 @@ class Patient(geomodels.Model):
     detected_city_pt = geomodels.PointField()
     detected_district = models.CharField(max_length=150, null=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
-    nationality = models.CharField(max_length=150)
+    nationality = models.CharField(max_length=150, choices=NATIONALITY_CHOICES)
     current_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     status_change_date = models.DateField(null=True)
     notes = models.TextField()
