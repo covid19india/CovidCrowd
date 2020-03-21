@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
+from django.contrib.admin.views.decorators import staff_member_required
 
 from .forms import ReportForm, PatientForm
 from .models import Report, Patient, STATES
@@ -45,6 +46,7 @@ def thank_you(request):
 
 
 @login_required
+@staff_member_required
 def review(request):
     reports = Report.objects.filter(report_state=Report.REPORTED)
     return render(request, "patients/review.html", {"reports": reports})
@@ -61,6 +63,7 @@ def logout(request):
     return redirect("patients:index")
 
 
+@staff_member_required
 @login_required
 def review_report(request, report_id):
     report = get_object_or_404(Report, pk=report_id)
@@ -68,6 +71,7 @@ def review_report(request, report_id):
     return render(request, "patients/review_report.html", {"report": report})
 
 
+@staff_member_required
 @login_required
 def add_patient(request):
     report_id = request.session.get("reviewing_report", None)
@@ -108,6 +112,7 @@ def add_patient(request):
     )
 
 
+@staff_member_required
 @login_required
 def mark_report_invalid(request):
     report_id = request.session.get("reviewing_report", None)
