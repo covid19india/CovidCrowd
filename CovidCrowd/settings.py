@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     "crispy_forms",
     "patients",
     "rest_framework",
+    "django_filters",
+    "django_tables2",
 ]
 
 MIDDLEWARE = [

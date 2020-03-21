@@ -3,10 +3,23 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
+from django_tables2.views import SingleTableMixin
+from django_filters.views import FilterView
+
 
 from .forms import ReportForm, PatientForm
 from .models import Report, Patient, STATES
+from .tables import ReportsTable
+from .filters import ReportsTableFilter
 
+
+class ReportQueue(SingleTableMixin, FilterView):
+    model = Report
+    queryset = Report.objects.filter(report_state=Report.REPORTED)
+    table_class = ReportsTable
+    filterset_class = ReportsTableFilter
+
+    template_name = "patients/report_list.html"
 
 def index(request):
     return render(request, "patients/index.html")

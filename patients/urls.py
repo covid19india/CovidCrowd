@@ -16,4 +16,5 @@ urlpatterns = [
     path("review-report/<int:report_id>/", views.review_report, name="review-report"),
     path("add-patient", views.add_patient, name="add-patient"),
     path("report-invalid", views.mark_report_invalid, name="report-invalid"),
+    path("report-queue", views.ReportQueue.as_view(), name='report-queue'),
 ]
