@@ -239,7 +239,7 @@ STATES = (
 
 
 class PatientStatus:
-    HOSPITALISED = "Hospitalised"
+    HOSPITALISED = "Hospitalized"
     RECOVERED = "Recovered"
     DECEASED = "Deceased"
     HOME_QUARANTINED = "Home Quarantined"

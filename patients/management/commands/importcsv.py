@@ -19,6 +19,7 @@ columns = [
     "Detected State",
     "Current Status",
     "Notes",
+    "Nationality",
     "Contracted from which Patient (Suspected)",
     "Status Change Date",
     "Source_1",
@@ -98,5 +99,6 @@ class Command(BaseCommand):
 
         report.notes = row["Notes"]
         report.source = "\n".join([row["Source_1"], row["Source_2"], row["Source_3"]])
+        report.nationality = row["Nationality"]
 
         report.save()
