@@ -2,9 +2,10 @@ import os.path
 import csv
 
 from datetime import datetime
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 
 from patients.models import Report
+from patients.constants import Gender, PatientStatus
 
 columns = [
     "Patient number",
@@ -80,15 +81,13 @@ class Command(BaseCommand):
         report.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
         if row["Age Bracket"].strip():
             report.age = int(row["Age Bracket"])
-        report.gender = row["Gender"]
+        report.gender = row["Gender"] or Gender.UNKNOWN
         report.detected_city = row["Detected City"]
         report.detected_district = row["Detected District"]
         report.detected_state = row["Detected State"]
         report.nationality = ""
-        if row["Current Status"]:
-            report.current_status = row["Current Status"].upper()[0]
-        else:
-            report.current_status = "H"
+        if row["Current Status"] in PatientStatus.CHOICES:
+            report.current_status = row["Current Status"]
 
         report.notes = row["Notes"]
         report.source = "\n".join([row["Source_1"], row["Source_2"], row["Source_3"]])
