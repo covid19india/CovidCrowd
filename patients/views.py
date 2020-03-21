@@ -34,24 +34,6 @@ class Index(SingleTableMixin, ExportMixin, FilterView):
     export_formats = ["csv", "json", "latex", "tsv"]
 
 
-def new_report(request):
-    states = [s[0] for s in STATES]
-    if request.method == "POST":
-        state = request.POST.get("state", None)
-        if state:
-            request.session["state"] = state
-            return redirect("patients:select-patient")
-    return render(request, "patients/new_report.html", {"states": states})
-
-
-def select_patient(request):
-    if "state" not in request.session:
-        return redirect("patients:index")
-    state = request.session.get("state")
-    patients = Patient.objects.filter(detected_state=state)
-    return render(request, "patients/select_patient.html", {"patients": patients})
-
-
 def report(request):
     if request.method == "POST":
         form = ReportForm(request.POST)
