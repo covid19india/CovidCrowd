@@ -77,6 +77,9 @@ class Report(models.Model):
     )
     duplicate_of = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
 
+    def __str__(self):
+        return f"Report #{self.id} ({self.detected_city}, {self.detected_state}, {self.gender}, {self.age})"
+
 
 class StatusUpdate(models.Model):
     STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
@@ -100,13 +103,15 @@ class Patient(geomodels.Model):
     detected_city_pt = geomodels.PointField()
     detected_district = models.CharField(max_length=150, null=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
-    nationality = models.CharField(max_length=5)
+    nationality = models.CharField(max_length=150)
     current_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    status_change_date = models.DateField()
+    status_change_date = models.DateField(null=True)
     notes = models.TextField()
     current_location = models.CharField(max_length=150)
     current_location_pt = geomodels.PointField()
     source = models.TextField()
+    unique_id = models.CharField(max_length=10)
+    government_id = models.CharField(max_length=20, null=True)
 
     contacts = models.ManyToManyField("self", blank=True)
 
@@ -114,13 +119,16 @@ class Patient(geomodels.Model):
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
     updated_on = models.DateTimeField(auto_now=True, editable=False)
 
+    def __str__(self):
+        return f"Patient {self.unique_id}:{self.government_id}"
+
     @staticmethod
     def from_report(report):
         p = Patient()
         p.diagnosed_date = report.diagnosed_date
         p.age = report.age
         p.gender = report.gender
-        p.detected_city = report.detected_location
+        p.detected_city = report.detected_city
         p.detected_city_pt = Point(80, 20)
         p.detected_district = report.detected_district
         p.detected_state = report.detected_state

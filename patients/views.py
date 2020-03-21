@@ -65,7 +65,6 @@ def logout(request):
 def review_report(request, report_id):
     report = get_object_or_404(Report, pk=report_id)
     request.session["reviewing_report"] = report_id
-    messages.error(request, "This is to test the message tags")
     return render(request, "patients/review_report.html", {"report": report})
 
 
