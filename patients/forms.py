@@ -60,8 +60,8 @@ class PatientForm(forms.ModelForm):
             "current_location_pt",
         ]
         widgets = {
-            "detected_city_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
-            "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 5}),
+            "detected_city_pt": geoforms.OSMWidget(attrs={"default_zoom": 8}),
+            "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 8}),
             "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "diagnosed_date": forms.DateInput(attrs={"type": "date"}),

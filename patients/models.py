@@ -1,3 +1,5 @@
+import requests
+
 from django.db import models
 from django.contrib.gis.db import models as geomodels
 from django.contrib.gis.geos import Point
@@ -129,14 +131,38 @@ class Patient(geomodels.Model):
         p.age = report.age
         p.gender = report.gender
         p.detected_city = report.detected_city
-        p.detected_city_pt = Point(80, 20)
+        p.detected_city_pt = Patient.get_point_for_location("city", report.detected_city)
         p.detected_district = report.detected_district
         p.detected_state = report.detected_state
         p.nationality = report.nationality
         p.current_status = report.current_status
         # p.status_change_date =
         p.notes = report.notes
-        p.current_location = report.current_location
-        p.current_location_pt = Point(80, 20)
+        p.current_location = report.current_location or report.detected_city
+        if p.current_location != report.detected_city:
+            p.current_location_pt = Patient.get_point_for_location("city", report.current_location)
+        else:
+            p.current_location_pt = p.detected_city_pt
         p.source = report.source
         return p
+
+    @staticmethod
+    def get_point_for_location(type, name):
+        point = Point(80, 20)
+
+        if type not in ["street", "city", "county", "state", "country"]:
+            return point
+
+        base_url = "https://nominatim.openstreetmap.org/search/"
+        payload = {"format": "json", type: name}
+
+        resp = requests.get(base_url, params=payload)
+        if resp.status_code != 200:
+            return point
+
+        try:
+            data = resp.json()[0]
+            point = Point(float(data["lon"]), float(data["lat"]))
+        except:
+            pass
+        return point
