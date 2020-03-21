@@ -19,4 +19,3 @@ def links(value, autoescape=True):
         if line.startswith("http"):
             lines[i] = f'<a href="{line}" target="_blank">{line}</a>'
     return mark_safe("\n".join(lines))
-

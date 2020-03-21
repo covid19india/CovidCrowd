@@ -1,4 +1,6 @@
 COUNTRIES = [
+    "India",
+    "Unknown",
     "Afghanistan",
     "Albania",
     "Algeria",
@@ -74,7 +76,6 @@ COUNTRIES = [
     "Honduras",
     "Hungary",
     "Iceland",
-    "India",
     "Indonesia",
     "Iran",
     "Iraq",
@@ -196,3 +197,60 @@ COUNTRIES = [
     "Zambia",
     "Zimbabwe",
 ]
+
+STATES = (
+    ("Andaman and Nicobar Islands", "Andaman and Nicobar Islands"),
+    ("Andhra Pradesh", "Andhra Pradesh"),
+    ("Assam", "Assam"),
+    ("Bihar", "Bihar"),
+    ("Chandigarh", "Chandigarh"),
+    ("Chattisgarh", "Chattisgarh"),
+    ("Dadar and Nagar Haveli", "Dadar and Nagar Haveli"),
+    ("Daman and Diu", "Daman and Diu"),
+    ("Goa", "Goa"),
+    ("Gujarat", "Gujarat"),
+    ("Haryana", "Haryana"),
+    ("Himachal Pradesh", "Himachal Pradesh"),
+    ("Jammu and Kashmir", "Jammu and Kashmir"),
+    ("Jharkhand", "Jharkand"),
+    ("Karnataka", "Karnataka"),
+    ("Kerala", "Kerala"),
+    ("Ladakh", "Ladakh"),
+    ("Lakshadweep", "Lakshadweep"),
+    ("Madhya Pradesh", "Madhya Pradesh"),
+    ("Maharastra", "Maharastra"),
+    ("Manipur", "Manipur"),
+    ("Meghalaya", "Meghalaya"),
+    ("Mizoram", "Mizoram"),
+    ("Nagaland", "Nagaland"),
+    ("NCT of Delhi", "NCT of Delhi"),
+    ("Odisha", "Odisha"),
+    ("Puducherry", "Puducherry"),
+    ("Punjab", "Punjab"),
+    ("Rajasthan", "Rajasthan"),
+    ("Sikkim", "Sikkim"),
+    ("Tamil Nadu", "Tamil Nadu"),
+    ("Telengana", "Telengana"),
+    ("Tripura", "Tripura"),
+    ("Uttar Pradesh", "Uttar Pradesh"),
+    ("Uttarakhand", "Uttarakhand"),
+    ("West Bengal", "West Bengal"),
+)
+
+
+class PatientStatus:
+    HOSPITALISED = "Hospitalised"
+    RECOVERED = "Recovered"
+    DECEASED = "Deceased"
+    HOME_QUARANTINED = "Home Quarantined"
+
+    CHOICES = [HOSPITALISED, RECOVERED, DECEASED, HOME_QUARANTINED]
+
+
+class Gender:
+    MALE = "Male"
+    FEMALE = "Female"
+    OTHERS = "Others"
+    UNKNOWN = "Unknown"
+
+    CHOICES = [MALE, FEMALE, OTHERS, UNKNOWN]

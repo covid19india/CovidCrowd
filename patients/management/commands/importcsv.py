@@ -61,12 +61,16 @@ class Command(BaseCommand):
                         existing = None
 
                     if existing:
-                        print(f"Report with patient number {row['Patient number']} already exits as Report #{existing.id}. Skipping.")
+                        print(
+                            f"Report with patient number {row['Patient number']} already exits as Report #{existing.id}. Skipping."
+                        )
                         skipped += 1
                         continue
                 self._create_new_report(row)
                 counter += 1
-        print(f"SUCCESS: CSV File was imported. Reports created: {counter}, Skipped: {skipped}")
+        print(
+            f"SUCCESS: CSV File was imported. Reports created: {counter}, Skipped: {skipped}"
+        )
 
     @staticmethod
     def _create_new_report(row):

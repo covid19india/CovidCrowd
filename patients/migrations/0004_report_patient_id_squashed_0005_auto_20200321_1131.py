@@ -5,21 +5,24 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    replaces = [('patients', '0004_report_patient_id'), ('patients', '0005_auto_20200321_1131')]
+    replaces = [
+        ("patients", "0004_report_patient_id"),
+        ("patients", "0005_auto_20200321_1131"),
+    ]
 
     dependencies = [
-        ('patients', '0003_auto_20200321_0943'),
+        ("patients", "0003_auto_20200321_0943"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='report',
-            name='patient_id',
+            model_name="report",
+            name="patient_id",
             field=models.CharField(blank=True, max_length=10, null=True),
         ),
         migrations.AlterField(
-            model_name='patient',
-            name='government_id',
+            model_name="patient",
+            name="government_id",
             field=models.CharField(blank=True, max_length=20, null=True),
         ),
     ]

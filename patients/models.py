@@ -3,47 +3,9 @@ import requests
 from django.db import models
 from django.contrib.gis.db import models as geomodels
 from django.contrib.gis.geos import Point, Polygon
+from django.utils import timezone
 
-from .constants import COUNTRIES
-
-STATES = (
-    ("Andaman and Nicobar Islands", "Andaman and Nicobar Islands"),
-    ("Andhra Pradesh", "Andhra Pradesh"),
-    ("Assam", "Assam"),
-    ("Bihar", "Bihar"),
-    ("Chandigarh", "Chandigarh"),
-    ("Chattisgarh", "Chattisgarh"),
-    ("Dadar and Nagar Haveli", "Dadar and Nagar Haveli"),
-    ("Daman and Diu", "Daman and Diu"),
-    ("Goa", "Goa"),
-    ("Gujarat", "Gujarat"),
-    ("Haryana", "Haryana"),
-    ("Himachal Pradesh", "Himachal Pradesh"),
-    ("Jammu and Kashmir", "Jammu and Kashmir"),
-    ("Jharkhand", "Jharkand"),
-    ("Karnataka", "Karnataka"),
-    ("Kerala", "Kerala"),
-    ("Ladakh", "Ladakh"),
-    ("Lakshadweep", "Lakshadweep"),
-    ("Madhya Pradesh", "Madhya Pradesh"),
-    ("Maharastra", "Maharastra"),
-    ("Manipur", "Manipur"),
-    ("Meghalaya", "Meghalaya"),
-    ("Mizoram", "Mizoram"),
-    ("Nagaland", "Nagaland"),
-    ("NCT of Delhi", "NCT of Delhi"),
-    ("Odisha", "Odisha"),
-    ("Puducherry", "Puducherry"),
-    ("Punjab", "Punjab"),
-    ("Rajasthan", "Rajasthan"),
-    ("Sikkim", "Sikkim"),
-    ("Tamil Nadu", "Tamil Nadu"),
-    ("Telengana", "Telengana"),
-    ("Tripura", "Tripura"),
-    ("Uttar Pradesh", "Uttar Pradesh"),
-    ("Uttarakhand", "Uttarakhand"),
-    ("West Bengal", "West Bengal"),
-)
+from .constants import COUNTRIES, STATES, PatientStatus, Gender
 
 
 class Report(models.Model):
@@ -53,8 +15,6 @@ class Report(models.Model):
     CONVERTED = "C"
     INVALID = "I"
 
-    GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
-    STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
     REPORT_STATE_CHOICES = (
         (REPORTED, "Reported"),
         (VERIFIED, "Verified"),
@@ -62,14 +22,18 @@ class Report(models.Model):
         (CONVERTED, "Converted"),
         (INVALID, "Invalid"),
     )
-    diagnosed_date = models.DateField(null=True, blank=True)
+    diagnosed_date = models.DateField(default=timezone.now)
     age = models.IntegerField(null=True, blank=True)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
+    gender = models.CharField(
+        max_length=15, choices=((c, c) for c in Gender.CHOICES), null=True, blank=True
+    )
     detected_city = models.CharField(max_length=150, null=True, blank=True)
     detected_district = models.CharField(max_length=150, null=True, blank=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
     nationality = models.CharField(max_length=150, null=True, blank=True)
-    current_status = models.CharField(max_length=1, choices=STATUS_CHOICES, null=True)
+    current_status = models.CharField(
+        max_length=25, choices=((c, c) for c in PatientStatus.CHOICES), null=True
+    )
     notes = models.TextField(null=True, blank=True)
     current_location = models.CharField(max_length=150, null=True, blank=True)
     source = models.TextField(null=True, blank=True)
@@ -87,10 +51,10 @@ class Report(models.Model):
 
 
 class StatusUpdate(models.Model):
-    STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
-
     patient = models.ForeignKey("Patient", on_delete=models.CASCADE, null=False)
-    patient_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    patient_status = models.CharField(
+        max_length=25, choices=((c, c) for c in PatientStatus.CHOICES)
+    )
     source = models.TextField()
 
     # Meta fields
@@ -98,19 +62,17 @@ class StatusUpdate(models.Model):
 
 
 class Patient(geomodels.Model):
-    GENDER_CHOICES = (("M", "Male"), ("F", "Female"), ("O", "Other"))
-    STATUS_CHOICES = (("R", "Recovered"), ("H", "Hospitalized"), ("D", "Deceased"))
-    NATIONALITY_CHOICES = [("Indian", "Indian"), ("Others", "Others")] + [(c, c) for c in COUNTRIES]
-
     diagnosed_date = models.DateField()
     age = models.IntegerField(null=True)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    gender = models.CharField(max_length=15, choices=((c, c) for c in Gender.CHOICES))
     detected_city = models.CharField(max_length=150)
     detected_city_pt = geomodels.PointField()
     detected_district = models.CharField(max_length=150, null=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
-    nationality = models.CharField(max_length=150, choices=NATIONALITY_CHOICES)
-    current_status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    nationality = models.CharField(max_length=150, choices=((c, c) for c in COUNTRIES))
+    current_status = models.CharField(
+        max_length=25, choices=((c, c) for c in PatientStatus.CHOICES)
+    )
     status_change_date = models.DateField(null=True)
     notes = models.TextField()
     current_location = models.CharField(max_length=150)
@@ -158,7 +120,9 @@ class Patient(geomodels.Model):
     @staticmethod
     def get_point_for_location(city=None, state=None):
         point = Point(80, 20)
-        india = Polygon.from_bbox((35.6745457, 6.2325274, 97.395561, 68.1113787, )).prepared
+        india = Polygon.from_bbox(
+            (35.6745457, 6.2325274, 97.395561, 68.1113787,)
+        ).prepared
 
         if not (city or state):
             return point

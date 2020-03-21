@@ -6,53 +6,58 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('patients', '0001_initial'),
+        ("patients", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='report',
-            name='age',
+            model_name="report",
+            name="age",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='current_location',
+            model_name="report",
+            name="current_location",
             field=models.CharField(blank=True, max_length=150, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='detected_city',
+            model_name="report",
+            name="detected_city",
             field=models.CharField(blank=True, max_length=150, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='detected_district',
+            model_name="report",
+            name="detected_district",
             field=models.CharField(blank=True, max_length=150, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='diagnosed_date',
+            model_name="report",
+            name="diagnosed_date",
             field=models.DateField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='gender',
-            field=models.CharField(blank=True, choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other')], max_length=1, null=True),
+            model_name="report",
+            name="gender",
+            field=models.CharField(
+                blank=True,
+                choices=[("M", "Male"), ("F", "Female"), ("O", "Other")],
+                max_length=1,
+                null=True,
+            ),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='nationality',
+            model_name="report",
+            name="nationality",
             field=models.CharField(blank=True, max_length=150, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='notes',
+            model_name="report",
+            name="notes",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='report',
-            name='source',
+            model_name="report",
+            name="source",
             field=models.TextField(blank=True, null=True),
         ),
     ]
