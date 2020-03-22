@@ -2,6 +2,7 @@
 {% load patients_tags %}
 
 {% block content %}
+  <div style="min-height: 80vh">
   <h3 class="h4 my-2">Patient {{ patient.id }}</h3>
   <div class="row my-2">
     <!-- Diagnosed on -->
@@ -115,4 +116,5 @@
   <footer>
     <a href="/"> <i class="fa fa-angle-double-left"></i> Back</a>
   </footer>
+  </div>
 {% endblock %}
