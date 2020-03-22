@@ -96,9 +96,7 @@ class Command(BaseCommand):
         patient.detected_city = city
         patient.detected_district = row["Detected District"]
         state = row.get("Detected State", None).strip()
-        if state == "Delhi":
-            state = "NCT of Delhi"
-        elif state == "Telangana":
+        if state == "Telangana":
             state = "Telengana"
 
         patient.detected_state = state
