@@ -26,7 +26,7 @@ class ReportForm(forms.ModelForm):
         widgets = {
             "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
-            "diagnosed_date": forms.DateInput(attrs={"type": "date"}),
+            "diagnosed_date": forms.DateInput(attrs={"type": "text", "class": "datepicker"}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -66,7 +66,7 @@ class PatientForm(forms.ModelForm):
             "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 6}),
             "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
-            "diagnosed_date": forms.DateInput(attrs={"type": "date"}),
+            "diagnosed_date": forms.DateInput(attrs={"type": "text", "class": "datepicker"}),
         }
 
     def __init__(self, *args, **kwargs):

@@ -2,6 +2,7 @@
 {% load patients_tags %}
 
 {% block content %}
+  <div style="min-height: 80vh">
   <h3 class="h4 my-2">Patient {{ patient.id }}</h3>
   <div class="row my-2">
     <!-- Diagnosed on -->
@@ -89,7 +90,7 @@
         <div class="card-body">--</div>
       </div>
 
-      <!-- div class="card my-2">
+      <div class="card my-2">
         <div class="card-header"><strong>Contribute</strong></div>
         <div class="card-body">
           <ul class="p-0" style="list-style: none;">
@@ -107,7 +108,7 @@
             </li>
           </ul>
         </div>
-      </div -->
+      </div>
 
     </div>
   </div>
@@ -115,4 +116,5 @@
   <footer>
     <a href="/"> <i class="fa fa-angle-double-left"></i> Back</a>
   </footer>
+  </div>
 {% endblock %}
