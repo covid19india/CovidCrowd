@@ -10,6 +10,11 @@ from django_tables2.views import SingleTableMixin
 from django_tables2.export.views import ExportMixin
 from django_filters.views import FilterView
 
+#rest api imports
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework import permissions
+from .serializers import PatientSerializer
 
 from .forms import ReportForm, PatientForm, ErrorReportForm
 from .models import Report, Patient, ErrorReport
@@ -49,8 +54,8 @@ class PatientDetails(DetailView):
 
 def report(request):
     if request.method == "POST":
-        form = ReportForm(request.POST)        
-        unit_id = request.POST.get('detected_district')        
+        form = ReportForm(request.POST)
+        unit_id = request.POST.get('detected_district')
         form.fields['detected_district'].choices = [(unit_id, unit_id)]
         if form.is_valid():
             form.save()
@@ -170,5 +175,20 @@ def report_error(request):
             return redirect("patients:patient-details", patient_id)
     return redirect("patients:index")
 
+#API Views : Patient
+@api_view(['GET',])
+@permission_classes((permissions.IsAuthenticatedOrReadOnly,))
+def get_patient(request,id):
+    try:
+        patient = Patient.objects.get(id=id)
+        serializer = PatientSerializer(patient)
+    except : #return null objects for values that does not exist
+        serializer = PatientSerializer()
+    return Response(serializer.data)
 
-
+@api_view(['GET',])
+@permission_classes((permissions.IsAuthenticatedOrReadOnly,))
+def get_patients(request):
+    patient = Patient.objects.all()
+    serializer = PatientSerializer(patient,many=True)
+    return Response(serializer.data)
