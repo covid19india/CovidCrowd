@@ -43,6 +43,10 @@ class PatientDetails(DetailView):
 def report(request):
     if request.method == "POST":
         form = ReportForm(request.POST)
+        # print('----------->>',request.POST.get('detected_district'))
+        unit_id = request.POST.get('detected_district')
+        print(unit_id)
+        form.fields['detected_district'].choices = [(unit_id, unit_id)]
         if form.is_valid():
             form.save()
             return redirect("patients:thank_you")
