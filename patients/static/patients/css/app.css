@@ -26,3 +26,20 @@ th.desc:after {
     color: #5e72e4;
     content: "\f161";
 }
+
+.awesomplete {
+    border: 1px solid #cad1d7;
+    border-radius: .25rem;
+}
+.awesomplete > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.awesomplete > ul > li {
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+.awesomplete > ul > li:hover {
+    background-color: #efefef;
+}
