@@ -4,7 +4,7 @@ import csv
 from datetime import datetime
 from django.core.management.base import BaseCommand
 
-from patients.models import Report
+from patients.models import Patient
 from patients.constants import Gender, PatientStatus
 
 columns = [
@@ -58,47 +58,54 @@ class Command(BaseCommand):
                     continue
                 if row["Patient number"]:
                     try:
-                        existing = Report.objects.get(patient_id=row["Patient number"])
-                    except Report.DoesNotExist:
+                        existing = Patient.objects.get(unique_id=row["Patient number"])
+                    except Patient.DoesNotExist:
                         existing = None
 
                     if existing:
                         print(
-                            f"Report with patient number {row['Patient number']} already exits as Report #{existing.id}. Skipping."
+                            f"Patient with patient number {row['Patient number']} already exits as Patient #{existing.id}. Skipping."
                         )
                         skipped += 1
                         continue
-                self._create_new_report(row)
+                self._create_new_patient(row)
                 counter += 1
         print(
-            f"SUCCESS: CSV File was imported. Reports created: {counter}, Skipped: {skipped}"
+            f"SUCCESS: CSV File was imported. Patients created: {counter}, Skipped: {skipped}"
         )
 
     @staticmethod
-    def _create_new_report(row):
-        report = Report()
+    def _create_new_patient(row):
+        print(f"Adding patient {row['Patient number']}")
+        patient = Patient()
 
-        report.patient_id = row["Patient number"]
-        report.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
+        patient.unique_id = row["Patient number"]
+        patient.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
+        patient.status_change_date = datetime.strptime(row["Status Change Date"], "%d/%m/%Y")
         if row["Age Bracket"].strip():
-            report.age = int(row["Age Bracket"])
+            patient.age = int(row["Age Bracket"])
         if row["Gender"] == "M":
-            report.gender = Gender.MALE
+            patient.gender = Gender.MALE
         elif row["Gender"] == "F":
-            report.gender = Gender.FEMALE
+            patient.gender = Gender.FEMALE
         elif row["Gender"]:
-            report.gender = Gender.OTHERS
+            patient.gender = Gender.OTHERS
         else:
-            report.gender = Gender.UNKNOWN
-        report.detected_city = row["Detected City"]
-        report.detected_district = row["Detected District"]
-        report.detected_state = row["Detected State"]
-        report.nationality = ""
+            patient.gender = Gender.UNKNOWN
+        city = row.get("Detected City", None).strip()
+        patient.detected_city = city
+        patient.detected_district = row["Detected District"]
+        state = row.get("Detected State", None).strip()
+        patient.detected_state = state
+        patient.detected_city_pt = Patient.get_point_for_location(city=city, state=state)
+        patient.current_location_pt = patient.detected_city_pt
+        patient.nationality = ""
         if row["Current Status"] in PatientStatus.CHOICES:
-            report.current_status = row["Current Status"]
+            patient.current_status = row["Current Status"]
 
-        report.notes = row["Notes"]
-        report.source = "\n".join([row["Source_1"], row["Source_2"], row["Source_3"]])
-        report.nationality = row["Nationality"]
+        patient.notes = row["Notes"]
+        patient.source = "\n".join([row["Source_1"], row["Source_2"], row["Source_3"]]).strip()
+        patient.nationality = row["Nationality"]
 
-        report.save()
+
+        patient.save()
