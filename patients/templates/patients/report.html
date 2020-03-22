@@ -8,7 +8,23 @@
 {% endblock %}
 
 {% block JS %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script> <!--helps to AutoComplete -->
   <script>
+    // Start : AutoComplete Citys
+    var ajax = new XMLHttpRequest();
+    var city_data = "https://indian-cities-api-nocbegfhqg.now.sh/cities"
+    ajax.open("GET", city_data, true);
+    ajax.onload = function() {
+      citys = JSON.parse(ajax.responseText);
+      list = citys.map(function(entry) {
+        name = entry.City;
+        return name;
+      });
+      var input = document.getElementById("id_detected_city");
+      new Awesomplete(input, { list: list });
+    }; ajax.send();
+    //End : AutoComplete Citys
+
     $(document).ready(function() {
       $("#id_detected_state").change(function() {
         var selected_state = $("#id_detected_state").val();
@@ -36,7 +52,7 @@
   <script>
     $('.datepicker').datepicker({
       startDate: '-1d',
-      format: "dd/MM/yyyy"
+      format: "yyyy-mm-dd"
     });
   </script>
 {% endblock %}

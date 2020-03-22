@@ -5,7 +5,7 @@ from django.contrib.gis.db import models as geomodels
 from django.contrib.gis.geos import Point, Polygon
 from django.utils import timezone
 
-from .constants import COUNTRIES, STATES, PatientStatus, Gender
+from .constants import COUNTRIES, STATES, PatientStatus, Gender,CITIES,DISTRICT_CHOICES
 
 
 class Report(models.Model):
@@ -27,10 +27,10 @@ class Report(models.Model):
     gender = models.CharField(
         max_length=15, choices=((c, c) for c in Gender.CHOICES), null=True, blank=True
     )
-    detected_city = models.CharField(max_length=150, null=True, blank=True)
-    detected_district = models.CharField(max_length=150, null=True, choices=[], blank=True)
+    detected_city = models.CharField(max_length=150,null=True, blank=True)
+    detected_district = models.CharField(max_length=150, null=True, choices=((c, c) for c in DISTRICT_CHOICES), blank=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
-    nationality = models.CharField(max_length=150, null=True, blank=True)
+    nationality = models.CharField(max_length=150,choices=((c, c) for c in COUNTRIES),null=True, blank=True)
     current_status = models.CharField(
         max_length=25, choices=((c, c) for c in PatientStatus.CHOICES), null=True
     )
