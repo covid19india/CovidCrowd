@@ -9,24 +9,28 @@
 
 {% block JS %}
   <script>
-   $(document).ready(function() {
+    $(document).ready(function() {
       $("#id_detected_state").change(function() {
-            var selected_state = $("#id_detected_state").val()
+        var selected_state = $("#id_detected_state").val();
         //make ajax call
         $.post("/get_districts",
-        {
+          {
             state: selected_state,
             csrfmiddlewaretoken: '{{ csrf_token }}'
-        },
-        function(data, status){
-        $('#id_detected_district').empty();
-        $('#id_detected_district').append(new Option('--------', ''));
-        $.each(data.districts, function( index, value ) {
-            $('#id_detected_district').append(new Option(value, value));
-        });
-        });
-        });
-    </script>
+          },
+          function(data, status){
+            $('#id_detected_district')
+              .empty()
+              .append(new Option('--------', ''));
+
+            $.each(data.districts, function( index, value ) {
+              $('#id_detected_district').append(new Option(value, value));
+            });
+
+          });
+      });
+    });
+  </script>
 
   <script src="{% static "patients/js/plugins/bootstrap-datepicker.min.js" %}"></script>
   <script>
