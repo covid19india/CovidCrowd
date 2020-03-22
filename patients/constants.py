@@ -231,7 +231,7 @@ STATES = (
     ("Rajasthan", "Rajasthan"),
     ("Sikkim", "Sikkim"),
     ("Tamil Nadu", "Tamil Nadu"),
-    ("Telengana", "Telengana"),
+    ("Telangana", "Telangana"),
     ("Tripura", "Tripura"),
     ("Uttar Pradesh", "Uttar Pradesh"),
     ("Uttarakhand", "Uttarakhand"),
