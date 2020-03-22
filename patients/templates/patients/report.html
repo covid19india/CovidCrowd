@@ -1,7 +1,18 @@
 {% extends 'patients/_base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block content %}
   <h2 class="h2 mt-3">Report Patient</h2>
   {% crispy form form.helper %}
+{% endblock %}
+
+{% block JS %}
+  <script src="{% static "patients/js/plugins/bootstrap-datepicker.min.js" %}"></script>
+  <script>
+    $('.datepicker').datepicker({
+      startDate: '-1d',
+      format: "dd/MM/yyyy"
+    });
+  </script>
 {% endblock %}

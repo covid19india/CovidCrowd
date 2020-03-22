@@ -1,5 +1,7 @@
 {% extends "patients/_base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
+
 {% block content %}
   <h3 class="heading-title text-warning">
     <i class="fa fa-warning"></i> Important Note
@@ -33,4 +35,14 @@
   <h3 class="heading-title">Add New Patient</h3>
   {% crispy form form.helper %}
 
+{% endblock %}
+
+{% block JS %}
+  <script src="{% static "patients/js/plugins/bootstrap-datepicker.min.js" %}"></script>
+  <script>
+    $('.datepicker').datepicker({
+      startDate: '-1d',
+      format: "dd/MM/yyyy"
+    });
+  </script>
 {% endblock %}
