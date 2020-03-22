@@ -224,4 +224,7 @@ Temporary Items
 # PyCharm
 .idea
 
+# Visual Studio Code
+.vscode
+
 # End of https://www.gitignore.io/api/linux,macos,django,python
