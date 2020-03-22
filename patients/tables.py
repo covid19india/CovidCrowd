@@ -23,6 +23,7 @@ class ReportsTable(tables.Table):
             "gender",
             "current_status",
         )
+        attrs = {"class": "table table-responsive"}
 
 
 class PatientsTable(tables.Table):
@@ -45,3 +46,4 @@ class PatientsTable(tables.Table):
             "gender",
             "current_status",
         )
+        attrs = {"class": "table table-responsive"}
