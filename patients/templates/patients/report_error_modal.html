@@ -1,0 +1,33 @@
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div id="report-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title text-white">Report Error</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="my-3">
+            Select the fields whose information is either missing or wrong and provide
+            the correct details in the text box below.
+          </p>
+          <p class="my-2">
+            <strong>
+            <i class="fa fa-info-circle"></i>
+            If possible, provide links to websites, images, or anything that will help
+            us validate this information.
+            </strong>
+          </p>
+          {% crispy form form.helper %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
+

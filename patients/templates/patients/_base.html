@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="{% url 'patients:report' %}">Report Incident</a>
+        <a class="nav-item nav-link" href="{% url 'patients:report' %}">Report New Patient</a>
       </div>
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
@@ -115,10 +115,13 @@
     </div>
   </footer>
 
+  {% block modal %}
+  {% endblock %}
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="{% static 'patients/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'patients/js/bootstrap.bundle.min.js' %}"></script>
 
 
     {% block JS %}

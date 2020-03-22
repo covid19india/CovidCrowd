@@ -93,15 +93,17 @@
       <div class="card my-2">
         <div class="card-header"><strong>Contribute</strong></div>
         <div class="card-body">
-          <ul class="p-0" style="list-style: none;">
-            <li class="py-2">
+          If the information in this page is wrong or missing any details, kindly
+          provide us with the right or new information.
+          <ul class="mt-2 p-0" style="list-style: none;">
+            <!-- li class="py-2">
               <a href="" class="text-primary">
                 <i class="fa fa-plus-square-o"></i>
                 Add More Information
               </a>
-            </li>
+            </li -->
             <li class="py-2">
-              <a href="#" class="text-danger">
+              <a href="#" class="text-danger" data-toggle="modal" data-target="#report-modal" >
                 <i class="fa fa-exclamation-circle"></i>
                 Report Error
               </a>
@@ -113,8 +115,12 @@
     </div>
   </div>
 
-  <footer>
+  <div class="my-3">
     <a href="/"> <i class="fa fa-angle-double-left"></i> Back</a>
-  </footer>
   </div>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  {% include "patients/report_error_modal.html" %}
 {% endblock %}

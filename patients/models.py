@@ -151,3 +151,22 @@ class Patient(geomodels.Model):
                 point = p
                 break
         return point
+
+
+class ErrorReport(models.Model):
+    NEW = "N"
+    USED = "U"
+    DISCARDED = "D"
+
+    patient = models.ForeignKey("Patient", on_delete=models.CASCADE)
+    error_fields = models.TextField()
+    corrections = models.TextField()
+    status = models.CharField(
+        max_length=1,
+        choices=((NEW, "New"), (USED, "Used"), (DISCARDED, "Discarded")),
+        default=NEW
+    )
+    reported_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"ErrorReport #{self.id} for Patient {self.patient_id}"

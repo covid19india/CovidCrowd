@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.gis import forms as geoforms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-
+from django.urls import reverse
 
 from .models import Report, Patient, StatusUpdate
 
@@ -99,3 +99,32 @@ class FilterForm(forms.Form):
         self.helper.label_class = "col-md-2"
         self.helper.field_class = "col-md-10"
         self.helper.add_input(Submit("submit", "Apply Filters"))
+
+
+class ErrorReportForm(forms.Form):
+    patient_id = forms.IntegerField(widget=forms.HiddenInput())
+    errors = forms.MultipleChoiceField(
+        label="What details are wrong? (Use Ctrl+click to select multiple)",
+        choices=(
+            ("diagnosed_date", "Diagnosed Date"),
+            ("age", "Age"),
+            ("gender", "Gender"),
+            ("detected_city", "City"),
+            ("detected_district", "District"),
+            ("detected_state", "State"),
+            ("nationality", "Nationality"),
+            ("current_status", "Current Status of the Patient"),
+            ("status_change_date", "Date on which the patient status changed"),
+            ("current_location", "Current Location of the patient"),
+            ("others", "Any other information")
+        ),
+        widget=forms.SelectMultiple(attrs={"size": 10})
+    )
+    correction = forms.CharField(widget=forms.Textarea)
+
+    def __init__(self, *args, **kwargs):
+        super(ErrorReportForm, self).__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+        self.helper.add_input(Submit("submit", "Submit"))
+        self.helper.form_action = reverse("patients:report-error")

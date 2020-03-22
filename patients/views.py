@@ -11,8 +11,8 @@ from django_tables2.export.views import ExportMixin
 from django_filters.views import FilterView
 
 
-from .forms import ReportForm, PatientForm
-from .models import Report, Patient, STATES
+from .forms import ReportForm, PatientForm, ErrorReportForm
+from .models import Report, Patient, ErrorReport
 from .tables import ReportsTable, PatientsTable
 from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
@@ -38,6 +38,13 @@ class Index(SingleTableMixin, ExportMixin, FilterView):
 
 class PatientDetails(DetailView):
     model = Patient
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        form = ErrorReportForm(initial={"patient_id": self.object.id})
+        context["form"] = form
+        return context
 
 
 def report(request):
@@ -132,9 +139,34 @@ def mark_report_invalid(request):
 
     return redirect("patients:report-queue")
 
+
 def get_statewise_districts(request):
     state = request.POST.get('state').lower()
     if STATE_WISE_DISTRICTS.get(state):
         return JsonResponse({'success': True, 'districts': STATE_WISE_DISTRICTS[state]})
     else:
         return JsonResponse({'success': False})
+
+
+def report_error(request):
+    if request.method == "POST":
+        form = ErrorReportForm(request.POST)
+        if form.is_valid():
+            patient_id = form.cleaned_data["patient_id"]
+            r = ErrorReport()
+            r.patient_id = patient_id
+            error_fields = form.cleaned_data["errors"]
+            r.error_fields = ",".join(error_fields)
+            r.corrections = form.cleaned_data["correction"]
+            r.save()
+
+            messages.success(
+                request,
+                "Thank you for your correction.  A volunteer from the team will "
+                "review the information and make necessary changes."
+            )
+            return redirect("patients:patient-details", patient_id)
+    return redirect("patients:index")
+
+
+
