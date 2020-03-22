@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
+from django.http import JsonResponse
 from django.contrib.admin.views.decorators import staff_member_required
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
-
 from django_tables2.views import SingleTableMixin
 from django_tables2.export.views import ExportMixin
 from django_filters.views import FilterView
@@ -14,6 +14,7 @@ from django_filters.views import FilterView
 from .forms import ReportForm, PatientForm
 from .models import Report, Patient, STATES
 from .tables import ReportsTable, PatientsTable
+from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
 
 
@@ -130,3 +131,10 @@ def mark_report_invalid(request):
     del request.session["reviewing_report"]
 
     return redirect("patients:report-queue")
+
+def get_statewise_districts(request):
+    state = request.POST.get('state').lower()
+    if STATE_WISE_DISTRICTS.get(state):
+        return JsonResponse({'success': True, 'districts': STATE_WISE_DISTRICTS[state]})
+    else:
+        return JsonResponse({'success': False})

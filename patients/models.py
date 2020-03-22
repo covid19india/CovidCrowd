@@ -28,7 +28,7 @@ class Report(models.Model):
         max_length=15, choices=((c, c) for c in Gender.CHOICES), null=True, blank=True
     )
     detected_city = models.CharField(max_length=150, null=True, blank=True)
-    detected_district = models.CharField(max_length=150, null=True, blank=True)
+    detected_district = models.CharField(max_length=150, null=True, choices=[], blank=True)
     detected_state = models.CharField(max_length=150, choices=STATES, null=True)
     nationality = models.CharField(max_length=150, null=True, blank=True)
     current_status = models.CharField(

@@ -5,3 +5,26 @@
   <h2 class="h2 mt-3">Report Patient</h2>
   {% crispy form form.helper %}
 {% endblock %}
+
+{% block JS %}
+  <script>
+   $(document).ready(function() {
+      $("#id_detected_state").change(function() {
+            var selected_state = $("#id_detected_state").val()
+        //make ajax call
+        $.post("/get_districts",
+        {
+            state: selected_state,
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        },
+        function(data, status){
+        $('#id_detected_district').empty();
+        $('#id_detected_district').append(new Option('--------', ''));
+        $.each(data.districts, function( index, value ) {
+            $('#id_detected_district').append(new Option(value, value));
+        });
+        });
+        });
+    });
+  </script>
+{% endblock %}
