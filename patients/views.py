@@ -4,6 +4,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from django.utils.decorators import method_decorator
+from django.views.generic import DetailView
 
 from django_tables2.views import SingleTableMixin
 from django_tables2.export.views import ExportMixin
@@ -32,6 +33,10 @@ class Index(SingleTableMixin, ExportMixin, FilterView):
     filterset_class = PatientsTableFilter
     template_name = "patients/index.html"
     export_formats = ["csv", "json", "latex", "tsv"]
+
+
+class PatientDetails(DetailView):
+    model = Patient
 
 
 def report(request):

@@ -19,3 +19,14 @@ def links(value, autoescape=True):
         if line.startswith("http"):
             lines[i] = f'<a href="{line}" target="_blank">{line}</a>'
     return mark_safe("\n".join(lines))
+
+
+@register.inclusion_tag("patients/components/small_card.html")
+def small_card(title, text):
+    return {"title": title, "content": text}
+
+
+@register.filter(name='splitlines')
+def splitlines(value):
+    """Returns the value turned into a list."""
+    return value.split("\n")

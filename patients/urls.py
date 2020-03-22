@@ -8,6 +8,7 @@ urlpatterns = [
     path("", views.Index.as_view(), name="index"),
     path("report", views.report, name="report"),
     path("thank_you", views.thank_you, name="thank_you"),
+    path("patient/<int:pk>/", views.PatientDetails.as_view(), name="patient-details"),
     path("logout", views.logout, name="logout"),
     path("login-form", views.login_form, name="login-form"),
     path("review-report/<int:report_id>/", views.review_report, name="review-report"),

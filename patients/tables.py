@@ -25,6 +25,12 @@ class ReportsTable(tables.Table):
 
 
 class PatientsTable(tables.Table):
+    detail = tables.TemplateColumn(
+        template_name="patients/_show_patient_details_btn.html",
+        verbose_name="Details",
+        orderable=False,
+    )
+
     class Meta:
         model = Patient
         template_name = "django_tables2/bootstrap4.html"

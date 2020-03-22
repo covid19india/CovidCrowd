@@ -1,0 +1,118 @@
+{% extends "patients/_base.html" %}
+{% load patients_tags %}
+
+{% block content %}
+  <h3 class="h4 my-2">Patient {{ patient.id }}</h3>
+  <div class="row my-2">
+    <!-- Diagnosed on -->
+    <div class="col p-1">
+      {% small_card "Announced" patient.diagnosed_date %}
+    </div>
+    <!-- Gender card -->
+    <div class="col p-1">
+      {% small_card "Gender" patient.gender %}
+    </div>
+    <!-- Age card -->
+    <div class="col p-1">
+      {% if patient.age %}
+        {% small_card "Age" patient.age %}
+      {% else %}
+        {% small_card "Age" "--" %}
+      {% endif %}
+    </div>
+    <!-- Status card -->
+    <div class="col p-1">
+      {% small_card "Status" patient.current_status %}
+    </div>
+    <!-- State card -->
+    <div class="col p-1">
+      {% small_card "State" patient.detected_state %}
+    </div>
+    <!-- Nationality -->
+    <div class="col p-1">
+      {% small_card "Country" patient.nationality %}
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="col-12 col-md-8 p-1">
+      <div class="card">
+        <div class="card-header">
+          <strong>
+            Details
+          </strong>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>City:</strong> {{ patient.detected_city }}
+          </li>
+          <li class="list-group-item">
+            <strong>District:</strong> {{ patient.detected_district }}
+          </li>
+          <li class="list-group-item">
+            <strong>Notes:</strong> {{ patient.notes }}
+          </li>
+          <li class="list-group-item">
+            <h5 class="h5">Sources</h5>
+            <ol>
+              {% for source in patient.source|splitlines %}
+                <li class="my-2">
+                  <a href="{{ source }}">{{ source }}</a>
+                </li>
+              {% endfor %}
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 p-1">
+      <div class="card mb-2">
+        <div class="card-header"><strong>Status Change</strong></div>
+        <div class="card-body">
+          {% if not patient.status_change_date %}
+            NA
+          {% elif patient.status_change_date == patient.diagnosed_date %}
+            No updates available
+          {% else %}
+            <p>
+              <strong>Changed on: </strong> {{ patient.status_change_date }}
+            </p>
+            <p>
+              <strong>Current Status: </strong> {{ patient.current_status }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="card my-2">
+        <div class="card-header"><strong>Connected to</strong></div>
+        <div class="card-body">--</div>
+      </div>
+
+      <div class="card my-2">
+        <div class="card-header"><strong>Contribute</strong></div>
+        <div class="card-body">
+          <ul class="p-0" style="list-style: none;">
+            <li class="py-2">
+              <a href="" class="text-primary">
+                <i class="fa fa-plus-square-o"></i>
+                Add More Information
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="text-danger">
+                <i class="fa fa-exclamation-circle"></i>
+                Report Error
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <a href="/"> <i class="fa fa-angle-double-left"></i> Back</a>
+  </footer>
+{% endblock %}
