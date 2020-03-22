@@ -23,6 +23,7 @@ class ReportsTable(tables.Table):
             "gender",
             "current_status",
         )
+        attrs = {"class": "table table-responsive"}
 
 
 class PatientsTable(tables.Table):
@@ -35,7 +36,7 @@ class PatientsTable(tables.Table):
 
     class Meta:
         model = Patient
-        template_name = "django_tables2/bootstrap4.html"
+        template_name = "django_tables2/bootstrap.html"
         fields = (
             "id",
             "diagnosed_date",
@@ -45,3 +46,4 @@ class PatientsTable(tables.Table):
             "gender",
             "current_status",
         )
+        attrs = {"class": "table table-responsive"}

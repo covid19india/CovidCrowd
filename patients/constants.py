@@ -218,7 +218,7 @@ STATES = (
     ("Ladakh", "Ladakh"),
     ("Lakshadweep", "Lakshadweep"),
     ("Madhya Pradesh", "Madhya Pradesh"),
-    ("Maharastra", "Maharastra"),
+    ("Maharashtra", "Maharashtra"),
     ("Manipur", "Manipur"),
     ("Meghalaya", "Meghalaya"),
     ("Mizoram", "Mizoram"),

@@ -96,6 +96,11 @@ class Command(BaseCommand):
         patient.detected_city = city
         patient.detected_district = row["Detected District"]
         state = row.get("Detected State", None).strip()
+        if state == "Delhi":
+            state = "NCT of Delhi"
+        elif state == "Telangana":
+            state = "Telengana"
+
         patient.detected_state = state
         patient.detected_city_pt = Patient.get_point_for_location(city=city, state=state)
         patient.current_location_pt = patient.detected_city_pt
