@@ -15,4 +15,5 @@ urlpatterns = [
     path("add-patient", views.add_patient, name="add-patient"),
     path("report-invalid", views.mark_report_invalid, name="report-invalid"),
     path("report-queue", views.ReportQueue.as_view(), name="report-queue"),
+    path("get_districts", views.get_statewise_districts, name="get_districts"),
 ]
