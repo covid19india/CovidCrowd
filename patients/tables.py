@@ -9,6 +9,7 @@ class ReportsTable(tables.Table):
         verbose_name="Actions",
         orderable=False,
     )
+    diagnosed_date = tables.DateTimeColumn(format='d/M/Y')
 
     class Meta:
         model = Report
@@ -30,6 +31,7 @@ class PatientsTable(tables.Table):
         verbose_name="Details",
         orderable=False,
     )
+    diagnosed_date = tables.DateTimeColumn(format='d/M/Y')
 
     class Meta:
         model = Patient
