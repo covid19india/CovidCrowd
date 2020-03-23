@@ -7,31 +7,31 @@
   <div class="row my-2">
     <!-- Diagnosed on -->
     <div class="col p-1">
-      {% small_card "Announced" patient.diagnosed_date %}
+      {% small_card "Announced" patient.diagnosed_date "bullhorn" %}
     </div>
     <!-- Gender card -->
     <div class="col p-1">
-      {% small_card "Gender" patient.gender %}
+      {% small_card "Gender" patient.gender "venus-mars" %}
     </div>
     <!-- Age card -->
     <div class="col p-1">
       {% if patient.age %}
-        {% small_card "Age" patient.age %}
+        {% small_card "Age" patient.age "user-plus" %}
       {% else %}
-        {% small_card "Age" "--" %}
+        {% small_card "Age" "--" "user-plus" %}
       {% endif %}
     </div>
     <!-- Status card -->
     <div class="col p-1">
-      {% small_card "Status" patient.current_status %}
+      {% small_card "Status" patient.current_status "heartbeat" %}
     </div>
     <!-- State card -->
     <div class="col p-1">
-      {% small_card "State" patient.detected_state %}
+      {% small_card "State" patient.detected_state "map-marker" %}
     </div>
     <!-- Nationality -->
     <div class="col p-1">
-      {% small_card "Country" patient.nationality %}
+      {% small_card "Country" patient.nationality "globe" %}
     </div>
   </div>
 
@@ -56,9 +56,13 @@
           <li class="list-group-item">
             <h5 class="h5">Sources</h5>
             <ol>
-              {% for source in patient.source|splitlines %}
+              {% for source in patient.source_set.all %}
                 <li class="my-2">
-                  <a href="{{ source }}">{{ source }}</a>
+                  <a href="{{ source.url }}">
+                    {% if source.description %} {{ source.description }}
+                    {% else %} {{ source.url }}
+                    {% endif %}
+                  </a>
                 </li>
               {% endfor %}
             </ol>
@@ -87,7 +91,19 @@
 
       <div class="card my-2">
         <div class="card-header"><strong>Connected to</strong></div>
-        <div class="card-body">--</div>
+        <div class="card-body p-0">
+          <ul class="list-group list-group-flush">
+            {% for contact in patient.contacts.all %}
+              <li class="list-group-item">
+                <a href="{% url "patients:patient-details" contact.id %}">
+                  Patient {{ contact.unique_id }} from {{ contact.detected_city }}
+                  {% if contact.detected_city %},{% endif %}
+                  {{ contact.detected_state }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
 
       <div class="card my-2">
