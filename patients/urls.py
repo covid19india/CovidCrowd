@@ -6,6 +6,7 @@ app_name = "patients"
 
 urlpatterns = [
     path("", views.Index.as_view(), name="index"),
+    path("export", views.Export.as_view(), name="export"),
     path("report", views.report, name="report"),
     path("thank_you", views.thank_you, name="thank_you"),
     path("patient/<int:pk>/", views.PatientDetails.as_view(), name="patient-details"),
