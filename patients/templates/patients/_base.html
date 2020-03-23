@@ -32,7 +32,10 @@
   </head>
   <body>
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="{% url "patients:index" %}">Covid-19 India</a>
+    <a class="navbar-brand" href="{% url "patients:index" %}">
+      <img src="{% static "patients/img/covidcrowd.svg" %}" width="30" height="30" class="d-inline-block" alt=""/>
+      Covid-19 India
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-primary">
         <i class="fa fa-bars"></i>
