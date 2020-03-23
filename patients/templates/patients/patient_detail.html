@@ -1,4 +1,5 @@
 {% extends "patients/_base.html" %}
+{% load render_table from django_tables2 %}
 {% load patients_tags %}
 
 {% block content %}
@@ -130,7 +131,14 @@
 
     </div>
   </div>
-
+    <div class="card">
+      <div class="card-header">
+        <strong>
+          Patient travel history
+        </strong>
+      </div>
+    </div>
+    {% render_table history_table %}
   <div class="my-3">
     <a href="/"> <i class="fa fa-angle-double-left"></i> Back</a>
   </div>
