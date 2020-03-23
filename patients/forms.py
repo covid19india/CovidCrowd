@@ -11,16 +11,17 @@ class ReportForm(forms.ModelForm):
     class Meta:
         model = Report
         fields = [
+            "patient_id",
             "diagnosed_date",
             "age",
             "gender",
-            "detected_city",
+            "nationality",
             "detected_state",
             "detected_district",
-            "nationality",
+            "detected_city",
+            "current_location",
             "current_status",
             "notes",
-            "current_location",
             "source",
         ]
         widgets = {
@@ -28,6 +29,10 @@ class ReportForm(forms.ModelForm):
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "diagnosed_date": forms.DateInput(attrs={"type": "text", "class": "datepicker"}),
         }
+        labels = {
+            "patient_id": "Government Reference ID"
+        }
+        localized_fields = ("diagnosed_date", )
 
     def __init__(self, *args, **kwargs):
         super(ReportForm, self).__init__(*args, **kwargs)
@@ -71,19 +76,10 @@ class PatientForm(forms.ModelForm):
         super(PatientForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
-        self.helper.form_class = "form-horizontal mt-4"
         self.helper.wrapper_class = "row"
         self.helper.label_class = "col-md-2"
         self.helper.field_class = "col-md-10"
-
-        self.helper.add_input(Submit("submit", "Add new Patient"))
-        self.helper.add_input(
-            Submit(
-                "mark_verified",
-                "Mark Report Verified",
-                css_class="btn-default float-right",
-            )
-        )
+        self.helper.form_tag = False
 
 
 class FilterForm(forms.Form):
@@ -126,3 +122,17 @@ class ErrorReportForm(forms.Form):
         self.helper = FormHelper()
         self.helper.add_input(Submit("submit", "Submit"))
         self.helper.form_action = reverse("patients:report-error")
+
+
+class SourceForm(forms.Form):
+    url = forms.URLField()
+    description = forms.CharField(widget=forms.Textarea(attrs={"rows": 2}))
+
+    def __init__(self, *args, **kwargs):
+        super(SourceForm, self).__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+        self.helper.form_tag = False
+        self.helper.wrapper_class = "row"
+        self.helper.label_class = "col-md-2"
+        self.helper.field_class = "col-md-10"

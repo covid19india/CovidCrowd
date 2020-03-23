@@ -33,7 +33,20 @@
   <hr />
 
   <h3 class="heading-title">Add New Patient</h3>
-  {% crispy form form.helper %}
+
+  <form class="form-horizontal mt-4" method="POST">
+    {% crispy form form.helper %}
+    {{ sformset.management_form }}
+    {% for sform in sformset %}
+      {% crispy sform %}
+    {% endfor %}
+
+    <div class="form-group">
+      <input type="submit" name="submit" value="Add new Patient" class="btn btn-primary" id="submit-id-submit">
+      <input type="submit" name="mark_verified" value="Mark Report Verified" class="btn btn-primary btn-default float-right" id="submit-id-mark_verified">
+    </div>
+  </form>
+
 
 {% endblock %}
 

@@ -130,7 +130,6 @@ class Patient(geomodels.Model):
             )
         else:
             p.current_location_pt = p.detected_city_pt
-        p.source = report.source
         p.unique_id = report.patient_id
         return p
 

@@ -9,15 +9,15 @@ from django.views.generic import DetailView
 from django_tables2.views import SingleTableMixin
 from django_tables2.export.views import ExportMixin
 from django_filters.views import FilterView
+from django.forms import formset_factory
 
-#rest api imports
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import permissions
 from .serializers import PatientSerializer
 
-from .forms import ReportForm, PatientForm, ErrorReportForm
-from .models import Report, Patient, ErrorReport
+from .forms import ReportForm, PatientForm, ErrorReportForm, SourceForm
+from .models import Report, Patient, ErrorReport, Source
 from .tables import ReportsTable, PatientsTable, PatientsExportedTable
 from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
@@ -101,12 +101,16 @@ def add_patient(request):
 
     report = get_object_or_404(Report, pk=report_id)
     patient = Patient.from_report(report)
+    sourcelines = report.source.strip().split("\n")
+    SourceFormset = formset_factory(SourceForm, extra=len(sourcelines) - 1)
 
     if request.method == "POST":
         form = PatientForm(request.POST)
-        if form.is_valid():
+        sformset = SourceFormset(request.POST)
+
+        if form.is_valid() and sformset.is_valid():
             if "submit" in request.POST:
-                form.save()
+                patient = form.save()
                 report.report_state = report.CONVERTED
                 report.save()
                 messages.success(
@@ -122,14 +126,31 @@ def add_patient(request):
                     "One of the admins will review it shortly. Thank you for "
                     "verifying the report.",
                 )
+
+            for sform in sformset:
+                if sform.is_valid() and sform.has_changed():
+                    source = Source(
+                        url=sform.cleaned_data["url"],
+                        description=sform.cleaned_data["description"],
+                        patient=patient
+                    )
+                    source.save()
             del request.session["reviewing_report"]
             return redirect("patients:report-queue")
     else:
         form = PatientForm(instance=patient)
+        initials = []
+        for line in sourcelines:
+            if line.strip().startswith("http"):
+                initials.append({"url": line.strip(), "description": ""})
+            else:
+                initials.append({"url": line.strip(), "description": ""})
+        sformset = SourceFormset(initial=initials)
+
     return render(
         request,
         "patients/add_patient.html",
-        {"patient": patient, "form": form, "report_id": report_id},
+        {"patient": patient, "form": form, "sformset": sformset, "report_id": report_id},
     )
 
 
@@ -179,16 +200,14 @@ def report_error(request):
             return redirect("patients:patient-details", patient_id)
     return redirect("patients:index")
 
-#API Views : Patient
+
 @api_view(['GET',])
 @permission_classes((permissions.IsAuthenticatedOrReadOnly,))
 def get_patient(request,id):
-    try:
-        patient = Patient.objects.get(id=id)
-        serializer = PatientSerializer(patient)
-    except : #return null objects for values that does not exist
-        serializer = PatientSerializer()
+    patient = get_object_or_404(Patient, pk=id)
+    serializer = PatientSerializer(patient)
     return Response(serializer.data)
+
 
 @api_view(['GET',])
 @permission_classes((permissions.IsAuthenticatedOrReadOnly,))
@@ -196,3 +215,4 @@ def get_patients(request):
     patient = Patient.objects.all()
     serializer = PatientSerializer(patient,many=True)
     return Response(serializer.data)
+
