@@ -51,6 +51,12 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
+6. Start local development server
+
+```shell script
+python manage.py runserver
+```
+
 ## Populating the Database
 
 The Raw Data sheet from the Google Sheets is dumped as a CSV file into the `data`
