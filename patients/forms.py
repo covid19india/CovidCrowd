@@ -57,14 +57,12 @@ class PatientForm(forms.ModelForm):
             "nationality",
             "current_status",
             "notes",
-            "source",
             "current_location",
             "current_location_pt",
         ]
         widgets = {
             "detected_city_pt": geoforms.OSMWidget(attrs={"default_zoom": 6}),
             "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 6}),
-            "source": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
             "diagnosed_date": forms.DateInput(attrs={"type": "text", "class": "datepicker"}),
         }

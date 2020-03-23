@@ -79,7 +79,16 @@ class PatientHistory(geomodels.Model):
     updated_on = models.DateTimeField(auto_now_add=True, editable=False)
 
 
+class Source(models.Model):
+    url = models.URLField()
+    description = models.TextField(null=True)
+    patient = models.ForeignKey("Patient", on_delete=models.CASCADE)
+    is_verified = models.BooleanField(default=False)
+
+
 class Patient(geomodels.Model):
+    unique_id = models.CharField(max_length=10)
+    government_id = models.CharField(max_length=20, null=True, blank=True)
     diagnosed_date = models.DateField()
     age = models.IntegerField(null=True)
     gender = models.CharField(max_length=15, choices=((c, c) for c in Gender.CHOICES))
@@ -95,9 +104,6 @@ class Patient(geomodels.Model):
     notes = models.TextField()
     current_location = models.CharField(max_length=150)
     current_location_pt = geomodels.PointField()
-    source = models.TextField()
-    unique_id = models.CharField(max_length=10)
-    government_id = models.CharField(max_length=20, null=True, blank=True)
 
     contacts = models.ManyToManyField("self", blank=True)
 
@@ -158,7 +164,6 @@ class Patient(geomodels.Model):
 
         data = resp.json()
         for loc in data:
-            print(loc)
             try:
                 lon = float(loc["lon"])
                 lat = float(loc["lat"])
