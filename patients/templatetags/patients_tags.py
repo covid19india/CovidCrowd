@@ -22,8 +22,8 @@ def links(value, autoescape=True):
 
 
 @register.inclusion_tag("patients/components/small_card.html")
-def small_card(title, text):
-    return {"title": title, "content": text}
+def small_card(title, text, icon):
+    return {"title": title, "content": text, "icon": icon}
 
 
 @register.filter(name='splitlines')

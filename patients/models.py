@@ -5,7 +5,7 @@ from django.contrib.gis.db import models as geomodels
 from django.contrib.gis.geos import Point, Polygon
 from django.utils import timezone
 
-from .constants import COUNTRIES, STATES, PatientStatus, Gender,CITIES,DISTRICT_CHOICES
+from .constants import COUNTRIES, STATES, PatientStatus, Gender, DISTRICT_CHOICES, PatientHistoryType
 
 
 class Report(models.Model):
@@ -61,7 +61,27 @@ class StatusUpdate(models.Model):
     updated_on = models.DateTimeField(auto_now_add=True, editable=False)
 
 
+class PatientHistory(geomodels.Model):
+    patient = models.ForeignKey("Patient", on_delete=models.CASCADE, null=False)
+    time_from = models.DateTimeField(null=True)
+    time_to = models.DateTimeField(null=True)
+    address = models.TextField()
+    address_pt = geomodels.PointField()
+    type = models.CharField(
+        max_length=15, choices=((c, c) for c in PatientHistoryType.CHOICES), null=True
+    )
+    travel_mode = models.TextField(null=True)
+    place_name = models.TextField(null=True)
+    data_source = models.TextField()
+
+    # Meta fields
+    created_on = models.DateTimeField(auto_now_add=True, editable=False)
+    updated_on = models.DateTimeField(auto_now_add=True, editable=False)
+
+
 class Patient(geomodels.Model):
+    unique_id = models.CharField(max_length=10)
+    government_id = models.CharField(max_length=20, null=True, blank=True)
     diagnosed_date = models.DateField()
     age = models.IntegerField(null=True)
     gender = models.CharField(max_length=15, choices=((c, c) for c in Gender.CHOICES))
@@ -77,9 +97,6 @@ class Patient(geomodels.Model):
     notes = models.TextField()
     current_location = models.CharField(max_length=150)
     current_location_pt = geomodels.PointField()
-    source = models.TextField()
-    unique_id = models.CharField(max_length=10)
-    government_id = models.CharField(max_length=20, null=True, blank=True)
 
     contacts = models.ManyToManyField("self", blank=True)
 
@@ -113,7 +130,6 @@ class Patient(geomodels.Model):
             )
         else:
             p.current_location_pt = p.detected_city_pt
-        p.source = report.source
         p.unique_id = report.patient_id
         return p
 
@@ -128,11 +144,7 @@ class Patient(geomodels.Model):
             return point
 
         base_url = "https://nominatim.openstreetmap.org/search/"
-        payload = {"format": "json"}
-        if city:
-            payload["city"] = city
-        if state:
-            payload["state"] = state
+        payload = {"format": "json", "q": ",".join([city, state])}
 
         resp = requests.get(base_url, params=payload)
         if resp.status_code != 200:
@@ -140,7 +152,6 @@ class Patient(geomodels.Model):
 
         data = resp.json()
         for loc in data:
-            print(loc)
             try:
                 lon = float(loc["lon"])
                 lat = float(loc["lat"])
@@ -150,7 +161,15 @@ class Patient(geomodels.Model):
             if india.contains(p):
                 point = p
                 break
+        print(point)
         return point
+
+
+class Source(models.Model):
+    url = models.URLField()
+    description = models.TextField(null=True)
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    is_verified = models.BooleanField(default=False)
 
 
 class ErrorReport(models.Model):

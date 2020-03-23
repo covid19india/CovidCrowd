@@ -9,11 +9,16 @@ from django.views.generic import DetailView
 from django_tables2.views import SingleTableMixin
 from django_tables2.export.views import ExportMixin
 from django_filters.views import FilterView
+from django.forms import formset_factory
 
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework import permissions
+from .serializers import PatientSerializer
 
-from .forms import ReportForm, PatientForm, ErrorReportForm
-from .models import Report, Patient, ErrorReport
-from .tables import ReportsTable, PatientsTable
+from .forms import ReportForm, PatientForm, ErrorReportForm, SourceForm
+from .models import Report, Patient, ErrorReport, Source
+from .tables import ReportsTable, PatientsTable, PatientsExportedTable
 from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
 
@@ -36,6 +41,10 @@ class Index(SingleTableMixin, ExportMixin, FilterView):
     export_formats = ["csv", "json", "latex", "tsv"]
 
 
+class Export(Index):
+    table_class = PatientsExportedTable
+
+
 class PatientDetails(DetailView):
     model = Patient
 
@@ -49,8 +58,8 @@ class PatientDetails(DetailView):
 
 def report(request):
     if request.method == "POST":
-        form = ReportForm(request.POST)        
-        unit_id = request.POST.get('detected_district')        
+        form = ReportForm(request.POST)
+        unit_id = request.POST.get('detected_district')
         form.fields['detected_district'].choices = [(unit_id, unit_id)]
         if form.is_valid():
             form.save()
@@ -92,12 +101,16 @@ def add_patient(request):
 
     report = get_object_or_404(Report, pk=report_id)
     patient = Patient.from_report(report)
+    sourcelines = report.source.strip().split("\n")
+    SourceFormset = formset_factory(SourceForm, extra=len(sourcelines) - 1)
 
     if request.method == "POST":
         form = PatientForm(request.POST)
-        if form.is_valid():
+        sformset = SourceFormset(request.POST)
+
+        if form.is_valid() and sformset.is_valid():
             if "submit" in request.POST:
-                form.save()
+                patient = form.save()
                 report.report_state = report.CONVERTED
                 report.save()
                 messages.success(
@@ -113,14 +126,31 @@ def add_patient(request):
                     "One of the admins will review it shortly. Thank you for "
                     "verifying the report.",
                 )
+
+            for sform in sformset:
+                if sform.is_valid() and sform.has_changed():
+                    source = Source(
+                        url=sform.cleaned_data["url"],
+                        description=sform.cleaned_data["description"],
+                        patient=patient
+                    )
+                    source.save()
             del request.session["reviewing_report"]
             return redirect("patients:report-queue")
     else:
         form = PatientForm(instance=patient)
+        initials = []
+        for line in sourcelines:
+            if line.strip().startswith("http"):
+                initials.append({"url": line.strip(), "description": ""})
+            else:
+                initials.append({"url": line.strip(), "description": ""})
+        sformset = SourceFormset(initial=initials)
+
     return render(
         request,
         "patients/add_patient.html",
-        {"patient": patient, "form": form, "report_id": report_id},
+        {"patient": patient, "form": form, "sformset": sformset, "report_id": report_id},
     )
 
 
@@ -171,4 +201,18 @@ def report_error(request):
     return redirect("patients:index")
 
 
+@api_view(['GET',])
+@permission_classes((permissions.IsAuthenticatedOrReadOnly,))
+def get_patient(request,id):
+    patient = get_object_or_404(Patient, pk=id)
+    serializer = PatientSerializer(patient)
+    return Response(serializer.data)
+
+
+@api_view(['GET',])
+@permission_classes((permissions.IsAuthenticatedOrReadOnly,))
+def get_patients(request):
+    patient = Patient.objects.all()
+    serializer = PatientSerializer(patient,many=True)
+    return Response(serializer.data)
 

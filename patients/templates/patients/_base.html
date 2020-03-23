@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'patients/img/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'patients/img/favicon.png' %}" type="image/x-icon">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'patients/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'patients/css/argon-design-system.min.css' %}" />
@@ -28,7 +32,10 @@
   </head>
   <body>
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="{% url "patients:index" %}">Covid-19 India</a>
+    <a class="navbar-brand" href="{% url "patients:index" %}">
+      <img src="{% static "patients/img/covidcrowd.svg" %}" width="30" height="30" class="d-inline-block" alt=""/>
+      Covid-19 India
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-primary">
         <i class="fa fa-bars"></i>
@@ -105,13 +112,25 @@
   </main>
 
   <footer class="mt-5 p-5 border-top bg-lighter">
-    <div class="text-gray-dark text-center">
-      <small>
-        The data on this site is curated by a team of volunteers under the umbrella of
-        <a href="http://covid19india.org">Covid19India.org</a> from multiple sources
-        including news reports, Twitter posts and official Govt Websites like the
-        <a href="https://www.mohfw.gov.in/">MoFHW</a> site.
-      </small>
+    <div class="row text-gray-dark text-center">
+      <div class="col">
+        <small>
+          The data on this site is curated by a team of volunteers under the umbrella of
+          <a href="http://covid19india.org">Covid19India.org</a> from multiple sources
+          including news reports, Twitter posts and official Govt Websites like the
+          <a href="https://www.mohfw.gov.in/">MoFHW</a> site.
+        </small>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col text-center">
+        <a class="github-button" href="https://github.com/covid19india/CovidCrowd/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork covid19india/CovidCrowd on GitHub">
+          Fork on Github
+        </a>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="covid19indiaorg" data-hashtags="covid19india" data-dnt="true" data-show-count="false">
+          Tweet
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -126,5 +145,7 @@
 
     {% block JS %}
     {% endblock %}
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
