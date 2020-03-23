@@ -109,13 +109,25 @@
   </main>
 
   <footer class="mt-5 p-5 border-top bg-lighter">
-    <div class="text-gray-dark text-center">
-      <small>
-        The data on this site is curated by a team of volunteers under the umbrella of
-        <a href="http://covid19india.org">Covid19India.org</a> from multiple sources
-        including news reports, Twitter posts and official Govt Websites like the
-        <a href="https://www.mohfw.gov.in/">MoFHW</a> site.
-      </small>
+    <div class="row text-gray-dark text-center">
+      <div class="col">
+        <small>
+          The data on this site is curated by a team of volunteers under the umbrella of
+          <a href="http://covid19india.org">Covid19India.org</a> from multiple sources
+          including news reports, Twitter posts and official Govt Websites like the
+          <a href="https://www.mohfw.gov.in/">MoFHW</a> site.
+        </small>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col text-center">
+        <a class="github-button" href="https://github.com/covid19india/CovidCrowd/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork covid19india/CovidCrowd on GitHub">
+          Fork on Github
+        </a>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="covid19indiaorg" data-hashtags="covid19india" data-dnt="true" data-show-count="false">
+          Tweet
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -130,5 +142,7 @@
 
     {% block JS %}
     {% endblock %}
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
