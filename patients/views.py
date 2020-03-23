@@ -18,7 +18,7 @@ from .serializers import PatientSerializer
 
 from .forms import ReportForm, PatientForm, ErrorReportForm
 from .models import Report, Patient, ErrorReport
-from .tables import ReportsTable, PatientsTable
+from .tables import ReportsTable, PatientsTable, PatientsExportedTable
 from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
 
@@ -39,6 +39,10 @@ class Index(SingleTableMixin, ExportMixin, FilterView):
     filterset_class = PatientsTableFilter
     template_name = "patients/index.html"
     export_formats = ["csv", "json", "latex", "tsv"]
+
+
+class Export(Index):
+    table_class = PatientsExportedTable
 
 
 class PatientDetails(DetailView):

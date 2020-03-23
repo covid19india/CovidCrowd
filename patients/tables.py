@@ -47,3 +47,31 @@ class PatientsTable(tables.Table):
             "current_status",
         )
         attrs = {"class": "table table-responsive"}
+
+
+class PatientsExportedTable(tables.Table):
+    diagnosed_date = tables.DateTimeColumn(format='d/M/Y')
+
+    class Meta:
+        model = Patient
+        fields = (
+            "id",
+            "unique_id",
+            "government_id",
+            "diagnosed_date",
+            "age",
+            "gender",
+            "detected_city",
+            "detected_city_pt",
+            "detected_district",
+            "detected_state",
+            "nationality",
+            "current_status",
+            "status_change_date",
+            "notes",
+            "current_location",
+            "current_location_pt",
+            "created_on",
+            "updated_on",
+            "contacts"
+        )

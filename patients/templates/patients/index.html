@@ -27,7 +27,7 @@
     <strong>Download </strong>
     {% for format in view.export_formats %}
       <span class="ml-2">
-        <a href="{% export_url format %}">
+        <a href="{% url 'patients:export' %}{% export_url format %}">
           <code>{{ format | upper }}</code>
         </a>
      </span>
