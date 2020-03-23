@@ -145,11 +145,7 @@ class Patient(geomodels.Model):
             return point
 
         base_url = "https://nominatim.openstreetmap.org/search/"
-        payload = {"format": "json"}
-        if city:
-            payload["city"] = city
-        if state:
-            payload["state"] = state
+        payload = {"format": "json", "q": ",".join([city, state])}
 
         resp = requests.get(base_url, params=payload)
         if resp.status_code != 200:
@@ -166,6 +162,7 @@ class Patient(geomodels.Model):
             if india.contains(p):
                 point = p
                 break
+        print(point)
         return point
 
 
