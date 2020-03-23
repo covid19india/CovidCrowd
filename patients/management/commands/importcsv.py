@@ -7,7 +7,7 @@ from datetime import datetime
 from django.contrib.gis.geos import Point
 from django.core.management.base import BaseCommand
 from django.utils.timezone import make_aware
-from patients.models import Patient, PatientHistory
+from patients.models import Patient, PatientHistory, Source
 from patients.constants import Gender, PatientStatus
 
 columns = [
@@ -40,7 +40,8 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("csvfile", nargs=1, type=str)
-        parser.add_argument("--type", action="store", type=str, choices=["raw_data", "history_data"], default="raw_data")
+        parser.add_argument("--type", action="store", type=str, choices=["patients", "travel"],
+                            default="patients")
 
     def handle(self, *args, **options):
         filepath = options["csvfile"]
@@ -56,14 +57,13 @@ class Command(BaseCommand):
         with open(filepath, "r") as fp:
             reader = csv.DictReader(fp)
             print(file_type)
-            if(file_type == "raw_data"):
+            if file_type == "patients":
                 self._patient_data_import(reader)
-            elif(file_type == "history_data"):
+            elif file_type == "travel":
                 self._travel_history_import(reader)
             else:
                 print(f"Cannot import file data type: {file_type}")
                 return
-
 
     def _patient_data_import(self, reader):
         counter = 0
@@ -96,8 +96,8 @@ class Command(BaseCommand):
         patient = Patient()
 
         patient.unique_id = row["Patient number"]
+        patient.government_id = row["State Patient Number"]
         patient.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
-        patient.status_change_date = datetime.strptime(row["Status Change Date"], "%d/%m/%Y")
         if row["Age Bracket"].strip():
             patient.age = int(row["Age Bracket"])
         if row["Gender"] == "M":
@@ -119,13 +119,32 @@ class Command(BaseCommand):
         patient.nationality = ""
         if row["Current Status"] in PatientStatus.CHOICES:
             patient.current_status = row["Current Status"]
+        patient.status_change_date = datetime.strptime(row["Status Change Date"], "%d/%m/%Y")
 
         patient.notes = row["Notes"]
-        patient.source = "\n".join([row["Source_1"], row["Source_2"], row["Source_3"]]).strip()
+        if row["Backup Notes"].strip() and row["Backup Notes"] != row["Notes"]:
+            patient.notes += ".\n" + row["Backup Notes"]
         patient.nationality = row["Nationality"]
-
-
         patient.save()
+
+        links = row["Contracted from which Patient (Suspected)"].split(",")
+        for link in links:
+            link = link.strip().strip("P")
+            try:
+                contact = Patient.objects.get(unique_id=link)
+                patient.contacts.add(contact)
+            except Patient.DoesNotExist:
+                continue
+        patient.save()
+
+        for source in ["Source_1", "Source_2", "Source_3"]:
+            text = row.get(source, "")
+            if not text:
+                continue
+            if text.startswith("http") or text.startswith("www"):
+                patient.source_set.create(url=text, is_verified=True)
+            else:
+                patient.source_set.create(description=text, is_verified=True)
 
     def _travel_history_import(self, reader):
         counter = 0

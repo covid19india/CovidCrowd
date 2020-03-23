@@ -79,13 +79,6 @@ class PatientHistory(geomodels.Model):
     updated_on = models.DateTimeField(auto_now_add=True, editable=False)
 
 
-class Source(models.Model):
-    url = models.URLField()
-    description = models.TextField(null=True)
-    patient = models.ForeignKey("Patient", on_delete=models.CASCADE)
-    is_verified = models.BooleanField(default=False)
-
-
 class Patient(geomodels.Model):
     unique_id = models.CharField(max_length=10)
     government_id = models.CharField(max_length=20, null=True, blank=True)
@@ -174,6 +167,13 @@ class Patient(geomodels.Model):
                 point = p
                 break
         return point
+
+
+class Source(models.Model):
+    url = models.URLField()
+    description = models.TextField(null=True)
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    is_verified = models.BooleanField(default=False)
 
 
 class ErrorReport(models.Model):
