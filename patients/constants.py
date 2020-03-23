@@ -266,3 +266,10 @@ class Gender:
     UNKNOWN = "Unknown"
 
     CHOICES = [MALE, FEMALE, OTHERS, UNKNOWN]
+
+
+class PatientHistoryType:
+    PLACE_VISIT = "placeVisit"
+    TRAVEL = "travel"
+
+    CHOICES = [PLACE_VISIT, TRAVEL]

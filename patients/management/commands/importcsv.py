@@ -1,10 +1,13 @@
 import os.path
 import csv
+import re
 
 from datetime import datetime
-from django.core.management.base import BaseCommand
 
-from patients.models import Patient
+from django.contrib.gis.geos import Point
+from django.core.management.base import BaseCommand
+from django.utils.timezone import make_aware
+from patients.models import Patient, PatientHistory
 from patients.constants import Gender, PatientStatus
 
 columns = [
@@ -37,6 +40,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("csvfile", nargs=1, type=str)
+        parser.add_argument("--type", action="store", type=str, choices=["raw_data", "history_data"], default="raw_data")
 
     def handle(self, *args, **options):
         filepath = options["csvfile"]
@@ -44,32 +48,44 @@ class Command(BaseCommand):
             print("Error! Missing CSV File Path")
             return
         filepath = filepath[0]
+        file_type = options["type"]
         if not os.path.isfile(filepath):
             print(f"Error! Cannot find file at: {filepath}")
             return
 
-        counter = 0
-        skipped = 0
         with open(filepath, "r") as fp:
             reader = csv.DictReader(fp)
-            for row in reader:
-                if not row["Date Announced"]:
+            print(file_type)
+            if(file_type == "raw_data"):
+                self._patient_data_import(reader)
+            elif(file_type == "history_data"):
+                self._travel_history_import(reader)
+            else:
+                print(f"Cannot import file data type: {file_type}")
+                return
+
+
+    def _patient_data_import(self, reader):
+        counter = 0
+        skipped = 0
+        for row in reader:
+            if not row["Date Announced"]:
+                skipped += 1
+                continue
+            if row["Patient number"]:
+                try:
+                    existing = Patient.objects.get(unique_id=row["Patient number"])
+                except Patient.DoesNotExist:
+                    existing = None
+
+                if existing:
+                    print(
+                        f"Patient with patient number {row['Patient number']} already exits as Patient #{existing.id}. Skipping."
+                    )
                     skipped += 1
                     continue
-                if row["Patient number"]:
-                    try:
-                        existing = Patient.objects.get(unique_id=row["Patient number"])
-                    except Patient.DoesNotExist:
-                        existing = None
-
-                    if existing:
-                        print(
-                            f"Patient with patient number {row['Patient number']} already exits as Patient #{existing.id}. Skipping."
-                        )
-                        skipped += 1
-                        continue
-                self._create_new_patient(row)
-                counter += 1
+            self._create_new_patient(row)
+            counter += 1
         print(
             f"SUCCESS: CSV File was imported. Patients created: {counter}, Skipped: {skipped}"
         )
@@ -110,3 +126,67 @@ class Command(BaseCommand):
 
 
         patient.save()
+
+    def _travel_history_import(self, reader):
+        counter = 0
+        skipped = 0
+        patient_id_pattern = re.compile("[P|R](\d+)")
+        for row in reader:
+            if not row['PID'] or not row['Address']:
+                print(f"Cannot import row without PID or Address")
+                skipped += 1
+                continue
+            try:
+                matches = patient_id_pattern.match(row["PID"])
+                if not matches:
+                    print(f"Patient ID is specified in a wrong format: {row['PID']}")
+                    skipped += 1
+                    continue
+                patient_id = int(matches.groups()[0])
+                address = row['Address']
+                patient = Patient.objects.get(unique_id=patient_id)
+                # Using a text field might not be the best approach to find duplicates.
+                # But I can't find any other field which can be used
+                history = PatientHistory.objects.filter(patient_id=patient_id,address=address)
+                if history.exists():
+                    print(f"Patient history already exists for patient: {patient_id} at address: {address}")
+                    skipped += 1
+                    continue
+            except (Patient.DoesNotExist):
+                print(f"Patient not found: {row['PID']} Skipping the history")
+                skipped += 1
+                continue
+            self._create_patient_history(row, patient)
+            counter += 1
+        print(
+            f"SUCCESS: CSV File was imported. History entries created: {counter}, Skipped: {skipped}"
+        )
+
+    def _create_patient_history(self, row, patient):
+        print(f"Creating new travel history for patient: {row['PID']}")
+
+        history = PatientHistory()
+        history.patient = patient
+        history.address = row['Address']
+
+        history.time_from = self._safe_parse_datetime(row["time_from"])
+        history.time_to = self._safe_parse_datetime(row["time_to"])
+        if row["lat_long"] is not None and row["lat_long"].strip() != "":
+            lat, long = tuple(map(lambda x: float(x), row["lat_long"].split(",")[0:2]))
+            history.address_pt = Point(lat, long)
+        else:
+            history.address_pt = Point(80, 20)
+        history.type = row['Type']
+        history.travel_mode = row['Mode of Travel']
+        history.place_name = row['PlaceName']
+        history.data_source = row['DataSource']
+
+        history.save()
+
+    @staticmethod
+    def _safe_parse_datetime(value):
+        try:
+            parsed = make_aware(datetime.strptime(value, "%d/%m/%Y %H:%M:%S"))
+            return parsed
+        except ValueError:
+            return None

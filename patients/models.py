@@ -5,7 +5,7 @@ from django.contrib.gis.db import models as geomodels
 from django.contrib.gis.geos import Point, Polygon
 from django.utils import timezone
 
-from .constants import COUNTRIES, STATES, PatientStatus, Gender,CITIES,DISTRICT_CHOICES
+from .constants import COUNTRIES, STATES, PatientStatus, Gender, DISTRICT_CHOICES, PatientHistoryType
 
 
 class Report(models.Model):
@@ -58,6 +58,24 @@ class StatusUpdate(models.Model):
     source = models.TextField()
 
     # Meta fields
+    updated_on = models.DateTimeField(auto_now_add=True, editable=False)
+
+
+class PatientHistory(geomodels.Model):
+    patient = models.ForeignKey("Patient", on_delete=models.CASCADE, null=False)
+    time_from = models.DateTimeField(null=True)
+    time_to = models.DateTimeField(null=True)
+    address = models.TextField()
+    address_pt = geomodels.PointField()
+    type = models.CharField(
+        max_length=15, choices=((c, c) for c in PatientHistoryType.CHOICES), null=True
+    )
+    travel_mode = models.TextField(null=True)
+    place_name = models.TextField(null=True)
+    data_source = models.TextField()
+
+    # Meta fields
+    created_on = models.DateTimeField(auto_now_add=True, editable=False)
     updated_on = models.DateTimeField(auto_now_add=True, editable=False)
 
 
