@@ -1,6 +1,6 @@
 import django_filters
 
-from .models import Report
+from .models import Report, ErrorReport
 from .forms import FilterForm
 
 
@@ -26,5 +26,17 @@ class PatientsTableFilter(django_filters.FilterSet):
             "detected_city",
             "gender",
             "current_status",
+        )
+        form = FilterForm
+
+class ErrorReportsTableFilter(django_filters.FilterSet):
+    class Meta:
+        model = ErrorReport
+        fields = (
+            "patient__id",
+            "error_fields",
+            "corrections",
+            "status",
+            "reported_on",
         )
         form = FilterForm

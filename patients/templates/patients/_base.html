@@ -61,9 +61,15 @@
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
           {% if user.is_staff %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'patients:report-queue' %}">Review Queue</a>
-            </li>
+          <li class="nav-item dropdown show">
+            <a class="nav-link" href="#" id="review-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Review Queue's <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="review-dropdown">
+            <a class="dropdown-item" href="{% url 'patients:report-queue' %}">Review Queue</a>
+            <a class="dropdown-item" href="{% url 'patients:error-report-queue' %}">Error Review Queue</a>
+            </div>
+          </li>
           {% endif %}
           <li class="nav-item dropdown show">
             <a class="nav-link" href="#" id="user-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

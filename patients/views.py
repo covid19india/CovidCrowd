@@ -18,10 +18,18 @@ from .serializers import PatientSerializer
 
 from .forms import ReportForm, PatientForm, ErrorReportForm, SourceForm
 from .models import Report, Patient, ErrorReport, Source
-from .tables import ReportsTable, PatientsTable, PatientsExportedTable
+from .tables import ReportsTable, PatientsTable, PatientsExportedTable, ErrorReportsTable
 from .constants import STATE_WISE_DISTRICTS
-from .filters import ReportsTableFilter, PatientsTableFilter
+from .filters import ReportsTableFilter, PatientsTableFilter, ErrorReportsTableFilter
 
+@method_decorator(staff_member_required, name="dispatch")
+class ErrorReportQueue(SingleTableMixin, FilterView):
+    model = ErrorReport
+    queryset = ErrorReport.objects.all().order_by('-status')
+    table_class = ErrorReportsTable
+    filterset_class = ErrorReportsTableFilter
+
+    template_name = "patients/report_list.html"
 
 @method_decorator(staff_member_required, name="dispatch")
 class ReportQueue(SingleTableMixin, FilterView):
@@ -215,4 +223,3 @@ def get_patients(request):
     patient = Patient.objects.all()
     serializer = PatientSerializer(patient,many=True)
     return Response(serializer.data)
-

@@ -1,6 +1,6 @@
 import django_tables2 as tables
 
-from .models import Report, Patient
+from .models import Report, Patient, ErrorReport
 
 
 class ReportsTable(tables.Table):
@@ -75,3 +75,22 @@ class PatientsExportedTable(tables.Table):
             "updated_on",
             "contacts"
         )
+
+class ErrorReportsTable(tables.Table):
+    review = tables.TemplateColumn(
+        template_name="patients/_review_btn.html",
+        verbose_name="Actions",
+        orderable=False,
+    )
+
+    class Meta:
+        model = ErrorReport
+        template_name = "django_tables2/bootstrap4.html"
+        fields = (
+            "patient__id",
+            "error_fields",
+            "corrections",
+            "status",
+            "reported_on",
+        )
+        attrs = {"class": "table table-responsive"}
