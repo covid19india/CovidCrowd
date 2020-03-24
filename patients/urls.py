@@ -1,17 +1,19 @@
 from django.urls import path
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 
 from . import views
 
 app_name = "patients"
 
 urlpatterns = [
-    path("", views.Index.as_view(), name="index"),
-    path("export", views.Export.as_view(), name="export"),
-    path("report", views.report, name="report"),
-    path("thank_you", views.thank_you, name="thank_you"),
-    path("patient/<int:pk>/", views.PatientDetails.as_view(), name="patient-details"),
+    path("", cache_page(10*60)(vary_on_cookie(views.Index.as_view())), name="index"),
+    path("export", cache_page(10*60)(views.Export.as_view()), name="export"),
+    path("report", cache_page(60*60)(views.report), name="report"),
+    path("thank_you", cache_page(24*60*60)(views.thank_you), name="thank_you"),
+    path("patient/<int:pk>/", cache_page(10*60)(vary_on_cookie(views.PatientDetails.as_view())), name="patient-details"),
     path("logout", views.logout, name="logout"),
-    path("login-form", views.login_form, name="login-form"),
+    path("login-form", cache_page(24*60*60)(views.login_form), name="login-form"),
     path("review-report/<int:report_id>/", views.review_report, name="review-report"),
     path("add-patient", views.add_patient, name="add-patient"),
     path("report-invalid", views.mark_report_invalid, name="report-invalid"),
