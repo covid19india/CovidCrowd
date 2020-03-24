@@ -1,11 +1,16 @@
 from django.contrib.gis.admin import OSMGeoAdmin
 from django.contrib import admin
 
-from .models import Report, Patient, ErrorReport, Source
+from .models import Report, Patient, ErrorReport, Source, PatientHistory
 
 
 @admin.register(Patient)
 class PatientAdmin(OSMGeoAdmin):
+    pass
+
+
+@admin.register(Patient)
+class PatientHistoryAdmin(OSMGeoAdmin):
     pass
 
 
