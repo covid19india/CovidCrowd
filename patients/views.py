@@ -1,26 +1,28 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
-from django.http import JsonResponse
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth import logout as auth_logout
+from django.contrib.auth.decorators import login_required
+from django.forms import formset_factory
+from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
-from django_tables2.views import SingleTableMixin
-from django_tables2.export.views import ExportMixin
 from django_filters.views import FilterView
-from django.forms import formset_factory
-
+from django_tables2.export.views import ExportMixin
+from django_tables2.views import SingleTableMixin
+from rest_framework import permissions
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from rest_framework import permissions
-from .serializers import PatientSerializer
 
-from .forms import ReportForm, PatientForm, ErrorReportForm, SourceForm
-from .models import Report, Patient, ErrorReport, Source
-from .tables import ReportsTable, PatientsTable, PatientsExportedTable
 from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
+from .forms import ReportForm, PatientForm, ErrorReportForm
+from .forms import SourceForm
+from .models import Report, Patient, ErrorReport, PatientHistory
+from .models import Source
+from .serializers import PatientSerializer
+from .tables import PatientsExportedTable
+from .tables import ReportsTable, PatientsTable, PatientHistoryTable
 
 
 @method_decorator(staff_member_required, name="dispatch")
@@ -52,7 +54,9 @@ class PatientDetails(DetailView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         form = ErrorReportForm(initial={"patient_id": self.object.id})
+        history_table = PatientHistoryTable(PatientHistory.objects.filter(patient_id=self.object.id).order_by('time_from'))
         context["form"] = form
+        context["history_table"] = history_table
         return context
 
 
