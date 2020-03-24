@@ -47,6 +47,7 @@ class PatientsTable(tables.Table):
             "current_status",
         )
         attrs = {"class": "table table-responsive"}
+        order_by = "-id"
 
 
 class PatientsExportedTable(tables.Table):
