@@ -57,6 +57,10 @@ class PatientDetails(DetailView):
         history_table = PatientHistoryTable(PatientHistory.objects.filter(patient_id=self.object.id).order_by('time_from'))
         context["form"] = form
         context["history_table"] = history_table
+
+        if self.request.user.is_staff:
+            context["error_report_count"] = ErrorReport.objects.filter(patient=self.object, status=ErrorReport.NEW).count()
+
         return context
 
 

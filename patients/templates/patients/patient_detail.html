@@ -4,7 +4,22 @@
 
 {% block content %}
   <div style="min-height: 80vh">
-  <h3 class="h4 my-2">Patient {{ patient.id }}</h3>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h3 class="h4 my-2">Patient {{ patient.id }}</h3>
+    </div>
+    <div class="col-12 col-md-6 text-right">
+      {% if user.is_staff and error_report_count %}
+        <span class="text-danger">
+          <i class="fa fa-exclamation-triangle"></i> {{ error_report_count }}
+          error{{ error_report_count|pluralize:",s" }} reported
+        </span>
+        <a href="" class="btn btn-outline-primary btn-sm ml-2">Review</a>
+      {% endif %}
+
+
+    </div>
+  </div>
   <div class="row my-2">
     <!-- Diagnosed on -->
     <div class="col p-1">
