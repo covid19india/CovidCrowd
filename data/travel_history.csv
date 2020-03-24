@@ -68,14 +68,14 @@ entry_id,PID,time_from,time_to,Address,lat_long,Accuracy_Location,Type,Mode of T
 67,P38,03/06/2020 08:15,03/06/2020 10:15,travel by Thachilethu Bus from Ranni to Kottayam,,,Travel,Bus,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 68,P38,03/06/2020 10:30,03/06/2020 11:15,"halt at Palathara Textiles, Kanjikuzhy, Kottayam","9.5966458, 76.5225306",,placevisit,,Palathara Fashions,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,76.5225306
 69,P38,03/06/2020 14:00,03/06/2020 16:00,travel by Mahiniyam bus from Kanjikuzhy to Ranni,,,Travel,Bus,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
-70,P38,3/8/2020,,Admitted to hospital,,,,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
+70,P38,8/3/2020,,Admitted to hospital,,,,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 71,P39,3/4/2020 06:00,3/4/2020 08:00,"halt at Jathanickal Cherukulangara Bakery, Ranni",,,placevisit,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 72,P39,03/04/2020 19:00,03/04/2020 20:30,"halt at Marthoma Hospital, Ranni","9.3865747, 76.7833664",Accurate,placevisit,,Marthoma Hospital,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,76.7833664
 73,P39,03/06/2020 08:15,03/06/2020 10:15,travel by Thachilethu Bus from Ranni to Kottayam,,,Travel,Bus,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 74,P39,03/06/2020 10:30,03/06/2020 11:15,"halt at Palathara Textiles, Kanjikuzhy, Kottayam","9.5966458, 76.5225306",Accurate,placevisit,,Palathara Fashions,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,76.5225306
 75,P39,03/06/2020 14:00,03/06/2020 16:00,travel by Mahiniyam bus from Kanjikuzhy to Ranni,,,Travel,Bus,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
-76,P39,3/8/2020,,Admitted to hospital,,,,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
-77,R2,02/29/2020 10.30AM,,Was at Hotel Aaryas on Kuthattukulum Muvattupuzha Road,"9.8614227, 76.5813094",Accurate,placeVisit,,hotel Aryaas Koothattukulam Muvattupuzha road,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
+76,P39,8/3/2020,,Admitted to hospital,,,,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
+77,R2,29/02/2020 10.30 AM,,Was at Hotel Aaryas on Kuthattukulum Muvattupuzha Road,"9.8614227, 76.5813094",Accurate,placeVisit,,hotel Aryaas Koothattukulam Muvattupuzha road,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 78,R2,03/02/2020 10.30 AM,,Relative's house in Punalur,,,placeVisit,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 79,R2,03/03/2020 11.00 AM,03/03/2020 12.00 PM,"Shopping at Golden Hypermarket, Ranni","9.3839593, 76.785245",Accurate,placeVisit,,Golden Hyper Market,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 80,R2,04/03/2020,,"Was at Marthoma Private clinic, Ranni",,,placeVisit,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
