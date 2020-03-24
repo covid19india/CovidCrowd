@@ -15,7 +15,6 @@ A crowd-sourcing platform for the Covid-19 Pandemic
 
 ```shell script
 sudo apt install libsqlite3-mod-spatialite python-gdal
-sudo apt-get install memcached libmemcached-tools -y
 ```
 #### For Mac
 

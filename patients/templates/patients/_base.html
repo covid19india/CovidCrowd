@@ -60,7 +60,6 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="{% url 'patients:report' %}">Report New Patient</a>
       </div>
-    {% cache 0 usermenu %}
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
           {% if user.is_staff %}
@@ -97,7 +96,6 @@
           </li>
         {% endif %}
       </ul>
-    {% endcache %}
 
     </div>
   </nav>

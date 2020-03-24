@@ -7,7 +7,6 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
-from django.views.decorators.cache import never_cache
 from django_filters.views import FilterView
 from django_tables2.export.views import ExportMixin
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -26,7 +25,6 @@ from .tables import PatientsExportedTable, ErrorReportsTable
 from .tables import ReportsTable, PatientsTable, PatientHistoryTable
 
 
-@method_decorator(never_cache, name="dispatch")
 @method_decorator(staff_member_required, name="dispatch")
 class ReportQueue(SingleTableMixin, FilterView):
     model = Report
@@ -251,7 +249,6 @@ def review_errors_for_patient(request, patient_id):
     return render(request, "patients/review_errors_for_patient.html", context)
 
 
-@method_decorator(never_cache, name="dispatch")
 @method_decorator(staff_member_required, name="dispatch")
 class ErrorQueueView(SingleTableView):
     model = ErrorReport
