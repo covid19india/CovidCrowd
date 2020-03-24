@@ -21,6 +21,7 @@ pathspec==0.7.0
 pycparser==2.20
 PyJWT==1.7.1
 python-decouple==3.3
+python-memcached==1.59
 python3-openid==3.1.0
 pytz==2019.3
 regex==2020.2.20
