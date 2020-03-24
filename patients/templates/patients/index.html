@@ -2,6 +2,7 @@
 {% load render_table from django_tables2 %}
 {% load crispy_forms_tags %}
 {% load django_tables2 %}
+{% load static %}
 
 {% block content %}
   {% if filter %}
@@ -47,8 +48,11 @@
 {% endblock %}
 
 {% block JS %}
+  <script src="{% static "patients/js/plugins/bootstrap-datepicker.min.js" %}"></script>
   <script>
     $(document).ready(function() {
+      $('.dateinput').datepicker();
+
       let btnText = $("#fBtnText");
       $("#show-filters").click(function() {
         console.log("showing filters");
@@ -60,6 +64,5 @@
         }
       });
     });
-
   </script>
 {% endblock %}
