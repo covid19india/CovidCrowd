@@ -11,9 +11,9 @@ class PatientAdmin(OSMGeoAdmin):
 
 @admin.register(Report)
 class ReportAdmin(admin.ModelAdmin):
-    pass
+    list_filter = ('report_state', )
 
 
 @admin.register(ErrorReport)
 class ErrorReportAdmin(admin.ModelAdmin):
-    pass
+    list_filter = ('status', )
