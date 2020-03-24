@@ -14,7 +14,7 @@
           <i class="fa fa-exclamation-triangle"></i> {{ error_report_count }}
           error{{ error_report_count|pluralize:",s" }} reported
         </span>
-        <a href="" class="btn btn-outline-primary btn-sm ml-2">Review</a>
+        <a href="{% url "patients:review-errors-for-patient" patient.id %}" class="btn btn-outline-primary btn-sm ml-2">Review</a>
       {% endif %}
 
 

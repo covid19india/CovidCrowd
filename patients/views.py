@@ -16,7 +16,7 @@ from rest_framework.response import Response
 
 from .constants import STATE_WISE_DISTRICTS
 from .filters import ReportsTableFilter, PatientsTableFilter
-from .forms import ReportForm, PatientForm, ErrorReportForm
+from .forms import ReportForm, PatientForm, ErrorReportForm, PatientEditForm
 from .forms import SourceForm
 from .models import Report, Patient, ErrorReport, PatientHistory
 from .models import Source
@@ -211,7 +211,7 @@ def report_error(request):
 
 @api_view(['GET',])
 @permission_classes((permissions.IsAuthenticatedOrReadOnly,))
-def get_patient(request,id):
+def get_patient(request, id):
     patient = get_object_or_404(Patient, pk=id)
     serializer = PatientSerializer(patient)
     return Response(serializer.data)
@@ -224,3 +224,20 @@ def get_patients(request):
     serializer = PatientSerializer(patient,many=True)
     return Response(serializer.data)
 
+
+@staff_member_required
+def review_errors_for_patient(request, patient_id):
+    patient = get_object_or_404(Patient, pk=patient_id)
+    errors = ErrorReport.objects.filter(patient=patient, status=ErrorReport.NEW)
+    if not errors:
+        messages.info(request, "Did not find any new errors.")
+        return redirect("patients:patient-details", patient_id)
+
+    if request.method == "POST":
+        pass
+
+    context = {
+        "patient_form": PatientEditForm(instance=patient),
+        "error_reports": errors
+    }
+    return render(request, "patients/review_errors_for_patient.html", context)

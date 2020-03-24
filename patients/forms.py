@@ -136,3 +136,19 @@ class SourceForm(forms.Form):
         self.helper.wrapper_class = "row"
         self.helper.label_class = "col-md-2"
         self.helper.field_class = "col-md-10"
+
+
+class PatientEditForm(forms.ModelForm):
+    class Meta:
+        model = Patient
+        exclude = ['unique_id', 'diagnosed_date', 'contacts', 'created_on', 'updated_on']
+        widgets = {
+            "detected_city_pt": geoforms.OSMWidget(attrs={"default_zoom": 6}),
+            "current_location_pt": geoforms.OSMWidget(attrs={"default_zoom": 6}),
+            "notes": forms.Textarea(attrs={"rows": 2, "cols": 15}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(PatientEditForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.add_input(Submit("submit", "Update Patient"))

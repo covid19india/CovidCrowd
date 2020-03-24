@@ -1,0 +1,41 @@
+{% extends "patients/_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-12 col-md-7">
+      {% crispy patient_form patient_form.helper %}
+    </div>
+    <div class="col-12 col-md-5">
+      {% for report in error_reports %}
+        <div class="card">
+          <div class="card-body bg-lighter">
+            <h4 class="h4">Report #{{ report.id }}</h4>
+            <p>
+              <strong>Error Fields: </strong>
+              {{ report.error_fields }}
+            </p>
+            <p>
+              <strong>Correction Proposed: </strong>
+              {{ report.corrections }}
+            </p>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-success btn-sm">Useful</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-danger btn-sm">Discard</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block JS %}
+  <script>
+
+  </script>
+{% endblock %}

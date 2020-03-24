@@ -10,6 +10,10 @@
     background-color: #2bab2f;
 }
 
+.alert-info {
+    background-color: #00b6d8;
+}
+
 th.orderable:after {
     font: normal normal normal 14px/1 FontAwesome;
     content: "\f0dc";
