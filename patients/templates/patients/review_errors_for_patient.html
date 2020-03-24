@@ -3,12 +3,9 @@
 
 {% block content %}
   <div class="row">
-    <div class="col-12 col-md-7">
-      {% crispy patient_form patient_form.helper %}
-    </div>
     <div class="col-12 col-md-5">
       {% for report in error_reports %}
-        <div class="card">
+        <div class="card mb-3" id="report_card_{{ report.id }}">
           <div class="card-body bg-lighter">
             <h4 class="h4">Report #{{ report.id }}</h4>
             <p>
@@ -21,21 +18,69 @@
             </p>
             <div class="row">
               <div class="col">
-                <button class="btn btn-success btn-sm">Useful</button>
+                <button class="btn btn-success btn-sm" onclick="reportUsed({{ report.id }});">
+                  <i class="fa fa-check-circle"></i>
+                  Mark Used
+                </button>
               </div>
               <div class="col">
-                <button class="btn btn-danger btn-sm">Discard</button>
+                <button class="btn btn-danger btn-sm" onclick="reportDiscarded({{ report.id }});">
+                  <i class="fa fa-trash"></i>
+                  Discard
+                </button>
               </div>
             </div>
           </div>
         </div>
+        <div id="report_used_{{ report.id }}" class="alert alert-success" style="display: none;">
+          <i class="fa fa-check-circle"></i> Error report #{{ report.id }} successfully used.
+        </div>
+        <div id="report_discarded_{{ report.id }}" class="alert alert-info" style="display: none;">
+          <i class="fa fa-check-circle"></i> Error report #{{ report.id }} discarded.
+        </div>
       {% endfor %}
+    </div>
+    <div class="col-12 col-md-7">
+      <h3 class="h3">Patient {{ patient_id }}</h3>
+      {% crispy patient_form patient_form.helper %}
     </div>
   </div>
 {% endblock %}
 
 {% block JS %}
   <script>
+    function sendAjaxRequest(payload, callback) {
+      $.ajax({
+        url: "{% url "patients:update-error-report" %}",
+        type: "post", // or "get"
+        data: payload,
+        headers: {'X-CSRFToken': '{{ csrf_token }}'}, // for csrf token
+        success: callback
+      });
+    }
 
+    function reportUsed(id) {
+      sendAjaxRequest({"id": id, "state": "used"}, function (data) {
+        if (data["status"] === "error") {
+          alert("Couldn't update the Error Ticket. But you can still update the patient information.");
+          console.log(data);
+          return;
+        }
+        $("#report_card_" + id).hide();
+        $("#report_used_" + id).show();
+      })
+    }
+
+    function reportDiscarded(id) {
+      sendAjaxRequest({"id": id, "state": "discarded"}, function (data) {
+        if (data["status"] === "error") {
+          alert("Couldn't update the Error Ticket. But you can still update the patient information.");
+          console.log(data);
+          return;
+        }
+        $("#report_card_" + id).hide();
+        $("#report_discarded_" + id).show();
+      })
+    }
   </script>
 {% endblock %}

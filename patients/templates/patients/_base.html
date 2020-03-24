@@ -61,11 +61,17 @@
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
           {% if user.is_staff %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'patients:report-queue' %}">Review Queue</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="review-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Review
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="review-dropdown">
+                <a class="dropdown-item" href="{% url 'patients:report-queue' %}">New Reports</a>
+                <a class="dropdown-item" href="{% url 'patients:error-queue' %}">Errors Reports</a>
+              </div>
             </li>
           {% endif %}
-          <li class="nav-item dropdown show">
+          <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="user-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               {% if user.is_superuser %}
                 <span class="badge badge-pill badge-danger">Admin</span>

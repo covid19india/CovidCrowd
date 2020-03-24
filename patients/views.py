@@ -9,7 +9,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
 from django_filters.views import FilterView
 from django_tables2.export.views import ExportMixin
-from django_tables2.views import SingleTableMixin
+from django_tables2.views import SingleTableMixin, SingleTableView
 from rest_framework import permissions
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -21,7 +21,7 @@ from .forms import SourceForm
 from .models import Report, Patient, ErrorReport, PatientHistory
 from .models import Source
 from .serializers import PatientSerializer
-from .tables import PatientsExportedTable
+from .tables import PatientsExportedTable, ErrorReportsTable
 from .tables import ReportsTable, PatientsTable, PatientHistoryTable
 
 
@@ -228,16 +228,62 @@ def get_patients(request):
 @staff_member_required
 def review_errors_for_patient(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
+
+    if request.method == "POST":
+        form = PatientEditForm(request.POST, instance=patient)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Patient data updated.")
+            return redirect("patients:patient-details", patient_id)
+
     errors = ErrorReport.objects.filter(patient=patient, status=ErrorReport.NEW)
     if not errors:
         messages.info(request, "Did not find any new errors.")
         return redirect("patients:patient-details", patient_id)
 
-    if request.method == "POST":
-        pass
-
     context = {
         "patient_form": PatientEditForm(instance=patient),
-        "error_reports": errors
+        "error_reports": errors,
+        "patient_id": patient.unique_id
     }
     return render(request, "patients/review_errors_for_patient.html", context)
+
+
+@method_decorator(staff_member_required, name="dispatch")
+class ErrorQueueView(SingleTableView):
+    model = ErrorReport
+    queryset = ErrorReport.objects.filter(status=ErrorReport.NEW)
+    table_class = ErrorReportsTable
+
+    template_name = "patients/error_report_queue.html"
+
+
+@staff_member_required
+def update_error_report(request):
+    if request.method != "POST":
+        return redirect("patients:index")
+
+    error_id = request.POST.get("id", None)
+    if not error_id:
+        return JsonResponse({"status": "error", "message": "Missing ID"})
+    state = request.POST.get("state", None)
+    if not state:
+        return JsonResponse({"status": "error", "message": "Missing state"})
+
+    try:
+        error_report = get_object_or_404(ErrorReport, pk=int(error_id))
+    except ValueError:
+        return JsonResponse({"status": "error", "message": "Invalid ID"})
+
+    if state.lower() == "used":
+        error_report.status = ErrorReport.USED
+    elif state.lower() == "discarded":
+        error_report.status = ErrorReport.DISCARDED
+    else:
+        return JsonResponse({"status": "error", "message": "Invalid State"})
+
+    error_report.save()
+    return JsonResponse({"status": "success", "message": "Error Report Updated"})
+
+
+

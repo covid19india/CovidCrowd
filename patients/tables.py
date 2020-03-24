@@ -1,6 +1,6 @@
 import django_tables2 as tables
 
-from .models import Report, Patient, PatientHistory
+from .models import Report, Patient, PatientHistory, ErrorReport
 
 
 class ReportsTable(tables.Table):
@@ -93,4 +93,18 @@ class PatientHistoryTable(tables.Table):
             "address",
             "travel_mode",
         )
+        attrs = {"class": "table table-responsive"}
+
+
+class ErrorReportsTable(tables.Table):
+    detail = tables.TemplateColumn(
+        template_name="patients/components/review_errors_btn.html",
+        verbose_name="Details",
+        orderable=False,
+    )
+
+    class Meta:
+        model = ErrorReport
+        fields = ("id", "patient", "error_fields", "corrections")
+        template_name = "django_tables2/bootstrap4.html"
         attrs = {"class": "table table-responsive"}

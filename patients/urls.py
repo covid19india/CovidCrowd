@@ -18,9 +18,11 @@ urlpatterns = [
     path("report-queue", views.ReportQueue.as_view(), name="report-queue"),
     path("get_districts", views.get_statewise_districts, name="get_districts"),
     path("report-error", views.report_error, name="report-error"),
+    path("error-queue", views.ErrorQueueView.as_view(), name="error-queue"),
     path("patient/<int:patient_id>/review-error-reports",
          views.review_errors_for_patient,
          name="review-errors-for-patient"),
+    path("update-error-report", views.update_error_report, name="update-error-report"),
     # API paths
     path('api/patients/', views.get_patients,name='patient list'),
     path('api/patient/<int:id>', views.get_patient,name='patient'),

@@ -1,0 +1,7 @@
+{% extends "patients/_base.html" %}
+{% load django_tables2 %}
+
+{% block content %}
+  <h3 class="h3 my-2">Error Reports</h3>
+  {% render_table table %}
+{% endblock %}
