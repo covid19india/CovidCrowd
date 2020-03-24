@@ -164,11 +164,12 @@ class Command(BaseCommand):
                 patient_id = int(matches.groups()[0])
                 address = row['Address']
                 patient = Patient.objects.get(unique_id=patient_id)
+                from_time = self._safe_parse_datetime(row["time_from"])
                 # Using a text field might not be the best approach to find duplicates.
                 # But I can't find any other field which can be used
-                history = PatientHistory.objects.filter(patient_id=patient_id,address=address)
-                if history.exists():
-                    print(f"Patient history already exists for patient: {patient_id} at address: {address}")
+                history = PatientHistory.objects.filter(patient_id=patient_id,time_from=from_time,address=address)
+                if history.exists() and from_time:
+                    print(f"Patient history already exists for patient: {patient_id} at time: {from_time} and address {address}")
                     skipped += 1
                     continue
             except (Patient.DoesNotExist):
@@ -206,6 +207,30 @@ class Command(BaseCommand):
     def _safe_parse_datetime(value):
         try:
             parsed = make_aware(datetime.strptime(value, "%d/%m/%Y %H:%M:%S"))
+            return parsed
+        except ValueError:
+            pass
+
+        try:
+            parsed = make_aware(datetime.strptime(value, "%d/%m/%Y %H:%M"))
+            return parsed
+        except ValueError:
+            pass
+
+        try:
+            parsed = make_aware(datetime.strptime(value, "%d/%m/%Y %H:%M %p"))
+            return parsed
+        except ValueError:
+            pass
+
+        try:
+            parsed = make_aware(datetime.strptime(value, "%d/%m/%Y %H.%M %p"))
+            return parsed
+        except ValueError:
+            pass
+
+        try:
+            parsed = make_aware(datetime.strptime(value, "%d/%m/%Y"))
             return parsed
         except ValueError:
             return None

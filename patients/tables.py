@@ -76,10 +76,13 @@ class PatientsExportedTable(tables.Table):
             "contacts"
         )
 
+
 class PatientHistoryTable(tables.Table):
-    time_from = tables.DateTimeColumn(format='d/M/Y H:m:s', verbose_name="From")
-    time_to = tables.DateTimeColumn(format='d/M/Y H:m:s', verbose_name="To")
-    data_source = tables.URLColumn(verbose_name="Source")
+    time_from = tables.DateTimeColumn(format='d-M-Y h:i A', verbose_name="From", orderable=False)
+    time_to = tables.DateTimeColumn(format='d-M-Y h:i A', verbose_name="To", orderable=False)
+    address = tables.Column(orderable=False)
+    travel_mode = tables.Column(orderable=False)
+
     class Meta:
         model = PatientHistory
         template_name = "django_tables2/bootstrap4.html"
@@ -88,6 +91,5 @@ class PatientHistoryTable(tables.Table):
             "time_to",
             "address",
             "travel_mode",
-            "data_source"
         )
         attrs = {"class": "table table-responsive"}
