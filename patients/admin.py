@@ -9,9 +9,11 @@ class PatientAdmin(OSMGeoAdmin):
     pass
 
 
-@admin.register(Patient)
+@admin.register(PatientHistory)
 class PatientHistoryAdmin(OSMGeoAdmin):
-    pass
+    list_filter = (
+            ("patient", admin.RelatedOnlyFieldListFilter),
+    )
 
 
 @admin.register(Report)

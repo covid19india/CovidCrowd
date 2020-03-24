@@ -78,6 +78,9 @@ class PatientHistory(geomodels.Model):
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
     updated_on = models.DateTimeField(auto_now_add=True, editable=False)
 
+    def __str__(self):
+        return f"PatientHistory #{self.id} for patient {self.patient_id}"
+
 
 class Patient(geomodels.Model):
     unique_id = models.CharField(max_length=10)
