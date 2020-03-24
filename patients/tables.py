@@ -105,6 +105,6 @@ class ErrorReportsTable(tables.Table):
 
     class Meta:
         model = ErrorReport
-        fields = ("id", "patient", "error_fields", "corrections")
+        fields = ("id", "patient", "error_fields",)
         template_name = "django_tables2/bootstrap4.html"
         attrs = {"class": "table table-responsive"}
