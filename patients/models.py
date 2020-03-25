@@ -146,8 +146,14 @@ class Patient(geomodels.Model):
         if not (city or state):
             return point
 
+        locs = []
+        if city:
+            locs.append(city)
+        if state:
+            locs.append(state)
+
         base_url = "https://nominatim.openstreetmap.org/search/"
-        payload = {"format": "json", "q": ",".join([city, state])}
+        payload = {"format": "json", "q": ",".join(locs)}
 
         resp = requests.get(base_url, params=payload)
         if resp.status_code != 200:

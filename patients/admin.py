@@ -5,6 +5,7 @@ from .models import Report, Patient, ErrorReport, Source, PatientHistory
 
 
 admin.site.index_template = 'memcache_status/admin_index.html'
+admin.site.site_header = "Covid19India Portal - Admin"
 
 
 @admin.register(Patient)
