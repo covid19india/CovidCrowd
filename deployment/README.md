@@ -12,7 +12,7 @@ you, kindly find a better method for this project and make this document obsolet
 1. Install Python 3, with all the bells 
 
 ```shell script
-sudo apt install python3 python3-dev python3-pip python3-virtualenv python-gdal
+sudo apt install python3 python3-dev python3-pip python3-venv python-gdal
 ```
 
 2. Install the DB and related spatial stuff
@@ -97,7 +97,7 @@ Login as the apps user for this, because whatever you create now will be used wh
 
 ```shell script
 sudo su - apps
-cd /opt/apps/CovidCreate
+cd /opt/apps/CovidCrowd
 cp example.env .env
 ```
 
@@ -111,12 +111,13 @@ Now let us setup the DB and the static files:
 
 ```shell script
 # inside /opt/apps/CovidCreate as user apps
-source env/bin/activate
+source venv/bin/activate
 pip install -r requirements
 python manage.py migrate
 python manage.py collectstatic
 exit
 ```
+**Note**: pip install might need sudo to work without errors. if `sudo pip install -r requirements` doesn't work, try `sudo venv/bin/pip install -r requirements`
 
 ### Start the app
 
