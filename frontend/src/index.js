@@ -1,40 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faArrowCircleRight, faSort, faSortAmountDown, faSortAmountUp,
-  faChevronLeft, faAngleDoubleLeft, faChevronRight, faAngleDoubleRight
+  faChevronLeft, faAngleDoubleLeft, faChevronRight, faAngleDoubleRight,
+  faBullhorn, faVenusMars, faUserPlus, faHeartbeat, faMapMarkerAlt, faGlobeAsia,
+  faExclamationCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './extras/css/argon-design-system.min.css';
 import './index.css';
 import App from './App';
-import NewPatient from "./pages/new-patient";
-import PatientDetail from "./pages/patient-detail";
 import * as serviceWorker from './serviceWorker';
-import store from "./store";
 
 library.add(faArrowCircleRight, faSort, faSortAmountDown, faSortAmountUp,
-  faChevronLeft, faAngleDoubleLeft, faChevronRight, faAngleDoubleRight);
-
-const app = (
-  <Provider store={store}>
-    <Router>
-      <Switch>
-        <Route path="/new-patient" component={NewPatient} />
-        <Route path="/patient/:id" component={PatientDetail} />
-        <Route exact path="/" component={App} />
-      </Switch>
-    </Router>
-  </Provider>
+  faChevronLeft, faAngleDoubleLeft, faChevronRight, faAngleDoubleRight,
+  faBullhorn, faVenusMars, faUserPlus, faHeartbeat, faMapMarkerAlt, faGlobeAsia,
+  faExclamationCircle
 );
 
 
 ReactDOM.render(
-  app,
+  <App />,
   document.getElementById('root')
 );
 

@@ -3,45 +3,26 @@ import './App.css';
 import axios from "axios";
 import TopNav from "./components/TopNav";
 import BottomFooter from "./components/BottomFooter";
-import PatientTable from "./components/PatientTable";
-import { addPatients } from "./store";
-import { connect } from "react-redux";
-
-function getTable(patients) {
-  if (patients.length) {
-    return <PatientTable patients={patients} />
-  }
-  return <h3 className="h3 my-3">Loading...</h3>
-}
-
-const mapStateToProps = function(state) {
-  return {
-    patients: state.patients
-  }
-};
-
-const mapDispatchToProps = {
-  addPatients: addPatients
-};
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import PatientDetail from "./pages/patient-detail";
+import NewPatient from "./pages/new-patient";
+import HomePage from "./pages/home-page";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoading: true,
-      patients: props.patients
+      patients: []
     }
   }
 
   componentDidMount() {
-    if (!this.patients) {
-      axios.get("/api/patients")
-        .then(res => {
-          this.setState({patients: res.data, isLoading: false});
-          this.props.dispatch(addPatients(res.data));
-        })
-        .catch(err => console.log(err));
-    }
+    axios.get("/api/patients")
+      .then(res => {
+        this.setState({patients: res.data, isLoading: false});
+      })
+      .catch(err => console.log(err));
   }
 
 
@@ -49,15 +30,24 @@ class App extends React.Component {
     return (
       <div className="App">
         <TopNav />
-        <main className="container">
-          { getTable(this.state.patients) }
-        </main>
+        { this.state.isLoading ?
+          <h3 className="my-3">Loading ....</h3> :
+          <Router>
+            <Switch>
+              <Route path="/patient/:id">
+                <PatientDetail patients={this.state.patients}/>
+              </Route>
+              <Route path="/new-patient" component={NewPatient}/>
+              <Route exact path="/">
+                <HomePage patients={this.state.patients}/>
+              </Route>
+            </Switch>
+          </Router>
+        }
         <BottomFooter />
       </div>
     );
   }
 }
 
-const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
-
-export default AppContainer;
+export default App;
