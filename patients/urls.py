@@ -26,6 +26,6 @@ urlpatterns = [
          name="review-errors-for-patient"),
     path("update-error-report", views.update_error_report, name="update-error-report"),
     # API paths
-    path('api/patients/', views.get_patients,name='patient list'),
+    path('api/patients/', cache_page(10*60)(views.get_patients),name='patient list'),
     path('api/patient/<int:id>', views.get_patient,name='patient'),
 ]
