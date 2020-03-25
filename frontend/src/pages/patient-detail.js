@@ -1,13 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-class PatientDetail extends React.Component {
-  render() {
-    return (
-      <div>
-        <h3 className="h3">Patient Detail</h3>
-      </div>
-    );
-  }
+function PatientDetail() {
+  const { id } = useParams();
+  return (
+    <h3>Patient {id}</h3>
+  );
 }
 
 export  default PatientDetail

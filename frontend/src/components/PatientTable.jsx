@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
   useTable,
@@ -31,30 +32,30 @@ function Table({columns, data}) {
     useSortBy,
     usePagination);
 
-
   return (
     <div>
       <table {...getTableProps()} className="table table-responsive">
         <thead>
         <tr>
-            {headers.map(column => (
-              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                <span className="mr-2">
-                  {column.render('Header')}
-                </span>
-                <i className="d-inline">
+          {headers.map(column => (
+            <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+              <span className="mr-2">
+                {column.render('Header')}
+              </span>
+              <i className="d-inline">
 
-                {
-                  column.isSorted ?
-                    (column.isSortedDesc ?
-                      <FontAwesomeIcon icon="sort-amount-down" />:
-                      <FontAwesomeIcon icon="sort-amount-up" />
-                  ) : <FontAwesomeIcon icon="sort"/>
-                }
-                </i>
-              </th>
-            ))}
-          </tr>
+              {
+                column.isSorted ?
+                  (column.isSortedDesc ?
+                    <FontAwesomeIcon icon="sort-amount-down" />:
+                    <FontAwesomeIcon icon="sort-amount-up" />
+                ) : <FontAwesomeIcon icon="sort"/>
+              }
+              </i>
+            </th>
+          ))}
+          <th>Details</th>
+        </tr>
         </thead>
         <tbody {...getTableBodyProps()}>
         {page.map((row, i) => {
@@ -64,6 +65,10 @@ function Table({columns, data}) {
               {row.cells.map(cell => {
                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
               })}
+              <td>
+                <Link to={`/patient/${row.values.id}`}>Details</Link>
+
+              </td>
             </tr>
           )
         })}
@@ -71,36 +76,28 @@ function Table({columns, data}) {
       </table>
 
       <div className="row align-items-baseline border-top p-2 justify-content-center">
-        <div className="col-6 col-md-3">
-          <span className="mr-2">Show</span>
-          <select
-            value={pageSize}
+
+        <div className="col-6 col-md-4">
+          Go to page:{' '}
+          <input
+            type="number"
+            defaultValue={pageIndex + 1}
             onChange={e => {
-              setPageSize(Number(e.target.value))
+              const page = e.target.value ? Number(e.target.value) - 1 : 0;
+              gotoPage(page)
             }}
-            className="form-control form-control-sm d-inline"
             style={{ width: '5rem' }}
-          >
-            {[10, 20, 30, 40, 50].map(pageSize => (
-              <option key={pageSize} value={pageSize}>
-                {pageSize}
-              </option>
-            ))}
-          </select>
-          <span className="mx-2">per page</span>
+            className="form-control form-control-sm d-inline"
+            min={1}
+            max={pageOptions.length}
+          />
+          <span className="ml-2">
+              of {pageOptions.length}
+          </span>
         </div>
 
-        <div className="col-6 col-md-3 text-center">
-          <p className="text-left text-md-right">
-            Page{' '}
-            <strong>
-              {pageIndex + 1} of {pageOptions.length}
-            </strong>
-          </p>
-        </div>
-
-        <div className="col-6 col-md-3">
-          <ul className="pagination mt-2">
+        <div className="col-6 col-md-4">
+          <ul className="pagination justify-content-center mt-1">
             <li className="page-item">
               <button className="page-link" onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
                 <FontAwesomeIcon icon='angle-double-left' />
@@ -124,19 +121,25 @@ function Table({columns, data}) {
           </ul>
         </div>
 
-       <div className="col-6 col-md-3 text-right">
-          Go to page:{' '}
-          <input
-            type="number"
-            defaultValue={pageIndex + 1}
+        <div className="col-6 col-md-4 text-right">
+          <span className="mr-2">Show</span>
+          <select
+            value={pageSize}
             onChange={e => {
-              const page = e.target.value ? Number(e.target.value) - 1 : 0;
-              gotoPage(page)
+              setPageSize(Number(e.target.value))
             }}
-            style={{ width: '3rem' }}
             className="form-control form-control-sm d-inline"
-          />
+            style={{ width: '5rem' }}
+          >
+            {[10, 20, 30, 40, 50].map(pageSize => (
+              <option key={pageSize} value={pageSize}>
+                {pageSize}
+              </option>
+            ))}
+          </select>
+          <span className="mx-2">per page</span>
         </div>
+
       </div>
     </div>
   );
