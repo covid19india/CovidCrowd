@@ -4,6 +4,9 @@ from django.contrib import admin
 from .models import Report, Patient, ErrorReport, Source, PatientHistory
 
 
+admin.site.index_template = 'memcache_status/admin_index.html'
+
+
 @admin.register(Patient)
 class PatientAdmin(OSMGeoAdmin):
     pass

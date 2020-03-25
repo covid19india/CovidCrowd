@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_filters",
     "django_tables2",
+    "debug_toolbar",
+    "memcache_status",
 ]
 
 MIDDLEWARE = [
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "social_django.middleware.SocialAuthExceptionMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "CovidCrowd.urls"
@@ -162,3 +165,7 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
