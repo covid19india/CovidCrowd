@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import SmallCard from "../components/SmallCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -97,12 +97,21 @@ function PatientDetail({ patients }) {
           <div className="card my-2">
             <div className="card-header"><strong>Connected to</strong></div>
             <div className="card-body p-0">
+              {
+                patient.contacts.length ?
               <ul className="list-group list-group-flush">
-
-                <li className="list-group-item">
-                </li>
-
+                {
+                  patient.contacts.map(c => {
+                    return (
+                      <li className="list-group-item">
+                        <Link to={`/patient/${c}`}>Patient {c}</Link>
+                      </li>
+                    )
+                  })
+                }
               </ul>
+              : <p className="m-3">No known contacts</p>
+              }
             </div>
           </div>
 
@@ -114,7 +123,7 @@ function PatientDetail({ patients }) {
               <ul className="mt-2 p-0" style={{ listStyle: 'none' }}>
                 <li className="py-2">
                   <a href="#" className="text-danger" data-toggle="modal" data-target="#report-modal">
-                    <FontAwesomeIcon icon="exclamation-circle" className="d-inline-block" />
+                    <FontAwesomeIcon icon="exclamation-circle" className="d-inline-block mr-2" />
                     Report Error
                   </a>
                 </li>
@@ -122,7 +131,15 @@ function PatientDetail({ patients }) {
             </div>
           </div>
 
+        </div>
+      </div>
 
+      <div className="row">
+        <div className="col">
+          <Link to="/">
+            <FontAwesomeIcon icon="angle-double-left"  className="mr-2"/>
+            Back
+          </Link>
         </div>
       </div>
 

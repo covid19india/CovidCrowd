@@ -10,7 +10,7 @@ function SmallCard({ icon, title, content }) {
           <span className="ml-1">{title}</span>
         </div>
         <p className="card-text">
-          {content}
+          {content ? content : "--"}
         </p>
       </div>
     </div>
