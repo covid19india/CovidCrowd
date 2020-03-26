@@ -4,7 +4,7 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	gzip on;
+	gzip off;
 	gzip_disable "msie6";
 
 	gzip_comp_level 6;
@@ -31,13 +31,18 @@ server {
 	server_name _;
 
 	location / {
+		root /opt/apps/CovidCrowd/frontend/build/;
+		sendfile on;
+	}
+
+	location /api {
 		include proxy_params;
 		proxy_pass http://unix:/var/run/covidcrowd/covidcrowd.sock;
 	}
 
-	location /static {
-		root /opt/apps/CovidCrowd;
-		sendfile on;
-	}
+	# location /static {
+	# 	root /opt/apps/CovidCrowd;
+	# 	sendfile on;
+	# }
 
 }
