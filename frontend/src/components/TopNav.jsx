@@ -25,9 +25,11 @@ const Example = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
+            {/*
             <NavItem>
               <NavLink href="/new-patient">Report New Patient</NavLink>
-            </NavItem>
+            </NavItem -->
+          */}
           </Nav>
         </Collapse>
       </Navbar>

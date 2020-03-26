@@ -28,7 +28,8 @@ function Table({columns, data}) {
     setPageSize,
   } = useTable({
       columns, data, initialState: {
-        sortBy: [{ id: 'diagnosed_date', desc: true }]
+        sortBy: [{ id: 'diagnosed_date', desc: true }],
+        pageSize: 20
       }
     },
     useSortBy,
@@ -79,7 +80,7 @@ function Table({columns, data}) {
 
       <div className="row align-items-baseline border-top p-2 justify-content-center">
 
-        <div className="col-6 col-md-4">
+        <div className="col-12 col-md-4 text-center text-md-left">
           Go to page:{' '}
           <input
             type="number"
@@ -98,7 +99,7 @@ function Table({columns, data}) {
           </span>
         </div>
 
-        <div className="col-6 col-md-4">
+        <div className="col-12 col-md-4 my-3 my-sm-auto">
           <ul className="pagination justify-content-center mt-1">
             <li className="page-item">
               <button className="page-link" onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
@@ -123,7 +124,7 @@ function Table({columns, data}) {
           </ul>
         </div>
 
-        <div className="col-6 col-md-4 text-right">
+        <div className="col-12 col-md-4 text-center text-md-right">
           <span className="mr-2">Show</span>
           <select
             value={pageSize}
