@@ -66,35 +66,32 @@ class Command(BaseCommand):
                 return
 
     def _patient_data_import(self, reader):
-        counter = 0
+        new = 0
+        updates = 0
         skipped = 0
         for row in reader:
-            if not row["Date Announced"]:
+            if not row["Date Announced"] or not row["Patient number"]:
                 skipped += 1
                 continue
-            if row["Patient number"]:
-                try:
-                    existing = Patient.objects.get(unique_id=row["Patient number"])
-                except Patient.DoesNotExist:
-                    existing = None
 
-                if existing:
-                    print(
-                        f"Patient with patient number {row['Patient number']} already exits as Patient #{existing.id}. Skipping."
-                    )
-                    skipped += 1
-                    continue
-            self._create_new_patient(row)
-            counter += 1
+            try:
+                existing = Patient.objects.get(unique_id=row["Patient number"])
+                print(f"Updating Patient #{existing.id}")
+                self._update_patient(existing, row)
+            except Patient.DoesNotExist:
+                self._create_new_patient(row)
+                new += 1
+
         print(
-            f"SUCCESS: CSV File was imported. Patients created: {counter}, Skipped: {skipped}"
+            f"SUCCESS: CSV File was imported. Patients:\n\tCreated: {new}\n\tUpdated: {updates}\n\tSkipped: {skipped}"
         )
 
-    @staticmethod
-    def _create_new_patient(row):
+    def _create_new_patient(self, row):
         print(f"Adding patient {row['Patient number']}")
         patient = Patient()
+        self._update_patient(patient, row, new=True)
 
+    def _update_patient(self, patient, row, new=False):
         patient.unique_id = row["Patient number"]
         patient.government_id = row["State Patient Number"]
         patient.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
@@ -112,14 +109,16 @@ class Command(BaseCommand):
         patient.detected_city = city
         patient.detected_district = row["Detected District"]
         state = row.get("Detected State", None).strip()
-
         patient.detected_state = state
-        patient.detected_city_pt = Patient.get_point_for_location(city=city, state=state)
+
+        if new or patient.detected_city != city:
+            patient.detected_city_pt = Patient.get_point_for_location(city=city, state=state)
+
         patient.current_location_pt = patient.detected_city_pt
         patient.nationality = ""
         if row["Current Status"] in PatientStatus.CHOICES:
             patient.current_status = row["Current Status"]
-        patient.status_change_date = datetime.strptime(row["Status Change Date"], "%d/%m/%Y")
+        patient.status_change_date = self._safe_parse_datetime(row["Status Change Date"])
 
         patient.notes = row["Notes"]
         if row["Backup Notes"].strip() and row["Backup Notes"] != row["Notes"]:
@@ -128,6 +127,14 @@ class Command(BaseCommand):
         patient.save()
 
         links = row["Contracted from which Patient (Suspected)"].split(",")
+        if new or patient.contacts.count() != len(links):
+            self._add_contacts(patient, links)
+
+        sources = [row[s] for s in ["Source_1", "Source_2", "Source_3"] if row.get(s, "").strip()]
+        if new or patient.source_set.count() != len(sources):
+            self._add_sources(patient, sources)
+
+    def _add_contacts(self, patient, links):
         for link in links:
             link = link.strip().strip("P")
             try:
@@ -137,14 +144,13 @@ class Command(BaseCommand):
                 continue
         patient.save()
 
-        for source in ["Source_1", "Source_2", "Source_3"]:
-            text = row.get(source, "")
-            if not text:
-                continue
-            if text.startswith("http") or text.startswith("www"):
-                patient.source_set.create(url=text, is_verified=True)
+    def _add_sources(self, patient, sources):
+        for source in sources:
+            if source.startswith("http") or source.startswith("www"):
+                patient.source_set.create(url=source, is_verified=True)
             else:
-                patient.source_set.create(description=text, is_verified=True)
+                patient.source_set.create(description=source, is_verified=True)
+        patient.save()
 
     def _travel_history_import(self, reader):
         counter = 0
