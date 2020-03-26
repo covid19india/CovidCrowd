@@ -25,11 +25,18 @@ const Example = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
-            {/*
             <NavItem>
-              <NavLink href="/new-patient">Report New Patient</NavLink>
-            </NavItem -->
-          */}
+              <NavLink href="http://covid19india.org">Dashboard</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://www.covid19india.org/clusters">Clusters</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://www.covid19india.org/links">Helpful Links</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://www.covid19india.org/faq">FAQ</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>

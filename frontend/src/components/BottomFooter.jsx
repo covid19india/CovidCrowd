@@ -6,10 +6,11 @@ function BottomFooter() {
       <div className="row text-gray-dark text-center">
         <div className="col">
           <small>
+            <strong>Disclaimer: </strong>
             The data on this site is curated by a team of volunteers under the umbrella of
-            <a href="http://covid19india.org">Covid19India.org</a> from multiple sources
+            <a href="http://covid19india.org" className="ml-1">Covid19India.org</a> from multiple sources
             including news reports, Twitter posts and official Govt Websites like the
-            <a href="https://www.mohfw.gov.in/">MoFHW</a> site.
+            <a href="https://www.mohfw.gov.in/" className="ml-1">MoFHW</a> site.
           </small>
         </div>
       </div>
