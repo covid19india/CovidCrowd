@@ -2,12 +2,16 @@
 
 A crowd-sourcing platform for the Covid-19 Pandemic
 
+> This is NOT the project that powers the Covid 19 India Dashboard. [Click here](https://github.com/covid19india/covid19india-react) to switch to the dashboard project.
+
 ## Workflow
+
+**Note:** This workflow was never fully implemented. The primary data collection is still based out of Google Sheets
 
 ![FlowChart](https://github.com/tecoholic/CovidCrowd/raw/master/docs/CovidCrowd-Workflow.png)
 
 
-## Development
+## Development Setup for Backend
 
 1. Install Spatial Data Requirements
 
@@ -71,7 +75,32 @@ This will create a new report for every row that has a data entry. Mainly it loo
 to see if the `Date Announced` column has a value. If the `Patient number` is
 already present it will be skipped. So running multiple imports is not an issue.
 
-**Note:** It will only generate "Report" objects and not "Patient" objects. You
- will have to manually create a patient based on the imported reports. Apologies
- for inconvenience during setup. We emphasize on clarity of data over simplicity
-  of creating a patient record.
+You can also load the patient travel history into the project using
+
+```shell script
+python manage.py importcsv ./data/travel_history.csv --type travel
+``` 
+
+### Development Setup for the frontend
+
+There are two frontends for this application:
+
+1. Server side rendered frontend based on Django Templates. This frontend has the crowdsourcing functionality.
+2. Client side rendered frontend based on React. This is just provides a table interface and patient details page for browsing the patient database.
+
+There is nothing to be done for the Django based frontend. This Backend setup would automatically handle this.
+
+### Setting up the React Frontend
+
+Install all the node dependencies and start the development server.
+
+```shell script
+cd frontend
+yarn
+yarn start
+```
+
+## A Note about caching
+
+Due to the high traffic load a number of Django views are cached. This might interfere with your development.
+See `patients/urls.py` for all the cached views and their durations.
