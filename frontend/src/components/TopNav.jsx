@@ -9,6 +9,7 @@ import {
   NavLink,
 } from 'reactstrap';
 import logo from './covidcrowd.svg';
+import "./TopNav.css";
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,25 +18,24 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar color="white" light expand="md">
+      <Navbar light expand="md">
         <NavbarBrand href="/" className="text-primary">
-          <img src={logo} alt="" width={30} height={30} className="mr-2"/>
-          Covid-19 India
+          <img src={logo} alt="" width={36} height={36}/>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="http://covid19india.org">Dashboard</NavLink>
+              <NavLink href="http://covid19india.org" className="text-uppercase">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://www.covid19india.org/clusters">Clusters</NavLink>
+              <NavLink href="https://www.covid19india.org/clusters" className="text-uppercase">Clusters</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://www.covid19india.org/links">Helpful Links</NavLink>
+              <NavLink href="https://www.covid19india.org/links" className="text-uppercase">Helpful Links</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://www.covid19india.org/faq">FAQ</NavLink>
+              <NavLink href="https://www.covid19india.org/faq" className="text-uppercase">FAQ</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
