@@ -32,6 +32,7 @@ server {
 
 	location / {
 		root /opt/apps/CovidCrowd/frontend/build/;
+		try_files $uri /index.html;
 		sendfile on;
 	}
 
@@ -40,9 +41,9 @@ server {
 		proxy_pass http://unix:/var/run/covidcrowd/covidcrowd.sock;
 	}
 
-	# location /static {
-	# 	root /opt/apps/CovidCrowd;
-	# 	sendfile on;
-	# }
+	location /djstatic {
+		root /opt/apps/CovidCrowd;
+		sendfile on;
+	}
 
 }
