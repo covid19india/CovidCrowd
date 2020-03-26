@@ -11,6 +11,7 @@ function getTable(patients) {
 function HomePage(props) {
   return (
     <main className="container">
+      <h3 className="h3 text-uppercase my-3">Affected Patients</h3>
       { getTable(props.patients) }
     </main>
   );

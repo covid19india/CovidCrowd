@@ -27,14 +27,16 @@ function Table({columns, data}) {
     pageCount,
     setPageSize,
   } = useTable({
-      columns, data
+      columns, data, initialState: {
+        sortBy: [{ id: 'diagnosed_date', desc: true }]
+      }
     },
     useSortBy,
     usePagination);
 
   return (
-    <div>
-      <table {...getTableProps()} className="table table-responsive">
+    <div className="table-responsive">
+      <table {...getTableProps()} className="table">
         <thead>
         <tr>
           {headers.map(column => (
@@ -47,9 +49,9 @@ function Table({columns, data}) {
               {
                 column.isSorted ?
                   (column.isSortedDesc ?
-                    <FontAwesomeIcon icon="sort-amount-down" />:
-                    <FontAwesomeIcon icon="sort-amount-up" />
-                ) : <FontAwesomeIcon icon="sort"/>
+                    <FontAwesomeIcon icon="sort-amount-down" className="text-orange" />:
+                    <FontAwesomeIcon icon="sort-amount-up" className="text-orange" />
+                ) : <FontAwesomeIcon icon="sort" className="text-light"/>
               }
               </i>
             </th>
@@ -149,13 +151,16 @@ function PatientTable({ patients }) {
   const columns = React.useMemo(()=> [
       {
         Header: 'ID',
-        accessor: 'id'
+        accessor: 'id',
+        sortType: 'basic'
       }, {
         Header: 'Diagnosed Date',
-        accessor: 'diagnosed_date'
+        accessor: 'diagnosed_date',
+        sortType: 'basic'
       }, {
         Header: 'Age',
-        accessor: 'age'
+        accessor: 'age',
+        sortType: 'basic'
       }, {
         Header: 'Gender',
         accessor: 'gender'
