@@ -115,6 +115,7 @@ function PatientDetail({ patients }) {
             </div>
           </div>
 
+          {/*
           <div className="card my-2">
             <div className="card-header"><strong>Contribute</strong></div>
             <div className="card-body">
@@ -130,6 +131,7 @@ function PatientDetail({ patients }) {
               </ul>
             </div>
           </div>
+          */}
 
         </div>
       </div>
