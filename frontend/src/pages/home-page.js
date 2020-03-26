@@ -1,5 +1,6 @@
 import React from "react";
 import PatientTable from "../components/PatientTable";
+import DownloadBlock from "../components/DownloadBlock";
 
 function getTable(patients) {
   if (patients.length) {
@@ -13,6 +14,7 @@ function HomePage(props) {
     <main className="container">
       <h3 className="h3 text-uppercase my-3">Affected Patients</h3>
       { getTable(props.patients) }
+      <DownloadBlock patients={props.patients} />
     </main>
   );
 }

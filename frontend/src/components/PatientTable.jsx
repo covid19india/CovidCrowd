@@ -69,8 +69,10 @@ function Table({columns, data}) {
                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
               })}
               <td>
-                <Link to={`/patient/${row.values.id}`}>Details</Link>
-
+                <Link to={`/patient/${row.values.id}`}>
+                  Details
+                  <FontAwesomeIcon icon="arrow-alt-circle-right" className="d-inline-block ml-2" />
+                </Link>
               </td>
             </tr>
           )

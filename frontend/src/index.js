@@ -5,7 +5,7 @@ import {
   faArrowCircleRight, faSort, faSortAmountDown, faSortAmountUp,
   faChevronLeft, faAngleDoubleLeft, faChevronRight, faAngleDoubleRight,
   faBullhorn, faVenusMars, faUserPlus, faHeartbeat, faMapMarkerAlt, faGlobeAsia,
-  faExclamationCircle
+  faExclamationCircle, faArrowAltCircleRight
 } from '@fortawesome/free-solid-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,7 +17,7 @@ import * as serviceWorker from './serviceWorker';
 library.add(faArrowCircleRight, faSort, faSortAmountDown, faSortAmountUp,
   faChevronLeft, faAngleDoubleLeft, faChevronRight, faAngleDoubleRight,
   faBullhorn, faVenusMars, faUserPlus, faHeartbeat, faMapMarkerAlt, faGlobeAsia,
-  faExclamationCircle
+  faExclamationCircle, faArrowAltCircleRight
 );
 
 
