@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Patient, PatientHistory
+from .models import Patient, PatientHistory, Source
 
 
 class PatientHistorySerializer(serializers.ModelSerializer):
@@ -38,3 +38,9 @@ class PatientOnlySerializer(serializers.ModelSerializer):
             "current_location_pt",
             "contacts"
         ]
+
+
+class SourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Source
+        fields = ["id", "patient_id", "url", "description"]

@@ -20,7 +20,7 @@ from .forms import ReportForm, PatientForm, ErrorReportForm, PatientEditForm
 from .forms import SourceForm
 from .models import Report, Patient, ErrorReport, PatientHistory
 from .models import Source
-from .serializers import PatientSerializer, PatientOnlySerializer
+from .serializers import PatientSerializer, PatientOnlySerializer, SourceSerializer
 from .tables import PatientsExportedTable, ErrorReportsTable
 from .tables import ReportsTable, PatientsTable, PatientHistoryTable
 
@@ -222,6 +222,14 @@ def get_patient(request, id):
 def get_patients(request):
     patient = Patient.objects.all().prefetch_related("contacts")
     serializer = PatientOnlySerializer(patient, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET',])
+@permission_classes((permissions.IsAuthenticatedOrReadOnly,))
+def get_sources_for_patient(request, patient_id):
+    sources = Source.objects.filter(patient_id=patient_id)
+    serializer = SourceSerializer(sources, many=True)
     return Response(serializer.data)
 
 
