@@ -27,7 +27,7 @@ function DownloadBlock(props) {
   const dataJSON = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(props.patients));
 
   return (
-    <div className="d-block">
+    <div className="d-block my-3">
       <p className="text-right">
         <small>
           <strong>Download </strong>
