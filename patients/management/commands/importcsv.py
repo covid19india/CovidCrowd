@@ -73,11 +73,11 @@ class Command(BaseCommand):
             if not row["Date Announced"] or not row["Patient number"]:
                 skipped += 1
                 continue
-
             try:
                 existing = Patient.objects.get(unique_id=row["Patient number"])
                 print(f"Updating Patient #{existing.id}")
                 self._update_patient(existing, row)
+                updates += 1
             except Patient.DoesNotExist:
                 self._create_new_patient(row)
                 new += 1
