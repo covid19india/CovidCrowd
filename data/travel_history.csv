@@ -1,4 +1,4 @@
-entry_id,PID,time_from,time_to,Address,lat_long,Accuracy_Location,Type,Mode of Travel,PlaceName,DataSource,
+ ,PID,time_from,time_to,Address,lat_long,Accuracy_Location,Type,Mode of Travel,PlaceName,DataSource,
 1,P35,29/02/2020 10:30:00,29/02/2020 11:30:00,"Hotel Aryas, Kuthattukulam, Muvattupuzha road","9.8614231,76.5900643",,placeVisit,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 2,P35,01/03/2020 21:30:00,01/03/2020 23:00:00,Suresh Hotel Ranni,"9.3823686,76.779199",,placeVisit,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,
 3,P35,02/03/2020 11:00:00,02/03/2020 11:30:00,"Post Office Ranni Pazvangadi, Ranni","9.3757533,76.7763825",,placeVisit,,,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,

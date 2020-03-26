@@ -31,7 +31,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 30,,05/03/2020,,59,M,Ghaziabad,Ghaziabad,Uttar Pradesh,Recovered,Travelled from Iran,,India,05/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://www.indiatoday.in/india/story/delhi-positive-coronavirus-number-cases-rise-india-news-update-1653008-2020-03-06,https://timesofindia.indiatimes.com/city/mumbai/coronavirus-in-india-live-updates-march-18-2020/liveblog/74683100.cms,Travelled to Iran
 31,DL-P3,06/03/2020,,,,Uttam Nagar,West Delhi,Delhi,Recovered,Travelled from Thailand and Malaysia,,India,15/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://www.indiatoday.in/india/story/delhi-positive-coronavirus-number-cases-rise-india-news-update-1653008-2020-03-06,http://health.delhigovt.nic.in/wps/wcm/connect/d9bd65804d9102c6a3baf7982ee7a5c7/HB15.pdf?MOD=AJPERES&lmod=-506630906&CACHEID=d9bd65804d9102c6a3baf7982ee7a5c7,Travelled to Thailand and Malaysia
 32,,07/03/2020,,65,M,Ladakh,Leh,Ladakh,Hospitalized,Travelled from Iran,,India,07/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://www.indiatoday.in/india/story/coronavirus-in-india-tracking-country-s-first-50-covid-19-cases-what-numbers-tell-1654468-2020-03-12,,Travelled from Iran
-33,,07/03/2020,,75,M,Ladakh,Leh,Ladakh,Hospitalized,Travelled from Iran,,India,07/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://www.indiatoday.in/india/story/coronavirus-in-india-tracking-country-s-first-50-covid-19-cases-what-numbers-tell-1654468-2020-03-12,,Travelled from Iran
+33,,07/03/2020,,75,M,Ladakh,Leh,Ladakh,Hospitalized,,,India,07/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://www.indiatoday.in/india/story/coronavirus-in-india-tracking-country-s-first-50-covid-19-cases-what-numbers-tell-1654468-2020-03-12,,Travelled from Iran
 34,TN-P1,07/03/2020,,45,M,Kancheepuram,Chennai,Tamil Nadu,Recovered,Travelled from Oman to Chennai Airport on 28.02.2020,,India,07/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://timesofindia.indiatimes.com/city/chennai/tamil-nadus-lone-covid-19-patient-recovers-to-be-discharged-from-chennai-hospital-on-monday/articleshow/74639130.cms,https://www.indiatoday.in/india/story/coronavirus-in-india-tracking-country-s-first-50-covid-19-cases-what-numbers-tell-1654468-2020-03-12,Travelled from Oman
 35,KL-PT-P1,08/03/2020,,24,M,Ranni,Pathanamthitta,Kerala,Hospitalized,Travelled from Italy on 29/02/2020 through Doha,,India,08/03/2020,https://indianexpress.com/article/india/coronavirus-outbreak-live-updates-pm-modi-6303338/,https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiq4ZOK7aHoAhWWH7cAHXyvBxgQFjAAegQIBhAB&url=https%3A%2F%2Fm.economictimes.com%2Fnews%2Fpolitics-and-nation%2Ffive-more-people-from-kerala-test-positive-for-coronavirus%2Farticleshow%2F74534888.cms&usg=AOvVaw0zADrc8fBj8SsZDqkG3Cwb,,Travel from Italy on 29/02/2020 through Doha
 36,KL-PT-P1,08/03/2020,,54,M,Ranni,Pathanamthitta,Kerala,Hospitalized,Travelled from Italy on 29/02/2020 through Doha,P35,India,08/03/2020,https://www.indiatoday.in/india/story/coronavirus-outbreak-more-test-positive-kerala-state-steps-precautionary-measures-1653599-2020-03-08,https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiq4ZOK7aHoAhWWH7cAHXyvBxgQFjAAegQIBhAB&url=https%3A%2F%2Fm.economictimes.com%2Fnews%2Fpolitics-and-nation%2Ffive-more-people-from-kerala-test-positive-for-coronavirus%2Farticleshow%2F74534888.cms&usg=AOvVaw0zADrc8fBj8SsZDqkG3Cwb,,Travel from Italy on 29/02/2020 through Doha
@@ -56,8 +56,8 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 55,KL-EL-P2,10/03/2020,,,F,Kochi,Ernakulam,Kerala,Hospitalized,Mother of P43,P43,India,10/03/2020,https://www.livemint.com/news/india/coronavirus-update-two-more-people-test-positive-for-covid-19-in-kerala-11583852482247.html,https://english.manoramaonline.com/news/kerala/2020/03/10/coronavirus-holiday-for-upto-class-7-kerala.html,,Mother of P43
 56,KL-PT-P5,10/03/2020,,96,M,Ranni,Pathanamthitta,Kerala,Hospitalized,Father of P36,"P36, P37, P38",India,10/03/2020,https://english.mathrubhumi.com/news/kerala/condition-of-89-yr-old-corona-positive-patient-from-ranni-critical-1.4604610,https://timesofindia.indiatimes.com/videos/city/kochi/kerala-corona-scare-2-patients-admitted-in-kottayam-hospital-critical/videoshow/74573426.cms,https://english.manoramaonline.com/news/kerala/2020/03/13/covid-19-coronavirus-chengalam-kottayam-neighbour-dies.html,Father of P36
 57,KL-PT-P6,10/03/2020,,89,F,Ranni,Pathanamthitta,Kerala,Hospitalized,Mother of P36,"P36, P37, P38",India,10/03/2020,https://english.mathrubhumi.com/news/kerala/condition-of-89-yr-old-corona-positive-patient-from-ranni-critical-1.4604610,https://timesofindia.indiatimes.com/videos/city/kochi/kerala-corona-scare-2-patients-admitted-in-kottayam-hospital-critical/videoshow/74573426.cms,https://english.manoramaonline.com/news/kerala/2020/03/13/covid-19-coronavirus-chengalam-kottayam-neighbour-dies.html,Mother of P36
-58,KL-KT-R1,10/03/2020,,,M,Chengalam,Kottayam,Kerala,Hospitalized,Daughter of P36 & P37,"P36, P37, P38",India,10/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/10/coronavirus-holiday-for-upto-class-7-kerala.html,,,Daughter of P36 & P37
-59,KL-KT-R2,10/03/2020,,,F,Chengalam,Kottayam,Kerala,Hospitalized,Son in law of P36 & P37,"P36, P37, P38",India,10/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/10/coronavirus-holiday-for-upto-class-7-kerala.html,,,Son in law of P36 & P37
+58,KL-KT-R1,10/03/2020,,,M,Chengalam,Kottayam,Kerala,Hospitalized,Daughter of P36 & P37,"P36, P37, P38",India,10/03/2020,https://www.facebook.com/collectorkottayam/posts/2542524755959751,https://economictimes.indiatimes.com/news/politics-and-nation/five-more-people-from-kerala-test-positive-for-coronavirus/articleshow/74534888.cms?from=mdr,https://english.manoramaonline.com/news/kerala/2020/03/10/coronavirus-holiday-for-upto-class-7-kerala.html,Daughter of P36 & P37
+59,KL-KT-R2,10/03/2020,,,F,Chengalam,Kottayam,Kerala,Hospitalized,Son in law of P36 & P37,"P36, P37, P38",India,10/03/2020,https://www.facebook.com/collectorkottayam/posts/2542524755959751,https://economictimes.indiatimes.com/news/politics-and-nation/five-more-people-from-kerala-test-positive-for-coronavirus/articleshow/74534888.cms?from=mdr,https://english.manoramaonline.com/news/kerala/2020/03/10/coronavirus-holiday-for-upto-class-7-kerala.html,Son in law of P36 & P37
 60,,10/03/2020,,3,F,Pune,Pune,Maharashtra,Hospitalized,Daughter of P44 & P45,"P44, P45",India,10/03/2020,https://www.thehindu.com/news/national/other-states/pune-coronavirus-case-kin-of-couple-who-tested-positive-cab-driver-in-isolation/article31031624.ece,https://www.theweek.in/news/india/2020/03/10/coronavirus-five-positive-cases-reported-in-pune.html,https://www.deccanherald.com/national/pune-confirms-five-coronavirus-cases-812429.html,Daughter of P44 & P45
 61,,10/03/2020,,,,Pune,Pune,Maharashtra,Hospitalized,Co-passenger with P44 & P45 in cab of P62 from Mumbai airport to Pune,"P44, P45",India,10/03/2020,https://www.thehindu.com/news/national/other-states/pune-coronavirus-case-kin-of-couple-who-tested-positive-cab-driver-in-isolation/article31031624.ece,https://www.theweek.in/news/india/2020/03/10/coronavirus-five-positive-cases-reported-in-pune.html,https://www.deccanherald.com/national/pune-confirms-five-coronavirus-cases-812429.html,Co-passenger with P44 & P45 in cab of P62 from Mumbai airport to Pune
 62,,10/03/2020,,,M,Pune,Pune,Maharashtra,Hospitalized,"Cab driver who ferried P44, P45, P61 from Mumbai airport to Pune","P44, P45",India,10/03/2020,https://www.thehindu.com/news/national/other-states/pune-coronavirus-case-kin-of-couple-who-tested-positive-cab-driver-in-isolation/article31031624.ece,https://www.theweek.in/news/india/2020/03/10/coronavirus-five-positive-cases-reported-in-pune.html,https://www.deccanherald.com/national/pune-confirms-five-coronavirus-cases-812429.html,"Cab driver who ferried P44, P45, P61 from Mumbai airport to Pune"
@@ -72,9 +72,9 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 71,AP-P1,12/03/2020,,27,M,Nellore,S.P.S. Nellore,Andhra Pradesh,Hospitalized,Travelled from Italy on March 6th,,India,12/03/2020,https://www.indiatoday.in/amp/india/story/first-coronavirus-case-in-andhra-pradesh-as-man-who-returned-from-italy-tests-positive-1654837-2020-03-12,https://twitter.com/xpressandhra/status/1242088017197559808?s=20,,Arrived from Italy on March 6th
 72,DL-P6,12/03/2020,,69,F,Janakpuri,South West Delhi,Delhi,Deceased,Mother of P64,P64,India,12/03/2020,https://www.newindianexpress.com/cities/delhi/2020/mar/12/sixth-case-of-coronavirus-reported-in-delhi-2115860.html,,,Mother of P64
 73,KA-P5,12/03/2020,,26,M,Bengaluru,Bengaluru,Karnataka,Recovered,"Travelled from Greece to Mumbai on March 6th, Google Employee",,India,20/03/2020,https://www.indiatoday.in/india/story/tracking-coronavirus-patients-in-karnataka-who-went-where-1655701-2020-03-15,https://www.newindianexpress.com/states/karnataka/2020/mar/20/coronavirus-two-patients-recover-to-be-discharged-on-friday-2119125.html,,"Google Employee, Came from Greece to Mumbai on March 6th"
-74,KA-P6,12/03/2020,,76,M,Kalaburgi,Kalaburagi,Karnataka,Deceased,"Travelled from Saudi on Feb 29, First death in India",,India,12/03/2020,https://www.hindustantimes.com/india-news/india-s-first-coronavirus-death-in-karnataka-confirmed/story-2ZJ6IuxJ38EiGndBq5pfHO.html,https://www.indiatoday.in/india/story/tracking-coronavirus-patients-in-karnataka-who-went-where-1655701-2020-03-15,,"First death in India, Returned from Saudi on Feb 29"
-75,KL-KN-2,12/03/2020,,,,Kannur,Kannur,Kerala,Hospitalized,"Travelled from Dubai, SG 54",,India,12/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/12/coronavirus-covid19-cases-kerala-govt-pinarayi-vijayan-shailaja.html,https://www.thenewsminute.com/article/two-more-covid-19-cases-kerala-returnees-dubai-and-qatar-120074,https://www.facebook.com/CollectorKKD/posts/2589002084669889,Returned from Dubai
-76,KL-TS-P1,12/03/2020,,,,Thrissur,Thrissur,Kerala,Hospitalized,Travelled from Qatar,,India,12/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/12/coronavirus-covid19-cases-kerala-govt-pinarayi-vijayan-shailaja.html,https://www.thenewsminute.com/article/two-more-covid-19-cases-kerala-returnees-dubai-and-qatar-120074,,Returned from Qatar
+74,KA-P6,12/03/2020,,76,M,Kalaburagi,Kalaburagi,Karnataka,Deceased,"Travelled from Saudi on Feb 29, First death in India",,India,12/03/2020,https://www.hindustantimes.com/india-news/india-s-first-coronavirus-death-in-karnataka-confirmed/story-2ZJ6IuxJ38EiGndBq5pfHO.html,https://www.indiatoday.in/india/story/tracking-coronavirus-patients-in-karnataka-who-went-where-1655701-2020-03-15,,"First death in India, Returned from Saudi on Feb 29"
+75,KL-KN-2,12/03/2020,,,,Kannur,Kannur,Kerala,Recovered,"Travelled from Dubai, SG 54",,India,23/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/12/coronavirus-covid19-cases-kerala-govt-pinarayi-vijayan-shailaja.html,https://www.thenewsminute.com/article/two-more-covid-19-cases-kerala-returnees-dubai-and-qatar-120074,https://www.facebook.com/CollectorKKD/posts/2589002084669889,Returned from Dubai
+76,KL-TS-P1,12/03/2020,,,,Thrissur,Thrissur,Kerala,Recovered,Travelled from Qatar,,India,24/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/12/coronavirus-covid19-cases-kerala-govt-pinarayi-vijayan-shailaja.html,https://www.thenewsminute.com/article/two-more-covid-19-cases-kerala-returnees-dubai-and-qatar-120074,https://www.facebook.com/thrissurcollector/posts/219341576091079,Returned from Qatar
 77,,12/03/2020,,65,M,Mumbai,Mumbai,Maharashtra,Deceased,"Travelled from Dubai on March 8, Third death in India, , Was hospitalised in Kasturba Hospital",,India,12/03/2020,https://www.ndtv.com/india-news/coronavirus-outbreak-live-updates-india-suspends-most-visas-amid-spike-in-cases-2193448?q_id=74,https://www.thehindu.com/news/national/other-states/three-more-test-positive-in-maharashtra/article31054460.ece,https://www.theweek.in/news/india/2020/03/17/coronavirus-3rd-death-in-india-reported-from-mumbai-as-64-year-old-man-dies.html,"Third death in India, Returned from Dubai on March 8, Was hospitalised in Kasturba Hospital"
 78,,12/03/2020,,45,M,Nagpur,Nagpur,Maharashtra,Hospitalized,Travelled from US on 6th March,,India,12/03/2020,https://www.deccanherald.com/national/west/11-coronavirus-cases-in-maharashtra-budget-session-to-be-curtailed-812912.html,,,Returned from US on 6th March
 79,,12/03/2020,,33,M,Pune,Pune,Maharashtra,Hospitalized,Travelled from US on 1st March,,India,12/03/2020,https://www.indiatoday.in/india/story/coronavirus-pune-maharashtra-1654932-2020-03-12,https://www.thehindu.com/news/cities/mumbai/man-back-from-us-is-punes-ninth-case/article31054331.ece,https://www.thehindu.com/news/national/other-states/three-more-test-positive-in-maharashtra/article31054460.ece,Returned from the US on 1st March
@@ -83,7 +83,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 82,,12/03/2020,,27,M,Ghaziabad,Ghaziabad,Uttar Pradesh,Hospitalized,Son of P30,P30,India,12/03/2020,https://timesofindia.indiatimes.com/city/ghaziabad/second-coronavirus-case-in-gzb-patients-son-also-tests-positive/articleshow/74602533.cms,,,Son of P30
 83,DL-P7,13/03/2020,,,M,Delhi,,Delhi,Hospitalized,"Travelled from Italy, Restaurant worker, Was evacuated",,India,13/03/2020,https://www.hindustantimes.com/india-news/coronavirus-update-indian-national-evacuated-from-italy-with-82-tests-positive-for-covid-19/story-OJV3iP46LNv5a1XPJawWuO.html,,,Restaurant worker evacuated from Italy
 84,,13/03/2020,,,,Jammu,,Jammu and Kashmir,Hospitalized,Close contact of P41,P41,India,13/03/2020,https://twitter.com/ANI/status/1238482416936701953,,,Close contact of P42
-85,KL-TV-R3,13/03/2020,,,,Varkala,Thiruvananthapuram,Kerala,Hospitalized,"Travelled from Italy, Italian national stayed in a resort at Varkala",,Italy,13/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/13/coronavirus-covid19-cases-kerala-pinarayi-vijayan-italian-kollam.html,https://www.thehindu.com/news/national/kerala/coronavirus-thiruvananthapuram-officials-release-travel-history-of-two-who-tested-positive/article31068119.ece,,Italian national stayed in a resort at Varkala
+85,KL-TV-R3,13/03/2020,,,,Varkala,Thiruvananthapuram,Kerala,Recovered,"Travelled from Italy, Italian national stayed in a resort at Varkala",,Italy,24/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/13/coronavirus-covid19-cases-kerala-pinarayi-vijayan-italian-kollam.html,https://www.thehindu.com/news/national/kerala/coronavirus-thiruvananthapuram-officials-release-travel-history-of-two-who-tested-positive/article31068119.ece,http://dhs.kerala.gov.in/wp-content/uploads/2020/03/bule_24032020-1.pdf,Italian national stayed in a resort at Varkala
 86,KL-TV-R1,13/03/2020,,,,Nedumangad,Thiruvananthapuram,Kerala,Hospitalized,"Travelled from Dubai, has visited Italy",,India,13/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/13/coronavirus-covid19-cases-kerala-pinarayi-vijayan-italian-kollam.html,https://www.thehindu.com/news/national/kerala/coronavirus-thiruvananthapuram-officials-release-travel-history-of-two-who-tested-positive/article31068119.ece,,"Returned from Dubai, has visited Italy"
 87,KL-TV-R2,13/03/2020,,,M,Thiruvanathapuram,Thiruvananthapuram,Kerala,Hospitalized,Travelled from London via Bahrain ,,India,13/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/13/coronavirus-covid19-cases-kerala-pinarayi-vijayan-italian-kollam.html,https://www.thehindu.com/news/national/kerala/coronavirus-thiruvananthapuram-officials-release-travel-history-of-two-who-tested-positive/article31068119.ece,,Returned from London via Bahrain 
 88,,13/03/2020,,,F,Nagpur,Nagpur,Maharashtra,Hospitalized,Wife of P78,P78,India,13/03/2020,https://economictimes.indiatimes.com/news/politics-and-nation/2-more-test-positive-for-coronavirus-in-nagpur-maharashtra-count-now-16/articleshow/74611718.cms,https://www.ndtv.com/india-news/coronavirus-outbreak-3-more-test-positive-for-coronavirus-in-maharashtra-2194498,,Wife of P78
@@ -138,10 +138,10 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 137,KA-P9,17/03/2020,,63,M,Kalaburagi,Kalaburagi,Karnataka,Hospitalized,Doctor of P74,P74,India,17/03/2020,https://twitter.com/ANI/status/1239769810608590848,,,Doctor of P74
 138,,17/03/2020,,49,M,Mumbai,Mumbai,Maharashtra,Hospitalized,Travelled from US on March 7,,India,17/03/2020,https://twitter.com/ANI/status/1239891569785765893?s=20,https://www.thehindu.com/news/national/coronavirus-live-updates-march-17-2020/article31088570.ece,,Travelled from the US on March 7
 139,,17/03/2020,,26,M,Pune,Pune,Maharashtra,Hospitalized,Travelled from US on March 14,,India,17/03/2020,https://twitter.com/ANI/status/1239886488629698567?s=20,https://www.thehindu.com/news/national/coronavirus-live-updates-march-17-2020/article31088570.ece,,Travelled from the US on March 14
-140,,17/03/2020,,68,F,"Travelled from Abhu Dhabi, EY 250",Mahe,Puducherry,Hospitalized,Travelled from UAE,,India,17/03/2020,https://twitter.com/PTI_News/status/1239866086905921536?s=19,https://www.thehindu.com/news/national/kerala/first-covid-19-case-detected-in-mahe/article31093347.ece,https://www.facebook.com/CollectorKKD/posts/2591627614407336,Travel history UAE
+140,,17/03/2020,,68,F,Mahe,Mahe,Puducherry,Hospitalized,Travelled from UAE,,India,17/03/2020,https://twitter.com/PTI_News/status/1239866086905921536?s=19,https://www.thehindu.com/news/national/kerala/first-covid-19-case-detected-in-mahe/article31093347.ece,https://www.facebook.com/CollectorKKD/posts/2591627614407336,Travel history UAE
 141,TS-P5,17/03/2020,,52,M,Hyderabad,Hyderabad,Telangana,Hospitalized,"Indonesian national; The patient had flown into Delhi on March 9 and after a few days took a train to Karimnagar, about 170 km from Hyderabad, for a religious meeting with a group from Indonesia and Malaysia.",,Indonesia,17/03/2020,https://twitter.com/ANI/status/1239894891678724097,,,"Indonesian national; The patient had flown into Delhi on March 9 and after a few days took a train to Karimnagar, about 170 km from Hyderabad, for a religious meeting with a group from Indonesia and Malaysia."
-142,,17/03/2020,,,M,Gautam Buddha Nagar,Gautam Buddha Nagar,Uttar Pradesh,Hospitalized,Sector 78; Contracted from his boss,P64,India,17/03/2020,https://mobile.twitter.com/ANINewsUP/status/1239777755505373184,https://timesofindia.indiatimes.com/city/noida/coronavirus-cases-in-noida-two-test-positive-for-coronavirus-in-noida/articleshow/74668161.cms,https://www.hindustantimes.com/noida/noida-man-tests-coronavirus-positive-after-he-meets-delhi-patient-at-work/story-KNJ0rTgO3n0Y5fyg4AVNxK.html,Sector 78; Contracted from his boss
-143,,17/03/2020,,21,F,Gautam Buddha Nagar,Gautam Buddha Nagar,Uttar Pradesh,Hospitalized,"Travelled from France, Sector 100; ",,India,17/03/2020,https://mobile.twitter.com/ANINewsUP/status/1239777755505373184,https://timesofindia.indiatimes.com/city/noida/coronavirus-cases-in-noida-two-test-positive-for-coronavirus-in-noida/articleshow/74668161.cms,https://www.hindustantimes.com/noida/noida-man-tests-coronavirus-positive-after-he-meets-delhi-patient-at-work/story-KNJ0rTgO3n0Y5fyg4AVNxK.html,Sector 100; Travel history to France
+142,,17/03/2020,,,M,Gautam Buddh Nagar,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,Sector 78; Contracted from his boss,P64,India,17/03/2020,https://mobile.twitter.com/ANINewsUP/status/1239777755505373184,https://timesofindia.indiatimes.com/city/noida/coronavirus-cases-in-noida-two-test-positive-for-coronavirus-in-noida/articleshow/74668161.cms,https://www.hindustantimes.com/noida/noida-man-tests-coronavirus-positive-after-he-meets-delhi-patient-at-work/story-KNJ0rTgO3n0Y5fyg4AVNxK.html,Sector 78; Contracted from his boss
+143,,17/03/2020,,21,F,Gautam Buddh Nagar,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,"Travelled from France, Sector 100; ",,India,17/03/2020,https://mobile.twitter.com/ANINewsUP/status/1239777755505373184,https://timesofindia.indiatimes.com/city/noida/coronavirus-cases-in-noida-two-test-positive-for-coronavirus-in-noida/articleshow/74668161.cms,https://www.hindustantimes.com/noida/noida-man-tests-coronavirus-positive-after-he-meets-delhi-patient-at-work/story-KNJ0rTgO3n0Y5fyg4AVNxK.html,Sector 100; Travel history to France
 144,,17/03/2020,,18,M,Kolkata,Kolkata,West Bengal,Hospitalized,Travelled from United Kingdom (quarantined),,India,17/03/2020,https://twitter.com/PTI_News/status/1239951825765158912,https://twitter.com/ANI/status/1239953388248260608,,Travel history to United Kingdom (quarantined)
 145,,17/03/2020,,34,M,Leh,Leh,Ladakh,Hospitalized,Indian Army jawan,P146,India,17/03/2020,https://www.indiatoday.in/india/story/coronavirus-first-indian-army-jawan-tests-positive-covid19-ladakh-1656643-2020-03-17,https://twitter.com/ANI/status/1239969373013438464,https://timesofindia.indiatimes.com/city/mumbai/coronavirus-in-india-live-updates-march-18-2020/liveblog/74683100.cms,Indian Army jawan
 146,,17/03/2020,,,M,Leh,Leh,Ladakh,Hospitalized,"Travelled from Iran, Father of P145, ",,India,17/03/2020,https://www.indiatoday.in/india/story/coronavirus-first-indian-army-jawan-tests-positive-covid19-ladakh-1656643-2020-03-17,https://twitter.com/ANI/status/1239969373013438464,,"Father of P145, Returned from Iran"
@@ -150,7 +150,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 149,TS-P6,18/03/2020,,22,M,Hyderabad,Hyderabad,Telangana,Hospitalized,"Studying BBA at Scotland, Travelled from UK",,India,18/03/2020,https://www.thenewsminute.com/article/telangana-records-sixth-case-coronavirus-patient-had-travel-history-uk-120510,https://drive.google.com/drive/folders/1yAgt3IN1u8jX8g8jEasC4KNR26HUqeKi,,"Travelled from Scotland, UK"
 150,KA-P13,18/03/2020,,56,F,Bengaluru ,Bengaluru,Karnataka,Hospitalized,Travelled from US,,India,18/03/2020,https://twitter.com/sriramulubjp/status/1240189934410948609,,,Travel History to the US
 151,KA-P12,18/03/2020,,25,M,Bengaluru ,Bengaluru,Karnataka,Hospitalized,Travelled from Spain AI136,,India,18/03/2020,https://twitter.com/sriramulubjp/status/1240189934410948609,,,Travel History to Spain
-152,,18/03/2020,,,,Gautam Buddha Nagar,Gautam Buddha Nagar,Uttar Pradesh,Hospitalized,Travelled from Indonesia,,India,18/03/2020,https://twitter.com/aninewsup/status/1240188649334964224?s=21,,,Travel history to Indonesia
+152,,18/03/2020,,,,Gautam Buddh Nagar,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,Travelled from Indonesia,,India,18/03/2020,https://twitter.com/aninewsup/status/1240188649334964224?s=21,,,Travel history to Indonesia
 153,,18/03/2020,,44,M,Gurugram,Gurugram,Haryana,Hospitalized,Travelled from UK,,India,18/03/2020,https://timesofindia.indiatimes.com/articleshow/74682966.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppst,https://epaper.hindustantimes.com/Home/ShareArticle?OrgId=d2d754a3,,Travel History to the UK
 154,TN-P2,18/03/2020,,20,M,Chennai,,Tamil Nadu,Hospitalized,Reached Chennai MGR Central from Delhi via Train on 12.03.2020,,India,18/03/2020,https://twitter.com/Vijayabaskarofl/status/1240250048639668224,,,Reached Chennai from Delhi via Train
 155,,18/03/2020,,68,F,Mumbai,,Maharashtra,Hospitalized,"Residing at N Ward,Close contact of P138",P138,India,18/03/2020,https://twitter.com/PTI_News/status/1240259888917278725,https://twitter.com/THMumbai/status/1240262937576484864,,"Residing at N Ward,Close contact of another Covid Patient"
@@ -235,8 +235,8 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 234,,20/03/2020,,,,Bhilwara,Bhilwara,Rajasthan,Hospitalized,Bangar Hospital Compounder,,India,20/03/2020,https://twitter.com/zeerajasthan_/status/1240971622212722692,,,Bangar Hospital Compounder
 235,,20/03/2020,,,,Bhilwara,Bhilwara,Rajasthan,Hospitalized,Bangar Hospital Compounder,,India,20/03/2020,https://twitter.com/zeerajasthan_/status/1240971622212722692,,,Bangar Hospital Compounder
 236,,20/03/2020,,,,Bhilwara,Bhilwara,Rajasthan,Hospitalized,Bangar Hospital Compounder,,India,20/03/2020,https://twitter.com/zeerajasthan_/status/1240971622212722692,,,Bangar Hospital Compounder
-237,,20/03/2020,,52,F,Faridabad,,Haryana,Hospitalized,Travelled from Spain,,India,20/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2020th%20March.pdf,,,Sector 15; Travel History to Spain
-238,,20/03/2020,,21,M,Panipat,,Haryana,Hospitalized,Travelled from UK,,India,20/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2020th%20March.pdf,,,Travel History to UK
+237,,20/03/2020,,52,F,Faridabad,Faridabad,Haryana,Hospitalized,Travelled from Spain,,India,20/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2020th%20March.pdf,,,Sector 15; Travel History to Spain
+238,,20/03/2020,,21,M,Panipat,Panipat,Haryana,Hospitalized,Travelled from UK,,India,20/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2020th%20March.pdf,,,Travel History to UK
 239,,20/03/2020,,52,M,Kasaragod,Kasaragod,Kerala,Hospitalized,Travelled from Sharjah ,,India,20/03/2020,https://twitter.com/ANI/status/1240996937672749059,https://www.thenewsminute.com/article/covid-19-kerala-reports-12-new-cases-coronavirus-total-rises-40-120740,https://www.thehindu.com/news/national/kerala/six-more-covid-19-cases-in-kasaragod/article31123807.ece,Returned from Sharjah 
 240,,20/03/2020,,27,M,Kasaragod,Kasaragod,Kerala,Hospitalized,Travelled from Dubai via Mangalore,,India,20/03/2020,https://twitter.com/ANI/status/1240996937672749059,https://www.thenewsminute.com/article/covid-19-kerala-reports-12-new-cases-coronavirus-total-rises-40-120740,https://www.thehindu.com/news/national/kerala/six-more-covid-19-cases-in-kasaragod/article31123807.ece,Returned from Dubai via Mangalore
 241,,20/03/2020,,,M,Kasaragod,Kasaragod,Kerala,Hospitalized,Travelled in a car with P117,P117,India,20/03/2020,https://twitter.com/ANI/status/1240996937672749059,https://www.thenewsminute.com/article/covid-19-kerala-reports-12-new-cases-coronavirus-total-rises-40-120740,https://www.thehindu.com/news/national/kerala/six-more-covid-19-cases-in-kasaragod/article31123807.ece,Travelled in a car with P117
@@ -267,7 +267,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 266,PJ-P10,21/03/2020,,42,M,Mohali,Sahibzada Ajit Singh Nagar,Punjab,Hospitalized,Travelled from UK,,India,21/03/2020,https://twitter.com/PTI_News/status/1241222515193573376,https://www.thehindu.com/news/national/other-states/coronavirus-three-fresh-cases-reported-in-punjab/article31126217.ece,https://www.outlookindia.com/newsscroll/three-more-test-positive-in-punjab-total-rises-to-six/1775128,Travel history to UK
 267,PJ-P12,21/03/2020,,74,F,Mohali,Sahibzada Ajit Singh Nagar,Punjab,Hospitalized,Sister of P201,P201,India,21/03/2020,https://twitter.com/PTI_News/status/1241222515193573376,https://www.thehindu.com/news/national/other-states/coronavirus-three-fresh-cases-reported-in-punjab/article31126217.ece,https://www.outlookindia.com/newsscroll/three-more-test-positive-in-punjab-total-rises-to-six/1775128,Sister of P201
 268,PJ-P13,21/03/2020,,28,F,Mohali,Sahibzada Ajit Singh Nagar,Punjab,Hospitalized,"Employee of P172, Accompanied P224 & Driver",P172,India,21/03/2020,https://twitter.com/PTI_News/status/1241222515193573376,https://www.thehindu.com/news/national/other-states/coronavirus-three-fresh-cases-reported-in-punjab/article31126217.ece,https://m.hindustantimes.com/cities/four-more-test-positive-for-covid-19-in-chandigarh-panchkula-and-mohali-taking-count-to-10-in-tricity/story-2KPatugr8JiGcNIUXZAJhI_amp.html?__twitter_impression=true,"Employee of P172, Accompanied P224 & Driver"
-269,,21/03/2020,,52,M,Vadodara,Vadodara,Gujarat,Hospitalized,"Travelled from Sri Lanka, same group as P222",,India,21/03/2020,https://timesofindia.indiatimes.com/city/mumbai/live-updates-coronavirus-in-india-maharashtra-punjab-delhi-telangana-karnataka-kerala/liveblog/74722161.cms,,,"Travel History to Sri Lanka, same group as P222"
+269,,21/03/2020,,59,M,Vadodara,Vadodara,Gujarat,Hospitalized,"Travelled from Sri Lanka, same group as P222",,India,21/03/2020,https://timesofindia.indiatimes.com/city/mumbai/live-updates-coronavirus-in-india-maharashtra-punjab-delhi-telangana-karnataka-kerala/liveblog/74722161.cms,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,,"Travel History to Sri Lanka, same group as P222"
 270,,21/03/2020,,63,M,Mumbai,,Maharashtra,Deceased,"Travelled from UK, had a chronic history of diabetes, high blood pressure, and ischemic heart disease.",,India,22/03/2020,https://twitter.com/PTI_News/status/1241219494996873217,https://www.thehindu.com/news/cities/mumbai/five-new-cases-in-state-critical-patient-shifted-to-jaslok/article31123456.ece,https://english.jagran.com/india/coronavirus-pandemic-india-reports-six-deaths-due-to-covid19-after-patients-from-bihar-and-maharashtra-dies-10009895,"Travel history to UK, had a chronic history of diabetes, high blood pressure, and ischemic heart disease."
 271,,21/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,India,21/03/2020,https://twitter.com/PTI_News/status/1241219494996873217,https://www.thehindu.com/news/cities/mumbai/five-new-cases-in-state-critical-patient-shifted-to-jaslok/article31123456.ece,,Details awaited
 272,,21/03/2020,,41,F,Pune,Pune,Maharashtra,Hospitalized,Admitted on Swine Flu suspicion; COVID19 confirmed,,India,21/03/2020,https://twitter.com/ANI/status/1241235696272076801,,,Admitted on Swine Flu suspicion; COVID19 confirmed
@@ -293,7 +293,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 292,,21/03/2020,,,,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Details awaited,,India,21/03/2020,https://twitter.com/ANI/status/1241292573584441345,https://www.thehindu.com/news/national/coronavirus-jump-in-covid-19-cases-in-gujarat/article31130224.ece,,Details awaited
 293,,21/03/2020,,,,Surat,Surat,Gujarat,Hospitalized,"No Travel History, Details awaited",,India,21/03/2020,https://twitter.com/ANI/status/1241292573584441345,https://www.thehindu.com/news/national/coronavirus-jump-in-covid-19-cases-in-gujarat/article31130224.ece,https://twitter.com/HuffPostIndia/status/1241673422272249857?s=20,Details awaited
 294,,21/03/2020,,67,M,Surat,Surat,Gujarat,Deceased,Travelled to Delhi & Jaipur,,India,22/03/2020,https://twitter.com/ANI/status/1241292573584441345,https://www.thehindu.com/news/national/coronavirus-jump-in-covid-19-cases-in-gujarat/article31130224.ece,https://economictimes.indiatimes.com/news/politics-and-nation/surat-man-first-victim-of-coronavirus-in-gujarat/articleshow/74760199.cms,Details awaited
-295,,21/03/2020,,,,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,Details awaited,,India,21/03/2020,https://twitter.com/ANI/status/1241292573584441345,https://www.thehindu.com/news/national/coronavirus-jump-in-covid-19-cases-in-gujarat/article31130224.ece,,Details awaited
+295,,21/03/2020,,26,M,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,Travelled from Dubai,,India,21/03/2020,https://twitter.com/ANI/status/1241292573584441345,https://www.thehindu.com/news/national/coronavirus-jump-in-covid-19-cases-in-gujarat/article31130224.ece,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,Details awaited
 296,KA-P16,21/03/2020,,53,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,Domestic worker of P137,P137,India,21/03/2020,https://twitter.com/sriramulubjp/status/1241281240243662848,,,Domestic worker of P137
 297,KA-P17,21/03/2020,,39,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from Netherlands Flight No. KL 1227,,India,21/03/2020,https://twitter.com/sriramulubjp/status/1241281240243662848,,,"Amsterdam > Paris (KL1227, Seat 9A) > Bengaluru (AF 0194, Seat 43) > (BMTC Bus KIA-8) > Home Quarantine > RGICD visit, with Wife "
 298,,21/03/2020,,19,F,Moradabad,Moradabad,Uttar Pradesh,Hospitalized,Travelled from France,,India,21/03/2020,https://twitter.com/ANINewsUP/status/1241280918888656901,,,Travel History to France
@@ -309,7 +309,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 308,PJ-P8,21/03/2020,,17,M,Nawanshahr,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,Grand daughter of P182,P182,India,21/03/2020,https://timesofindia.indiatimes.com/india/coronavirus-live-updates-air-india-to-send-aircraft-to-bring-indians-stranded-in-rome/liveblog/74740230.cms,https://punjabupdate.com/media-bulletin-21-03-2020-covid-19-punjab-total-number-of-positive-cases-rise-to-13.html,,Grand daughter of P182
 309,PJ-P9,21/03/2020,,36,F,Nawanshahr,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,Daughter of P182,P182,India,21/03/2020,https://timesofindia.indiatimes.com/india/coronavirus-live-updates-air-india-to-send-aircraft-to-bring-indians-stranded-in-rome/liveblog/74740230.cms,https://punjabupdate.com/media-bulletin-21-03-2020-covid-19-punjab-total-number-of-positive-cases-rise-to-13.html,,Daughter of P182
 310,,21/03/2020,,,,Yavatmal,,Maharashtra,Hospitalized,Travelled from Congo,,India,21/03/2020,https://twitter.com/ANI/status/1241334903129563137,,,Travel history to Congo
-311,PJ-P11,21/03/2020,,60,M,Garshankar,Hoshiarpur,Punjab,Hospitalized,In contact with P182,P182,India,21/03/2020,http://www.babushahi.com/full-news.php?id=98694,,,In contact with P182
+311,PJ-P11,21/03/2020,,60,M,Garhshankar,Hoshiarpur,Punjab,Hospitalized,In contact with P182,P182,India,21/03/2020,http://www.babushahi.com/full-news.php?id=98694,,,In contact with P182
 312,,21/03/2020,,,,,Kannur,Kerala,Hospitalized, Travelled from Sharjah IX 746,,India,21/03/2020,https://twitter.com/ANI/status/1241349576361037824,https://www.thehindu.com/news/national/kerala/more-positive-cases-reported-in-state/article31130190.ece,https://www.facebook.com/CollectorKNR/posts/2829558627140973,Details awaited; Returned from a Gulf Country
 313,,21/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, Air India Express IX 344",,India,21/03/2020,https://twitter.com/ANI/status/1241349576361037824,https://www.thehindu.com/news/national/kerala/more-positive-cases-reported-in-state/article31130190.ece,https://www.facebook.com/CollectorKKD/posts/2595278194042278,Details awaited; Returned from a Gulf Country
 314,,21/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, SG54",,India,21/03/2020,https://twitter.com/ANI/status/1241349576361037824,https://www.thehindu.com/news/national/kerala/more-positive-cases-reported-in-state/article31130190.ece,https://www.facebook.com/CollectorKNR/posts/2829557580474411,Details awaited; Returned from a Gulf Country
@@ -324,8 +324,8 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 323,,21/03/2020,,,,,Ernakulam,Kerala,Hospitalized,Details awaited; Travelled from Middle East,,India,21/03/2020,https://twitter.com/ANI/status/1241349576361037824,https://www.thehindu.com/news/national/kerala/more-positive-cases-reported-in-state/article31130190.ece,,Details awaited; Returned from a Gulf Country
 324,KA-P18,21/03/2020,,21,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from UK,,India,21/03/2020,,,,"Travel history to Edinburgh, Scotland"
 325,KA-P20,21/03/2020,,35,M,Mysuru,Mysuru,Karnataka,Hospitalized,Travelled from Dubai via Bengaluru,,India,21/03/2020,https://kannada.asianetnews.com/state/coronavirus-positive-case-founded-at-mysuru-total-rise-to-20-in-karnataka-q7jo5i,,,Travel History to Dubai via Bengaluru
-326,,21/03/2020,,23,F,Sonipat,Sonipat,Haryana,Hospitalized,Travelled from UK,,India,21/03/2020,https://www.hindustantimes.com/cities/23-year-old-woman-in-sonepat-tests-positive-for-coronavirus/story-2HQJGTajtXM9tRF42Vp8PJ.html,,,Sector 14; Travel History to the UK
-327,WB-P4,21/03/2020,,57,M,Dum Dum,North Kolkata,West Bengal,Deceased,No international travel history,,India,23/03/2020,https://twitter.com/PTI_News/status/1241377636317708288,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-man-with-no-foreign-travel-history-tests-positive-in-bengal/articleshow/74751265.cms,https://timesofindia.indiatimes.com/city/kolkata/man-infected-with-the-coronavirus-dies-in-kolkata-hospital/articleshow/74775374.cms,"No international travel history but Travelled to Bilaspur, Chhatisgarh in February"
+326,,21/03/2020,,23,F,Sonepat,Sonepat,Haryana,Hospitalized,Travelled from UK,,India,21/03/2020,https://www.hindustantimes.com/cities/23-year-old-woman-in-sonepat-tests-positive-for-coronavirus/story-2HQJGTajtXM9tRF42Vp8PJ.html,,,Sector 14; Travel History to the UK
+327,WB-P4,21/03/2020,,57,M,Dum Dum,North Kolkata,West Bengal,Deceased,"No international travel history, has travelled to  Bilaspur by train",,India,23/03/2020,https://twitter.com/PTI_News/status/1241377636317708288,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-man-with-no-foreign-travel-history-tests-positive-in-bengal/articleshow/74751265.cms,https://timesofindia.indiatimes.com/city/kolkata/man-infected-with-the-coronavirus-dies-in-kolkata-hospital/articleshow/74775374.cms,"No international travel history but Travelled to Bilaspur, Chhatisgarh in February"
 328,,21/03/2020,,,,Jaipur,Jaipur,Rajasthan,Hospitalized,Details awaited,,India,21/03/2020,https://www.indiatoday.in/india/story/novel-coronavirus-covid19-india-live-updates-latest-news-developments-confirmed-positive-cases-1658051-2020-03-21#60619,,,Details awaited
 329,,21/03/2020,,59,F,Lakhapt,Kutch,Gujarat,Hospitalized,Travelled from Saudi Arabia,,India,21/03/2020,https://timesofindia.indiatimes.com/india/coronavirus-live-updates-air-india-to-send-aircraft-to-bring-indians-stranded-in-rome/liveblog/74740230.cms,https://twitter.com/tv9gujarati/status/1241361717499584513,,Returned from Saudi Arabia
 330,AP-P4,21/03/2020,,22,M,Rajahmundry,East Godavari,Andhra Pradesh,Hospitalized,Travelled from UK,,India,21/03/2020,https://twitter.com/THAndhra/status/1241410102717906945,,,London to Hyderabad to Rajahmundry
@@ -345,14 +345,14 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 344,,22/03/2020,,,,Pune,,Maharashtra,Hospitalized,"Contact transmission, details awaited",P272,India,22/03/2020,https://twitter.com/PTI_News/status/1241595506037415936,https://www.livemint.com/news/india/coronavirus-have-no-option-but-to-apply-section-144-in-maharashtra-says-thackeray-11584870602906.html,,Close Relatives of P272
 345,,22/03/2020,,,,Pune,,Maharashtra,Hospitalized,"Contact transmission, details awaited",P272,India,22/03/2020,https://twitter.com/PTI_News/status/1241595506037415936,https://www.livemint.com/news/india/coronavirus-have-no-option-but-to-apply-section-144-in-maharashtra-says-thackeray-11584870602906.html,,Close Relatives of P272
 346,,22/03/2020,,,,Pune,,Maharashtra,Hospitalized,"Contact transmission, details awaited",P272,India,22/03/2020,https://twitter.com/PTI_News/status/1241595506037415936,https://www.livemint.com/news/india/coronavirus-have-no-option-but-to-apply-section-144-in-maharashtra-says-thackeray-11584870602906.html,,Close Relatives of P272
-347,TN-P7,22/03/2020,,25,F,Chennai,,Tamil Nadu,Hospitalized,"Travelled from Spain, Delhi, Bengaluru, Coimbatore on 15-03-2020",,,22/03/2020,https://twitter.com/Vijayabaskarofl/status/1241609304127336449,https://twitter.com/wilson_thehindu/status/1241649188783312899,,Traveller from Spain
+347,TN-P7,22/03/2020,,25,F,Coimbatore,Coimbatore,Tamil Nadu,Hospitalized,"Travelled from Spain, Delhi, Bengaluru, Coimbatore on 15-03-2020",,,22/03/2020,https://twitter.com/Vijayabaskarofl/status/1241609304127336449,https://twitter.com/wilson_thehindu/status/1241649188783312899,,Traveller from Spain
 348,,22/03/2020,,38,M,Munger,Munger,Bihar,Deceased,"Travelled from Qatar, Kolkata. He was from Munger. He died yesterday at AIIMS in Patna; had Travelled from Kolkata two days back.Foreign ",,India,22/03/2020,https://twitter.com/ANI/status/1241613245934260225,https://twitter.com/ANI/status/1241621958925537280,,He was from Munger. He died yesterday at AIIMS in Patna; had returned from Kolkata two days back.Foreign travel history to Qatar
 349,,22/03/2020,,,F,Patna,Patna,Bihar,Hospitalized,Travelled from UK. Patient has recently ,,,22/03/2020,https://www.indiatvnews.com/news/india/bihar-coronavirus-cases-patna-covid-19-fatality-health-ministry-janata-curfew-600424,https://twitter.com/ANI/status/1241621958925537280,,Patient has recently returned from Scotland.
 350,TS-P22,22/03/2020,,24,M,Hyderabad,Hyderabad,Telangana,Hospitalized,"Travelled from London via Dubai; Resident of Guntur, AP",,India,22/03/2020,https://twitter.com/TOIHyderabad/status/1241629696149708803,,,From London via Dubai
-351,,22/03/2020,,,,,Ahmedabad,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
-352,,22/03/2020,,,,,Ahmedabad,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
-353,,22/03/2020,,,,,Ahmedabad,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
-354,,22/03/2020,,,,,,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
+351,,22/03/2020,,,,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
+352,,22/03/2020,,,,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
+353,,22/03/2020,,,,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,,,
+354,,22/03/2020,,81,F,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,"Grandmother of P295, Travelled from Dubai",P295,,22/03/2020,https://twitter.com/htTweets/status/1241649921499049985,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,https://ahmedabadmirror.indiatimes.com/ahmedabad/others/seven-cases-in-24-hrs-take-gujarat-tally-to-14/articleshow/74754020.cms,
 355,,22/03/2020,,,,,Amritsar,Punjab,Hospitalized,Travelled from UK via Delhi,,,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,Details awaited
 356,,22/03/2020,,,,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,Travelled from Germany via Italy,,,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,https://www.hindustantimes.com/india-news/coronavirus-7-more-test-positive-for-covid-19-in-sbs-nagar-punjab-toll-touches-21/story-g5yplHLS1Eadb3CcnM9MwJ.html,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,Details awaited
 357,,22/03/2020,,,,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,Travelled from Germany via Italy,,,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,https://www.hindustantimes.com/india-news/coronavirus-7-more-test-positive-for-covid-19-in-sbs-nagar-punjab-toll-touches-21/story-g5yplHLS1Eadb3CcnM9MwJ.html,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,Details awaited
@@ -360,7 +360,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 359,,22/03/2020,,,,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,"Close contact of Patient (Patient Unknown, likely P182)",P182,,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,https://www.hindustantimes.com/india-news/coronavirus-7-more-test-positive-for-covid-19-in-sbs-nagar-punjab-toll-touches-21/story-g5yplHLS1Eadb3CcnM9MwJ.html,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,Details awaited
 360,,22/03/2020,,,,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,"Close contact of Patient (Patient Unknown, likely P182)",P182,,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,https://www.hindustantimes.com/india-news/coronavirus-7-more-test-positive-for-covid-19-in-sbs-nagar-punjab-toll-touches-21/story-g5yplHLS1Eadb3CcnM9MwJ.html,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,Details awaited
 361,,22/03/2020,,,,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,"Close contact of Patient (Patient Unknown, likely P182)",P182,,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,https://www.hindustantimes.com/india-news/coronavirus-7-more-test-positive-for-covid-19-in-sbs-nagar-punjab-toll-touches-21/story-g5yplHLS1Eadb3CcnM9MwJ.html,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,Details awaited
-362,,22/03/2020,,26,F,Bhopal,Bhopal,Madhya Pradesh,Hospitalized,Travelled from UK via Delhi (by train),,,22/03/2020,https://dbpost.com/madhya-pradesh-first-coronavirus-case-confirmed-in-bhopal-girl-returned-from-london-3-days-ago-found-positive/,https://timesofindia.indiatimes.com/city/bhopal/bhopal-reports-first-covid-19-case-total-goes-up-to-five-in-mp/articleshow/74758474.cms,,Professor Colony
+362,,22/03/2020,,26,F,Bhopal,Bhopal,Madhya Pradesh,Hospitalized,Travelled from UK via Delhi (by Shatabdi Express),,,22/03/2020,https://dbpost.com/madhya-pradesh-first-coronavirus-case-confirmed-in-bhopal-girl-returned-from-london-3-days-ago-found-positive/,https://timesofindia.indiatimes.com/city/bhopal/bhopal-reports-first-covid-19-case-total-goes-up-to-five-in-mp/articleshow/74758474.cms,,Professor Colony
 363,,22/03/2020,,58,M,,Kasaragod,Kerala,Hospitalized,Travelled from Dubai AI 938 admitted in Kozhikode  Medical College,,,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/coronavirus-kerala-lockdown-cm-chief-sec-different-voices.amp.html?__twitter_impression=true,https://www.newindianexpress.com/states/kerala/2020/mar/23/18-of-19-coronavirus-cases-in-kasaragod-linked-to-dubai-2120272.html,https://www.facebook.com/CollectorKKD/posts/2596942053875892,
 364,,22/03/2020,,27,M,,Kasaragod,Kerala,Hospitalized,Travelled from Middle East,,,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/coronavirus-kerala-lockdown-cm-chief-sec-different-voices.amp.html?__twitter_impression=true,https://www.newindianexpress.com/states/kerala/2020/mar/23/18-of-19-coronavirus-cases-in-kasaragod-linked-to-dubai-2120272.html,,
 365,,22/03/2020,,32,M,,Kasaragod,Kerala,Hospitalized,Travelled from Middle East,,,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/coronavirus-kerala-lockdown-cm-chief-sec-different-voices.amp.html?__twitter_impression=true,https://www.newindianexpress.com/states/kerala/2020/mar/23/18-of-19-coronavirus-cases-in-kasaragod-linked-to-dubai-2120272.html,,
@@ -384,11 +384,11 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 383,KA-P23,22/03/2020,,36,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from Switzerland and France,,,22/03/2020,State Health Bulletin - 22nd March,,,
 384,KA-P24,22/03/2020,,27,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from Germany,,,22/03/2020,State Health Bulletin - 22nd March,,,
 385,KA-P25,22/03/2020,,51,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from London,,,22/03/2020,State Health Bulletin - 22nd March,,,
-386,,22/03/2020,,,,,Kannur,Kerala,Hospitalized,Details awaited,,India,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/15-more-covid-19-cases-in-kerala-on-sunday.html,,,
-387,,22/03/2020,,,,,Kannur,Kerala,Hospitalized,Details awaited,,India,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/15-more-covid-19-cases-in-kerala-on-sunday.html,,,
+386,,22/03/2020,,,,,Kannur,Kerala,Hospitalized,Travelled from Dubai,,India,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/15-more-covid-19-cases-in-kerala-on-sunday.html,,,
+387,,22/03/2020,,,,,Kannur,Kerala,Hospitalized,Travelled from Dubai,,India,22/03/2020,https://english.manoramaonline.com/news/kerala/2020/03/22/15-more-covid-19-cases-in-kerala-on-sunday.html,,,
 388,,22/03/2020,,,,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,"Close contact of Patient (Patient Unknown, likely P182)",P182,India,22/03/2020,https://twitter.com/ANI/status/1241641572162101249,https://www.hindustantimes.com/india-news/coronavirus-7-more-test-positive-for-covid-19-in-sbs-nagar-punjab-toll-touches-21/story-g5yplHLS1Eadb3CcnM9MwJ.html,https://punjabupdate.com/8-new-cases-of-covid-19-in-punjab-total-21.html,
-389,,22/03/2020,,37,M,Greater Noida (West),Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,Travelled from Denmark,,India,22/03/2020,https://mobile.twitter.com/PTI_News/status/1241728729958629378,https://timesofindia.indiatimes.com/city/delhi/gurgaon-doctor-among-7-new-covid-19-patients-in-delhi-ncr/articleshow/74765177.cms,,
-390,,22/03/2020,,62,F,Greater Noida (West),Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,"Mother of P389, showed symptoms first -- tested on Mar 19",P389,India,22/03/2020,https://mobile.twitter.com/PTI_News/status/1241728729958629378,https://timesofindia.indiatimes.com/city/delhi/gurgaon-doctor-among-7-new-covid-19-patients-in-delhi-ncr/articleshow/74765177.cms,,
+389,,22/03/2020,,37,M,Greater Noida,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,Travelled from Denmark,,India,22/03/2020,https://mobile.twitter.com/PTI_News/status/1241728729958629378,https://timesofindia.indiatimes.com/city/delhi/gurgaon-doctor-among-7-new-covid-19-patients-in-delhi-ncr/articleshow/74765177.cms,,
+390,,22/03/2020,,62,F,Greater Noida,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,"Mother of P389, showed symptoms first -- tested on Mar 19",P389,India,22/03/2020,https://mobile.twitter.com/PTI_News/status/1241728729958629378,https://timesofindia.indiatimes.com/city/delhi/gurgaon-doctor-among-7-new-covid-19-patients-in-delhi-ncr/articleshow/74765177.cms,,
 391,,22/03/2020,,,M,Kolkata,Kolkata,West Bengal,Hospitalized,Father of P200,P200,India,22/03/2020,https://twitter.com/abpanandatv/status/1241737377212559367?s=20,https://twitter.com/TimesNow/status/1241735783444131840,,
 392,,22/03/2020,,,F,Kolkata,Kolkata,West Bengal,Hospitalized,Mother of P200,P200,India,22/03/2020,https://twitter.com/abpanandatv/status/1241737377212559367?s=20,https://twitter.com/TimesNow/status/1241735783444131840,,
 393,,22/03/2020,,,F,Kolkata,Kolkata,West Bengal,Hospitalized,Domestic worker of P200,P200,India,22/03/2020,https://twitter.com/abpanandatv/status/1241737377212559367?s=20,https://twitter.com/TimesNow/status/1241735783444131840,,
@@ -400,7 +400,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 399,,22/03/2020,,,,,,Rajasthan,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/ani/status/1241767703146201090?s=12,,,
 400,,22/03/2020,,,,,,Rajasthan,Hospitalized,Details awaited,,,22/03/2020,https://twitter.com/ani/status/1241767703146201090?s=12,,,
 401,,22/03/2020,,,M,Jhunjhunu,Jhunjhunu,Rajasthan,Hospitalized,Travelled from Dubai,,,22/03/2020,https://twitter.com/ani/status/1241767703146201090?s=12,https://www.bhaskar.com/rajasthan/jaipur/news/state-1-1-new-patients-found-in-bhilwara-jhunjhunu-and-jodhpur-now-29cases-death-toll-latest-news-and-updates-127030601.html,,
-402,,22/03/2020,,36,M,Shashta Nagar,Jodhpur,Rajasthan,Hospitalized,"Travelled from Turkey, between Mar 8th-17th",,,22/03/2020,https://www.bhaskar.com/rajasthan/jaipur/news/state-1-1-new-patients-found-in-bhilwara-jhunjhunu-and-jodhpur-now-29cases-death-toll-latest-news-and-updates-127030601.html,,,
+402,,22/03/2020,,36,M,Shashtri Nagar,Jodhpur,Rajasthan,Hospitalized,"Travelled from Turkey, between Mar 8th-17th",,,22/03/2020,https://www.bhaskar.com/rajasthan/jaipur/news/state-1-1-new-patients-found-in-bhilwara-jhunjhunu-and-jodhpur-now-29cases-death-toll-latest-news-and-updates-127030601.html,,,
 403,,23/03/2020,,,,Pune,,Maharashtra,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PTI_News/status/1241931502671130624?s=20,,,
 404,,23/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PTI_News/status/1241931502671130624?s=20,https://www.livemint.com/news/india/coronavirus-update-14-new-cases-reported-from-mumbai-1-from-pune-11584935139945.html,,
 405,,23/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PTI_News/status/1241931502671130624?s=20,https://www.livemint.com/news/india/coronavirus-update-14-new-cases-reported-from-mumbai-1-from-pune-11584935139945.html,,
@@ -418,17 +418,17 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 417,,23/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PTI_News/status/1241931502671130624?s=20,https://www.livemint.com/news/india/coronavirus-update-14-new-cases-reported-from-mumbai-1-from-pune-11584935139945.html,,
 418,KA-P27,23/03/2020,,46,M,Mysuru,Mysuru,Karnataka,Hospitalized,"Travelled from Dubai via Bengaluru, Resident of Kerala, ",,India,23/03/2020,https://twitter.com/ANI/status/1241953201072394240?s=20,https://timesofindia.indiatimes.com/city/mysuru/one-more-tests-positive-for-covid-19-in-karnataka-total-cases-rise-to-27/articleshow/74770193.cms,State Health Bulletin - 23rd Mar 2pm,
 419,,23/03/2020,,,M,Palwal,Palwal,Haryana,Hospitalized,Travelled from Dubai ,,India,23/03/2020,https://www.amarujala.com/delhi-ncr/coronavirus-in-delhi-ncr-latest-update-delhi-ghaziabad-gurugram-faridabad-noida-palwal-new-cases,,,"Travelled to Dubai on 12th March Returned back on 18th March, Two household members under quarantine."
-420,,23/03/2020,,45,M,,Surat,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-421,,23/03/2020,,58,M,,Ahmedabad,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-422,,23/03/2020,,57,F,,Ahmedabad,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-423,,23/03/2020,,27,F,,Vadodara,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-424,,23/03/2020,,29,F,,Vadodara,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-425,,23/03/2020,,24,F,,Ahmedabad,Gujarat,Hospitalized,Travelled from Paris,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-426,,23/03/2020,,33,M,,Ahmedabad,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-427,,23/03/2020,,49,M,,Gandhinagar,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-428,,23/03/2020,,46,F,,Vadodara,Gujarat,Hospitalized,Travelled from Sri Lanka,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-429,,23/03/2020,,61,M,,Ahmedabad,Gujarat,Hospitalized,Travelled from UK,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
-430,,23/03/2020,,85,F,,Ahmedabad,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+420,,23/03/2020,,45,M,Surat,Surat,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+421,,23/03/2020,,58,M,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+422,,23/03/2020,,57,F,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+423,,23/03/2020,,27,F,Vadodara,Vadodara,Gujarat,Hospitalized,Daughter of P269,P269,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,,
+424,,23/03/2020,,29,F,Vadodara,Vadodara,Gujarat,Hospitalized,Daughter in Law of P269,P269,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,,
+425,,23/03/2020,,24,F,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Travelled from Paris,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+426,,23/03/2020,,33,M,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Local transmission,,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+427,,23/03/2020,,49,M,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,Father of P295,P295,India,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+428,,23/03/2020,,46,F,Vadodara,Vadodara,Gujarat,Hospitalized,"Travelled from Sri Lanka, Wife of P269",P269,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,,
+429,,23/03/2020,,61,M,Ahmedabad,Ahmedabad,Gujarat,Hospitalized,Travelled from UK,,,23/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,,,
+430,,23/03/2020,,85,F,Ahmedabad,Ahmedabad,Gujarat,Deceased,Travelled from Saudi Arabia. She was suffering from many complications.,,,25/03/2020,https://twitter.com/PTI_News/status/1241956921332002820?s=20,https://twitter.com/MoHFW_GUJARAT/status/1242857603211972609?s=20,,
 431,,22/03/2020,,,,Delhi,,Delhi,Hospitalized,Doctor who has treated P171,P171,,22/03/2020,https://twitter.com/ArvindKejriwal/status/1241957699916427268,https://pbs.twimg.com/media/ETxYjOnU0AEJ0HV?format=jpg&name=900x900,https://twitter.com/ANI/status/1241966782216204288?s=19,
 432,,23/03/2020,,,,Delhi,,Delhi,Hospitalized,Details awaited,P171,,23/03/2020,https://twitter.com/ArvindKejriwal/status/1241957699916427268,https://twitter.com/ANI/status/1241966782216204288?s=19,,
 433,,23/03/2020,,,,Delhi,,Delhi,Hospitalized,Details awaited,P171,,23/03/2020,https://twitter.com/ArvindKejriwal/status/1241957699916427268,https://twitter.com/ANI/status/1241966782216204288?s=19,,
@@ -439,7 +439,7 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 438,TS-P31,23/03/2020,,20,M,Somajiguda,Hyderabad,Telangana,Hospitalized,Travelled from New York,,,23/03/2020,https://twitter.com/PTI_News/status/1242033516927320064?s=19,,,
 439,TS-P32,23/03/2020,,25,M,Gachibowli,Hyderabad,Telangana,Hospitalized,Tavelled from London,,,23/03/2020,https://twitter.com/PTI_News/status/1242033516927320064?s=19,https://twitter.com/IPRTelangana/status/1242100613174808576/photo/1,,
 440,TS-P33,23/03/2020,,56,M,Kukatpally,Hyderabad,Telangana,Hospitalized,Travelled from Sri Lanka,,,23/03/2020,https://twitter.com/PTI_News/status/1242033516927320064?s=19,https://twitter.com/IPRTelangana/status/1242100613174808576/photo/1,,
-441,,23/03/2020,,,,,,Gujarat,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/GujHFWDept/status/1242055510532202497,,,
+441,,23/03/2020,,32,M,Vadodara,Vadodara,Gujarat,Hospitalized,Son of P269,P269,,23/03/2020,https://twitter.com/GujHFWDept/status/1242055510532202497,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,,
 442,,23/03/2020,,,,,,Uttarakhand,Hospitalized,"One more person, who is under observation at Dehradun's Doon Hospita",,,23/03/2020,https://twitter.com/ANI/status/1242063740637339649,,,
 443,,23/03/2020,,24,M,Kasaragod,Kasaragod,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
 444,,23/03/2020,,30,M,Kasaragod,Kasaragod,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
@@ -460,48 +460,48 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 459,,23/03/2020,,34,,Kasaragod,Kasaragod,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
 460,,23/03/2020,,52,,Kasaragod,Kasaragod,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
 461,,23/03/2020,,26,F,Kasaragod,Kasaragod,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
-462,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
-463,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
-464,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
-465,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
-466,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/permalink.php?story_fbid=156890639114106&id=100507158085788,,
+462,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/CollectorKNR/posts/2833958063367696,,
+463,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/CollectorKNR/posts/2833958063367696,,
+464,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/CollectorKNR/posts/2833958063367696,,
+465,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/CollectorKNR/posts/2833958063367696,,
+466,,23/03/2020,,,,,Kannur,Kerala,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/CollectorKNR/posts/2833958063367696,,
 467,,23/03/2020,,61,F,,Ernakulam,Kerala,Hospitalized,"Travelled from UK, British tourist among those who visited Munnar, Wife of P229",P108,United Kingdom,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/dcekm/posts/965794730485017,,
 468,,23/03/2020,,56,,Kochi,Ernakulam,Kerala,Hospitalized,"Travelled from Dubai, Emirates flight, been in isolation since landed yesterday at Kochi airport",,India,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/dcekm/posts/965794730485017,,
 469,,23/03/2020,,,,,Thrissur,Kerala,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,,,
-470,,23/03/2020,,,,,Pathanamthitta,Kerala,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,,,
+470,,23/03/2020,,,,,Pathanamthitta,Kerala,Hospitalized,"Travelled from Qatar, Qatar Airways QR 506",,,23/03/2020,https://twitter.com/ANI/status/1242069720276168705,https://www.facebook.com/dc.pathanamthitta/posts/3730619510312952:0,,
 471,KA-P28,23/03/2020,,38,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from Dubai,,,23/03/2020,https://twitter.com/ANI/status/1242085764638208000,State Health Bulletin - 23rd Mar 2pm,,
 472,KA-P29,23/03/2020,,41,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from London,,,23/03/2020,https://twitter.com/ANI/status/1242085764638208000,State Health Bulletin - 23rd Mar 2pm,,
 473,KA-P30,23/03/2020,,30,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Wife of P297, KA-P17",P297,,23/03/2020,https://twitter.com/ANI/status/1242085764638208000,State Health Bulletin - 23rd Mar 2pm,,
 474,KA-P31,23/03/2020,,24,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from UK and Dubai,,,23/03/2020,https://twitter.com/ANI/status/1242085764638208000,State Health Bulletin - 23rd Mar 2pm,,
 475,KA-P32,23/03/2020,,60,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travelled from Germany,,,23/03/2020,https://twitter.com/ANI/status/1242085764638208000,State Health Bulletin - 23rd Mar 2pm,,
 476,KA-P33,23/03/2020,,22,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Travelled from Dubai, resident of Kannur, Kerala",,,23/03/2020,https://twitter.com/ANI/status/1242085764638208000,State Health Bulletin - 23rd Mar 2pm,,
-477,,23/03/2020,,38,F,Mumbai,,Maharashtra,Hospitalized,Travelled from Abu Dhabi ,,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://arogya.maharashtra.gov.in/pdf/pressnote23.pdf,https://twitter.com/rajeshtope11/status/1242138355338563589,
-478,,23/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,,,
-479,,23/03/2020,,,,Thane,Thane,Maharashtra,Hospitalized,"Contact with P 80, Details awaited",,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://twitter.com/rajeshtope11,,
-480,,23/03/2020,,,M,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
-481,,23/03/2020,,,F,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
-482,,23/03/2020,,,F,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
-483,,23/03/2020,,,F,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
-484,,23/03/2020,,45,F,Khandala,Satara,Maharashtra,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://twitter.com/radhika1705/status/1242095519633010689,https://www.thehindu.com/news/national/coronavirus-live-updates-march-23-2020/article31140072.ece,https://twitter.com/rajeshtope11/status/1242138355338563589,
+477,,23/03/2020,,38,F,Mumbai,,Maharashtra,Hospitalized,Travelled from Abu Dhabi ,,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://arogya.maharashtra.gov.in/pdf/pressnote23.pdf,https://twitter.com/rajeshtope11/status/1242138355338563589,
+478,,23/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,,,
+479,,23/03/2020,,,,Thane,Thane,Maharashtra,Hospitalized,"Contact with P 80, Details awaited",,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11,,
+480,,23/03/2020,,,M,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
+481,,23/03/2020,,,F,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
+482,,23/03/2020,,,F,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
+483,,23/03/2020,,,F,Sangli,,Maharashtra,Hospitalized,"Travelled from Saudi Arabia, Details awaited",,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://twitter.com/rajeshtope11/status/1242138355338563589,
+484,,23/03/2020,,45,F,Khandala,Satara,Maharashtra,Hospitalized,"Travelled from Dubai, UAE",,,23/03/2020,https://www.indiatoday.in/india/story/coronavirus-in-india-covid-19-cases-in-maharashtra-97-as-8-more-test-positive-1658860-2020-03-23,https://www.thehindu.com/news/national/coronavirus-live-updates-march-23-2020/article31140072.ece,https://twitter.com/rajeshtope11/status/1242138355338563589,
 485,,23/03/2020,,,,Nawabganj,Kanpur,Uttar Pradesh,Hospitalized,Travelled from USA,,,23/03/2020,https://www.amarujala.com/uttar-pradesh/kanpur/first-positive-case-of-corona-virus-found-in-kanpur,https://twitter.com/ANINewsUP/status/1242092359740829696,,
-486,,23/03/2020,,45,F,Pilibhit,,Uttar Pradesh,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/ANINewsUP/status/1242100370676957185,https://www.businesstoday.in/current/economy-politics/coronavirus-in-india-live-updates-covid-news-delhi-mumbai-maharashtra-lockdown-pm-modi-death-toll-china-italy/story/398930.html,https://timesofindia.indiatimes.com/india/saudi-arabia-returned-woman-tests-positive-of-coronavirus-in-up/articleshow/74781340.cms?from=mdr,Travelled in a group of 37 people to Mecca -- 36 others under observation in Lucknow 
+486,,23/03/2020,,45,F,Pilibhit,Pilibhit,Uttar Pradesh,Hospitalized,Travelled from Saudi Arabia,,,23/03/2020,https://twitter.com/ANINewsUP/status/1242100370676957185,https://www.businesstoday.in/current/economy-politics/coronavirus-in-india-live-updates-covid-news-delhi-mumbai-maharashtra-lockdown-pm-modi-death-toll-china-italy/story/398930.html,https://timesofindia.indiatimes.com/india/saudi-arabia-returned-woman-tests-positive-of-coronavirus-in-up/articleshow/74781340.cms?from=mdr,Travelled in a group of 37 people to Mecca -- 36 others under observation in Lucknow 
 487,,23/03/2020,,69,M,Kangra,Kangra,Himachal Pradesh,Deceased,"Tibetan refugee,died at a hospital in Tanda. Travelled from the US on 15.03.2020",,,23/03/2020,https://twitter.com/ANI/status/1242105074567929858,,,
 488,,23/03/2020,,2,M,,Shaheed Bhagat Singh Nagar,Punjab,Hospitalized,Grand son of P182,P182,India,23/03/2020,https://dronamaps.com/corona.html#/,https://twitter.com/ThePuneMirror/status/1242109593737547776?s=20,,
-489,,23/03/2020,,,,Mohali,Sahibzada Ajit Singh Nagar,Punjab,Hospitalized,"Close contact of Patient (Patient Unknown, likely P 201, 266, 267 or 268)",,India,23/03/2020,https://dronamaps.com/corona.html#/,https://web.telegram.org/170472fe-dd0e-46b8-979a-6e783f27dd06,,
+489,,23/03/2020,,,,Mohali,Sahibzada Ajit Singh Nagar,Punjab,Hospitalized,"Close contact of Patient (Patient Unknown, likely P 201, 266, 267 or 268)",,India,23/03/2020,https://dronamaps.com/corona.html#/,,,
 490,,23/03/2020,,,,,Jodhpur,Rajasthan,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PIBJaipur/status/1242109602411380738,,,
 491,,23/03/2020,,,,,Pratapgarh ,Rajasthan,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PIBJaipur/status/1242109602411380738,,,
 492,,23/03/2020,,,,,Pratapgarh ,Rajasthan,Hospitalized,Details awaited,,,23/03/2020,https://twitter.com/PIBJaipur/status/1242109602411380738,,,
-493,AP-P7,23/03/2020,,25,M,Vishakhapatnam,Vishakhapatnam,Andhra Pradesh,Hospitalized,"Travelled from Birmingham,UK",,,23/03/2020,https://web.telegram.org/ea77fd5d-0794-4ead-ae41-2c87886a676e,,,"Birmingham to Delhi (Recommended Home Quarantine) -> Vizag airport to Thagarapuvalasa in a car with father -> develops symptoms, visits hospital (Gayatri Vidya Parishad Hospital) -> hospitalised"
-494,,23/03/2020,,,,,,Haryana,Hospitalized,Gurugram,,,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
-495,,23/03/2020,,,,,,Haryana,Hospitalized,Gurugram,,,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
-496,,23/03/2020,,,,,,Haryana,Hospitalized,Gurugram,,,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
-497,,23/03/2020,,,,,,Haryana,Hospitalized,Gurugram,,,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
-498,,23/03/2020,,,,,,Haryana,Hospitalized,Gurugram,,,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
-499,,23/03/2020,,,,,,Haryana,Hospitalized,Sonipat,,,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
-500,,23/03/2020,,25,M,Chennai,Chennai,Tamil Nadu,Hospitalized,Travelled from London - RGGH,,,23/03/2020,https://twitter.com/Vijayabaskarofl/status/1242122022022340610,,,
-501,,23/03/2020,,48,M,Tiruppur,Tiruppur,Tamil Nadu,Hospitalized,Travelled from London - ESI,,,23/03/2020,https://twitter.com/Vijayabaskarofl/status/1242122022022340610,,,
-502,,23/03/2020,,54,M,Madurai,Madurai,Tamil Nadu,Hospitalized,Annanagar at Rajaji Hosp. No mention of travel history.,,,23/03/2020,https://twitter.com/Vijayabaskarofl/status/1242122022022340610,,,
-503,,23/03/2020,,24,M,,Patna,Bihar,Hospitalized,Travelled from Scotland,,,23/03/2020,https://twitter.com/PTI_News/status/1242128652684296193,https://www.financialexpress.com/lifestyle/health/coronavirus-in-india-live-updates-coronavirus-cases-in-india-lockdown-india-lockdown-district-delhi-lucknow-mumbai-coronavirus-news/1906274/,,
+493,AP-P7,23/03/2020,,25,M,Vishakhapatnam,Vishakhapatnam,Andhra Pradesh,Hospitalized,"Travelled from Birmingham,UK",,,23/03/2020,https://twitter.com/ArogyaAndhra/status/1242310445588865026,,,"Birmingham to Delhi (Recommended Home Quarantine) -> Vizag airport to Thagarapuvalasa in a car with father -> develops symptoms, visits hospital (Gayatri Vidya Parishad Hospital) -> hospitalised"
+494,,23/03/2020,,,,,Gurugram,Haryana,Hospitalized,Details Awaited,,India,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
+495,,23/03/2020,,,,,Gurugram,Haryana,Hospitalized,Details Awaited,,India,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
+496,,23/03/2020,,,,,Gurugram,Haryana,Hospitalized,Details Awaited,,India,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
+497,,23/03/2020,,,,,Gurugram,Haryana,Hospitalized,Details Awaited,,India,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
+498,,23/03/2020,,,,,Gurugram,Haryana,Hospitalized,Details Awaited,,India,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
+499,,23/03/2020,,,,,Gurugram,Haryana,Hospitalized,Sonipat,,India,23/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2023%20March.pdf,,,
+500,TN-P10,23/03/2020,,25,M,Chennai,Chennai,Tamil Nadu,Hospitalized,Travelled from London via Bangaloe then to Chennai by Car on 14th March,,,23/03/2020,https://twitter.com/Vijayabaskarofl/status/1242122022022340610,,,
+501,TN-P11,23/03/2020,,48,M,Tiruppur,Tiruppur,Tamil Nadu,Hospitalized,Travelled from London via Coimbatore on 15th March,,,23/03/2020,https://twitter.com/Vijayabaskarofl/status/1242122022022340610,,,
+502,TN-P12,23/03/2020,,54,M,Madurai,Madurai,Tamil Nadu,Deceased,Annanagar at Rajaji Hosp. No mention of travel history. Came in contact with some Thailand nationals who were on tour in the state.,"P301, P302",,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242122022022340610,https://www.oneindia.com/india/coronavirus-india-s-death-toll-rises-to-11-as-tamil-nadu-records-first-fatality-3057978.html,,
+503,,23/03/2020,,24,M,,Patna,Bihar,Hospitalized,Travelled from Scotland,,,23/03/2020,https://twitter.com/PTI_News/status/1242128652684296193,,,
 504,,23/03/2020,,35,M,Jaunpur,Jaunpur,Uttar Pradesh,Hospitalized,Travelled from Saudi Arabia on 15th Mar; Symptons on 21st Mar,,,23/03/2020,https://twitter.com/ANINewsUP/status/1242105254482554882?s=20,https://www.amarujala.com/uttar-pradesh/varanasi/corona-positive-found-in-jaunpur-district-locked-down,,
 505,,23/03/2020,,41,M,Kaushambi,Ghaziabad,Uttar Pradesh,Hospitalized,"Doctor, Travelled from France on 13th Mar",,,23/03/2020,https://www.hindustantimes.com/cities/ghaziabad-doctor-returned-from-france-found-positive-for-coronavirus-six-highrises-in-kaushambi-sanitised/story-oXl35rS6I7ANWEcfCuZ4aK.html,,,
 506,,24/03/2020,,23,F,Imphal,Imphal West,Manipur,Hospitalized,Travelled from London,,,24/03/2020,https://twitter.com/the_hindu/status/1242295023657308160,https://www.deccanherald.com/national/east-and-northeast/manipur-reports-first-covid-19-positive-case-samples-sent-to-pune-for-retest-817079.html,,
@@ -509,211 +509,209 @@ Patient number,State Patient Number,Date Announced,Estimated Onset Date,Age Brac
 508,,24/03/2020,,,,,Pune,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/ANI/status/1242308037756387328,,,
 509,,24/03/2020,,,,,Pune,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/ANI/status/1242308037756387328,,,
 510,,24/03/2020,,,,,Satara,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/ANI/status/1242308037756387328,,,
-511,,24/03/2020,,,,,,Rajasthan,Hospitalized,"Details awaited, To match MoHFW 33",,,24/03/2020,,,,
-512,,24/03/2020,,,,Jabalpur,,Madhya Pradesh,Hospitalized,"Contact Transmission,Details awaited",,,23/03/2020,https://timesofindia.indiatimes.com/city/bhopal/coronavirus-outbreak-7-more-cases-reported-in-madhya-pradesh/articleshow/74779793.cms,,,
-513,KA-P34,24/03/2020,,32,M,Mangaluru,Dakshina Kannada,Karnataka,Hospitalized,"Kasargod Resident; Travelled from Dubai, landed in Mangaluru  Airport on 20th Mar",,,24/03/2020,http://english.varthabharati.in/karavali/two-bhatkal-men-who-arrived-from-dubai-tests-positive-for-covid-19,State Health Bulletion - 24th Mar 8am,,
-514,KA-P35,24/03/2020,,40,M,,Uttara Kannada,Karnataka,Hospitalized,"Travelled from Dubai, landed in Mangaluru  Airport on 21st Mar",,,24/03/2020,http://english.varthabharati.in/karavali/two-bhatkal-men-who-arrived-from-dubai-tests-positive-for-covid-19,State Health Bulletion - 24th Mar 8am,,
-515,KA-P36,24/03/2020,,65,M,,Uttara Kannada,Karnataka,Hospitalized,"Travelled from Dubai, Landed in Mumbai (18th Mar)  and Travelled by train to Uttara Kannada",,,24/03/2020,State Health Bulletion - 24th Mar 8am,,,
-516,KA-P37,24/03/2020,,56,F,,Chikkaballapura,Karnataka,Hospitalized,"Travelled from Mecca, Saudi Arabia along with P285 and P382, via Hyderabad (14th Mar) to Hindupur by train and to Gowribidanur by bus",P285,,24/03/2020,State Health Bulletion - 24th Mar 8am,,,
-517,,24/03/2020,,,,,,Delhi,Hospitalized,"Details awaited, To match MoHFW 31",,,24/03/2020,,,,
-518,KL-KZ-P3,24/03/2020,,,,,Kozhikode,Kerala,Hospitalized,"Travelled from Dubai, Indigo  6E: 89",,,23/03/2020,https://www.manoramanews.com/news/breaking-news/2020/03/24/two-more-covid-cases-in-kerala.html,https://www.facebook.com/CollectorKKD/posts/2596942053875892,,
-519,KL-KZ-P4,24/03/2020,,,,,Kozhikode,Kerala,Hospitalized,"Travelled from Dubai, Air India AI 906 landed at Chennai ",,,23/03/2020,https://www.manoramanews.com/news/breaking-news/2020/03/24/two-more-covid-cases-in-kerala.html,https://www.facebook.com/CollectorKKD/posts/2596942053875892,,
-520,,24/03/2020,,,,,Surat,Gujarat,Hospitalized,"Travelled from Saudi Arabia, More details awaited",,,24/03/2020,https://twitter.com/ANI/status/1242313723064143877,,,
-521,,24/03/2020,,,,,Gandhinagar,Gujarat,Hospitalized,"Local Transmission, Details awaited",,,24/03/2020,https://twitter.com/ANI/status/1242313723064143877,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-cases-rise-to-33-in-gujarat/articleshow/74787468.cms?from=mdr,,
-522,,24/03/2020,,,,,Gandhinagar,Gujarat,Hospitalized,"Local Transmission, Details awaited",,,24/03/2020,https://twitter.com/ANI/status/1242313723064143877,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-cases-rise-to-33-in-gujarat/articleshow/74787468.cms?from=mdr,,
-523,,24/03/2020,,,,,,West Bengal,Hospitalized,"Travelled from Egypt, Details awaited",,,24/03/2020,https://twitter.com/PTI_News/status/1242320937497714688,https://www.livemint.com/news/india/coronavirus-in-west-bengal-2-new-covid-19-cases-found-11585031344955.html,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-measures-bengal-government-asks-civic-bodies-to-conduct-door-to-door-survey/articleshow/74789604.cms,
-524,,24/03/2020,,74,M,Porur,Chennai,Tamil Nadu,Hospitalized,Travelled from USA,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242360657518845953?s=19,,,
-525,,24/03/2020,,52,F,Purasaivakkam,Chennai,Tamil Nadu,Hospitalized,Travelled from USA,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242360657518845953?s=19,,,
-526,,24/03/2020,,25,F,Keelkattalai,Chennai,Tamil Nadu,Hospitalized,Travelled from Switzerland ,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242360657518845953?s=19,,,
-527,,24/03/2020,,49,M,,,Telangana,Hospitalized,Travelled from London,,India,24/03/2020,https://twitter.com/TelanganaHealth/status/1242353133994438658?s=19,,,
-528,,24/03/2020,,39,F,,,Telangana,Hospitalized,Travelled from Germany,,India,24/03/2020,https://twitter.com/TelanganaHealth/status/1242353133994438658?s=19,,,
-529,,24/03/2020,,61,F,,,Telangana,Hospitalized,Travelled from Saudi Arabia,,India,24/03/2020,https://twitter.com/TelanganaHealth/status/1242353133994438658?s=19,,,
-530,KA-P38,24/03/2020,,56,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Contact of P150, KA-P13",P150,,24/03/2020,State Health Bulletion - 24th Mar 8am,,,
-531,,24/03/2020,,,,Singasandra,Bengaluru,Karnataka,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/BBMPCOMM/status/1242350440580124673,,,
-532,,24/03/2020,,,,,,West Bengal,Hospitalized,"Travelled from UK, Details Awaited",,,24/03/2020,https://twitter.com/PTI_News/status/1242320937497714688,https://www.livemint.com/news/india/coronavirus-in-west-bengal-2-new-covid-19-cases-found-11585031344955.html,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-measures-bengal-government-asks-civic-bodies-to-conduct-door-to-door-survey/articleshow/74789604.cms,
-533,,24/03/2020,,,,,Srinagar,Jammu and Kashmir,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242384111110512640,,,
-534,,24/03/2020,,,,,Srinagar,Jammu and Kashmir,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242384111110512640,,,
+511,,24/03/2020,,,,Jabalpur,,Madhya Pradesh,Hospitalized,"Contact Transmission,Details awaited",,,23/03/2020,https://timesofindia.indiatimes.com/city/bhopal/coronavirus-outbreak-7-more-cases-reported-in-madhya-pradesh/articleshow/74779793.cms,,,
+512,KA-P34,24/03/2020,,32,M,Mangaluru,Dakshina Kannada,Karnataka,Hospitalized,"Kasaragod Resident; Travelled from Dubai, landed in Mangaluru  Airport on 20th Mar",,,24/03/2020,http://english.varthabharati.in/karavali/two-bhatkal-men-who-arrived-from-dubai-tests-positive-for-covid-19,State Health Bulletion - 24th Mar 8am,,
+513,KA-P35,24/03/2020,,40,M,,Uttara Kannada,Karnataka,Hospitalized,"Travelled from Dubai, landed in Mangaluru  Airport on 21st Mar",,,24/03/2020,http://english.varthabharati.in/karavali/two-bhatkal-men-who-arrived-from-dubai-tests-positive-for-covid-19,State Health Bulletion - 24th Mar 8am,,
+514,KA-P36,24/03/2020,,65,M,,Uttara Kannada,Karnataka,Hospitalized,"Travelled from Dubai, Landed in Mumbai (18th Mar)  and Travelled by train to Uttara Kannada",,,24/03/2020,State Health Bulletion - 24th Mar 8am,,,
+515,KA-P37,24/03/2020,,56,F,Chikkaballapura,Chikkaballapura,Karnataka,Hospitalized,"Travelled from Mecca, Saudi Arabia along with P285 and P382, via Hyderabad (14th Mar) to Hindupur by train and to Gowribidanur by bus",P285,,24/03/2020,State Health Bulletion - 24th Mar 8am,,,
+516,KL-KZ-P3,24/03/2020,,,,,Kozhikode,Kerala,Hospitalized,"Travelled from Dubai, Indigo  6E: 89",,,24/03/2020,https://www.manoramanews.com/news/breaking-news/2020/03/24/two-more-covid-cases-in-kerala.html,https://www.facebook.com/CollectorKKD/posts/2596942053875892,,
+517,KL-KZ-P4,24/03/2020,,,,,Kozhikode,Kerala,Hospitalized,"Travelled from Dubai, Air India AI 906 landed at Chennai ",,,24/03/2020,https://www.manoramanews.com/news/breaking-news/2020/03/24/two-more-covid-cases-in-kerala.html,https://www.facebook.com/CollectorKKD/posts/2596942053875892,,
+518,,24/03/2020,,65,M,Surat,Surat,Gujarat,Hospitalized,"Travelled from Saudi Arabia, More details awaited",,,24/03/2020,https://twitter.com/ANI/status/1242313723064143877,,,
+519,,24/03/2020,,53,M,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,Uncle of P295,P295,,24/03/2020,https://twitter.com/ANI/status/1242313723064143877,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-cases-rise-to-33-in-gujarat/articleshow/74787468.cms?from=mdr,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,
+520,,24/03/2020,,54,F,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,Aunt of P295,P295,,24/03/2020,https://twitter.com/ANI/status/1242313723064143877,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-cases-rise-to-33-in-gujarat/articleshow/74787468.cms?from=mdr,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,
+521,,24/03/2020,,,,,,West Bengal,Hospitalized,"Travelled from Egypt, Details awaited",,,24/03/2020,https://twitter.com/PTI_News/status/1242320937497714688,https://www.livemint.com/news/india/coronavirus-in-west-bengal-2-new-covid-19-cases-found-11585031344955.html,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-measures-bengal-government-asks-civic-bodies-to-conduct-door-to-door-survey/articleshow/74789604.cms,
+522,TN-P13,24/03/2020,,74,M,Porur,Chennai,Tamil Nadu,Hospitalized,Travelled from USA via Singapore on 12th March,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242360657518845953?s=19,,,
+523,TN-P14,24/03/2020,,52,F,Purasaivakkam,Chennai,Tamil Nadu,Hospitalized,Travelled from USA via London on 17 March,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242360657518845953?s=19,,,
+524,TN-P15,24/03/2020,,25,F,Keelkattalai,Chennai,Tamil Nadu,Hospitalized,Travelled from Switzerland via Delhi on 15th March,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242360657518845953?s=19,,,
+525,TS-P34,24/03/2020,,49,M,Kokapet,Ranga Reddy,Telangana,Hospitalized,Travelled from London,,India,24/03/2020,https://twitter.com/TelanganaHealth/status/1242353133994438658?s=19,,,
+526,TS-P35,24/03/2020,,39,F,Chandanagar,Ranga Reddy,Telangana,Hospitalized,Travelled from Germany,,India,24/03/2020,https://twitter.com/TelanganaHealth/status/1242353133994438658?s=19,,,
+527,TS-P36,24/03/2020,,61,F,Begumpet,Hyderabad,Telangana,Hospitalized,Travelled from Saudi Arabia,,India,24/03/2020,https://twitter.com/TelanganaHealth/status/1242353133994438658?s=19,,,
+528,KA-P38,24/03/2020,,56,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Contact of P150, KA-P13",P150,,24/03/2020,State Health Bulletion - 24th Mar 8am,,,
+529,KA-P39,24/03/2020,,47,M,Kasaragod,Bengaluru,Karnataka,Hospitalized,From the state of Kerala. With a Travel History to Dubai and Arrived in Mangaluru by Air India Express flight IX-814 at 5am on Mar 19,,,24/03/2020,https://twitter.com/BBMPCOMM/status/1242350440580124673,State Health Bulletin,https://indianexpress.com/article/cities/bangalore/coronavirus-in-karnataka-38-cases-so-far-bengaluru-uses-drones-to-spray-disinfectants-6329577/,
+530,,24/03/2020,,,,,,West Bengal,Hospitalized,"Travelled from UK, Details Awaited",,,24/03/2020,https://twitter.com/PTI_News/status/1242320937497714688,https://www.livemint.com/news/india/coronavirus-in-west-bengal-2-new-covid-19-cases-found-11585031344955.html,https://economictimes.indiatimes.com/news/politics-and-nation/covid-19-measures-bengal-government-asks-civic-bodies-to-conduct-door-to-door-survey/articleshow/74789604.cms,
+531,,24/03/2020,,,,,Srinagar,Jammu and Kashmir,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242384111110512640,,,
+532,,24/03/2020,,,,,Srinagar,Jammu and Kashmir,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242384111110512640,,,
+533,,24/03/2020,,,,Phillaur,Jalandhar,Punjab,Hospitalized,Details awaited,P182,,24/03/2020,https://www.hindustantimes.com/cities/six-people-including-three-of-family-in-phillaur-test-positive-for-coronavirus-in-punjab-taking-state-s-count-to-29/story-WgQK84nSF0cnUeHIPLVxAN.html,,,
+534,,24/03/2020,,,,Phillaur,Jalandhar,Punjab,Hospitalized,Details awaited,P182,,24/03/2020,https://www.hindustantimes.com/cities/six-people-including-three-of-family-in-phillaur-test-positive-for-coronavirus-in-punjab-taking-state-s-count-to-29/story-WgQK84nSF0cnUeHIPLVxAN.html,,,
 535,,24/03/2020,,,,Phillaur,Jalandhar,Punjab,Hospitalized,Details awaited,P182,,24/03/2020,https://www.hindustantimes.com/cities/six-people-including-three-of-family-in-phillaur-test-positive-for-coronavirus-in-punjab-taking-state-s-count-to-29/story-WgQK84nSF0cnUeHIPLVxAN.html,,,
-536,,24/03/2020,,,,Phillaur,Jalandhar,Punjab,Hospitalized,Details awaited,P182,,24/03/2020,https://www.hindustantimes.com/cities/six-people-including-three-of-family-in-phillaur-test-positive-for-coronavirus-in-punjab-taking-state-s-count-to-29/story-WgQK84nSF0cnUeHIPLVxAN.html,,,
-537,,24/03/2020,,,,Phillaur,Jalandhar,Punjab,Hospitalized,Details awaited,P182,,24/03/2020,https://www.hindustantimes.com/cities/six-people-including-three-of-family-in-phillaur-test-positive-for-coronavirus-in-punjab-taking-state-s-count-to-29/story-WgQK84nSF0cnUeHIPLVxAN.html,,,
+536,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
+537,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
 538,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
 539,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
 540,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
-541,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
-542,,24/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
-543,,24/03/2020,,,,Ahmednagar,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
-544,,24/03/2020,,47,F,Noida,,Delhi,Hospitalized,No travel history,,,24/03/2020,https://mobile.twitter.com/PTI_News/status/1242393507890749440,,,
-545,,,,,,,,,,,,,,,,,
-546,,,,,,,,,,,,,,,,,
-547,,,,,,,,,,,,,,,,,
-548,,,,,,,,,,,,,,,,,
-549,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
+541,,24/03/2020,,,,Ahmednagar,,Maharashtra,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/PTI_News/status/1242403827619266560,,,
+542,,24/03/2020,,47,F,Noida,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,"No travel history, husband has had contact with a colleague from London",,,24/03/2020,https://mobile.twitter.com/PTI_News/status/1242393507890749440,https://timesofindia.indiatimes.com/city/noida/up-one-more-tests-positive-for-covid-19-from-noida-taking-the-total-to-9/articleshow/74791398.cms?utm_source=twitter.com&utm_medium=social&utm_campaign=TOINoida,,
+543,,24/03/2020,,,,,,Punjab,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/ANI/status/1242430437898649601?s=19,,,
+544,,24/03/2020,,,,,,Punjab,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/ANI/status/1242430437898649601?s=19,,,
+545,,24/03/2020,,,,,,Punjab,Hospitalized,Details awaited,,,24/03/2020,https://twitter.com/ANI/status/1242430437898649601?s=19,,,
+546,,24/03/2020,,,,,,Kerala,Hospitalized,Travelled from United Kingdom,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,,,
+547,,24/03/2020,,,,,Palakkad,Kerala,Hospitalized,Travelled from Dubai,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,,,
+548,KL-KZ-P5,24/03/2020,,,,,Kasargod,Kerala,Hospitalized,Details awaited,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,https://www.facebook.com/CollectorKKD/posts/2597771657126265,,
+549,,24/03/2020,,,,,Kasargod,Kerala,Hospitalized,"Travelled from Sharjah Air Arabia G9 454, Admitted in Kozhikode",,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,https://www.facebook.com/CollectorKKD/posts/2597771657126265,,
+550,,24/03/2020,,,,,Kasargod,Kerala,Hospitalized,Travelled from Dubai,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,https://www.facebook.com/permalink.php?story_fbid=157190929084077&id=100507158085788,,
+551,,24/03/2020,,,,,Kasargod,Kerala,Hospitalized,Travelled from Dubai,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,https://www.facebook.com/permalink.php?story_fbid=157190929084077&id=100507158085788,,
+552,,24/03/2020,,,,,Malappuram,Kerala,Hospitalized,Travelled from Dubai,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,,,
+553,,24/03/2020,,,,,Alappuzha,Kerala,Hospitalized,Travelled from Qatar to Goa Oman Air WY 662 and from there by train to Alappuzha,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,https://www.facebook.com/districtcollectoralappuzha/posts/829752300763599:0,,
+554,,24/03/2020,,57,F,,Ernakulam,Kerala,Hospitalized,Close relative of  P380,P380,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,https://www.facebook.com/dcekm/posts/966614817069675,,
+555,,24/03/2020,,,,,Kottayam,Kerala,Hospitalized,Nurse at Kottayam Medical College,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,,,
+556,,24/03/2020,,,,,,Kerala,Hospitalized,"Contact Transmission,Details awaited",,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,,,
+557,,24/03/2020,,,,,,Kerala,Hospitalized,Details awaited,,,24/03/2020,https://www.livemint.com/news/india/kerala-reports-14-new-corona-cases-state-tally-at-105-11585058837568.html,,,
+558,KA-P40,24/03/2020,,70,F,Kasaragod,Kasaragod,Karnataka,Hospitalized,From the state of Kerala. With a Travel History to Saudi Arabia and Arrived in Mangaluru. Date of arrival is not known.,,,24/03/2020,https://twitter.com/ANI/status/1242444608149139457,State Health Bulletin,,
+559,KA-P41,24/03/2020,,23,M,Kasaragod,Kasaragod,Karnataka,Hospitalized,From the state of Kerala. With a Travel History to Dubai and Arrived in Mangaluru by Spicejet Flight SG-60 at 5:30pm on Mar 20,,,24/03/2020,https://twitter.com/ANI/status/1242444608149139457,State Health Bulletin,https://indianexpress.com/article/cities/bangalore/coronavirus-in-karnataka-38-cases-so-far-bengaluru-uses-drones-to-spray-disinfectants-6329577/,
+560,AP-P8,24/03/2020,,25,M,Srikalahasti,Chitoor,Andhra Pradesh,Hospitalized,Travelled from London,,,24/03/2020,https://timesofindia.indiatimes.com/city/vijayawada/tirupati-first-coronavirus-positive-case-reported-in-chittoor-district-8th-in-andhra-pradesh/articleshow/74797576.cms,,,
+561,TN-P16,24/03/2020,,65,M,Chennai,Chennai,Tamil Nadu,Hospitalized,Travelled from New Zealand,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242482077091524608,,,
+562,TN-P17,24/03/2020,,55,F,Saidapet,Chennai,Tamil Nadu,Hospitalized,No travel history,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242482077091524608,,,
+563,TN-P18,24/03/2020,,25,M,Chennai,Chennai,Tamil Nadu,Hospitalized,Travelled from London via Bengaluru,,,24/03/2020,https://twitter.com/Vijayabaskarofl/status/1242482077091524608,,,
+564,TS-P37,24/03/2020,,64,F,Manikonda,Hyderabad,Telangana,Hospitalized,Contact with TS-P25,P369,,24/03/2020,https://twitter.com/IPRTelangana/status/1242490062907912192,,,
+565,,24/03/2020,,,,Panipat,Panipat,Haryana,Hospitalized,Details awaited,,India,24/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2024%20March.pdf,,,
+566,,24/03/2020,,,,Faridabad,Faridabad,Haryana,Hospitalized,Details awaited,,India,24/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2024%20March.pdf,,,
+567,,24/03/2020,,,F,Gandhinagar,Gandhinagar,Gujarat,Hospitalized,Wife of P295,P295,,,https://indianexpress.com/article/india/gujarat-corona-cases-rise-to-35-case-against-four-patients-of-a-family-6330089/,,,
+568,,24/03/2020,,36,M,Rajkot,Rajkot,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,,,,,
+569,,24/03/2020,,75,F,Rajkot,Rajkot,Gujarat,Hospitalized,Travelled from Saudi Arabia,,,,,,,
+570,TS-P38,24/03/2020,,57,M,,Bhadradri Kothagudem,Telangana,Hospitalized,Contact with TS-P26,P370,,25/03/2020,https://twitter.com/RishikaSadam/status/1242519487997284352/photo/1,https://twitter.com/IPRTelangana/status/1242624185131622400,,
+571,TS-P39,24/03/2020,,,F,,Bhadradri Kothagudem,Telangana,Hospitalized,Contact with TS-P26,P370,,25/03/2020,https://twitter.com/RishikaSadam/status/1242519487997284352/photo/1,https://twitter.com/IPRTelangana/status/1242624185131622400,,
+572,,25/03/2020,,,,,Patna,Bihar,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242646531561246720?s=20,,,
+573,,25/03/2020,,,,Indore,,Madhya Pradesh,Hospitalized,"Details awaited, (family)",,,25/03/2020,https://twitter.com/PTI_News/status/1242660625228021762,https://dbpost.com/mp-coronavirus-cases-updates-14-cases-of-covid-19-in-state-4-fresh-cases-in-indore-and-one-in-ujjain/,,
+574,,25/03/2020,,,,Indore,,Madhya Pradesh,Hospitalized,"Details awaited, (family)",,,25/03/2020,https://twitter.com/PTI_News/status/1242660625228021762,https://dbpost.com/mp-coronavirus-cases-updates-14-cases-of-covid-19-in-state-4-fresh-cases-in-indore-and-one-in-ujjain/,,
+575,,25/03/2020,,,,Indore,,Madhya Pradesh,Hospitalized,"Details awaited, (family)",,,25/03/2020,https://twitter.com/PTI_News/status/1242660625228021762,https://dbpost.com/mp-coronavirus-cases-updates-14-cases-of-covid-19-in-state-4-fresh-cases-in-indore-and-one-in-ujjain/,,
+576,,25/03/2020,,,,Indore,,Madhya Pradesh,Hospitalized,Travelled from Rishikesh,,,25/03/2020,https://twitter.com/PTI_News/status/1242660625228021762,https://dbpost.com/mp-coronavirus-cases-updates-14-cases-of-covid-19-in-state-4-fresh-cases-in-indore-and-one-in-ujjain/,,
+577,,25/03/2020,,65,F,Ujjain,,Madhya Pradesh,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/PTI_News/status/1242660625228021762,https://dbpost.com/mp-coronavirus-cases-updates-14-cases-of-covid-19-in-state-4-fresh-cases-in-indore-and-one-in-ujjain/,https://twitter.com/the_hindu/status/1242802581669179393,
+578,,25/03/2020,,,,Sangli,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/PTI_News/status/1242681262994640896,,,
+579,,25/03/2020,,,,Sangli,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/PTI_News/status/1242681262994640896,,,
+580,,25/03/2020,,,,Sangli,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/PTI_News/status/1242681262994640896,,,
+581,,25/03/2020,,,,Sangli,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/PTI_News/status/1242681262994640896,,,
+582,,25/03/2020,,,,Sangli,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/PTI_News/status/1242681262994640896,,,
+583,,25/03/2020,,,,,,Gujarat,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/MoHFW_GUJARAT/status/1242679908595314688,,,
+584,,25/03/2020,,,,,,Gujarat,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/MoHFW_GUJARAT/status/1242679908595314688,,,
+585,,25/03/2020,,36,M,,Gwalior,Madhya Pradesh,Hospitalized,Native of Allahabad,,,24/03/2020,https://twitter.com/the_hindu/status/1242671220543254529,https://timesofindia.indiatimes.com/city/bhopal/madhya-pradesh-coronavirus-count-touches-9-curfew-in-gwalior/articleshow/74802791.cms,,
+586,,25/03/2020,,,,,Bhopal,Madhya Pradesh,Hospitalized,"Father of P362, Journalist ",P362,,25/03/2020,https://twitter.com/the_hindu/status/1242671220543254529,https://dbpost.com/mp-coronavirus-cases-update-scribe-who-attended-kamal-naths-presser-tests-positive-ex-cm-in-self-quarantine/,,
+587,,25/03/2020,,50,M,,Aizawl,Mizoram,Hospitalized,Travelled from Netherlands; Admitted at Zoram Medical College,,,25/03/2020,https://www.indiatvnews.com/news/india/mizoram-man-tests-positive-for-coronavirus-second-case-in-northeast-601266,https://www.ndtv.com/india-news/coronavirus-india-news-mizoram-man-tests-coronavirus-positive-2nd-case-in-northeast-2200778,,
+588,,25/03/2020,,,,Bhilwara,,Rajasthan,Hospitalized,Hospital staff,,,25/03/2020,https://twitter.com/PIBJaipur/status/1242713952913518592,,,
+589,,25/03/2020,,,,Bhilwara,,Rajasthan,Hospitalized,Hospital staff,,,25/03/2020,https://twitter.com/PIBJaipur/status/1242713952913518592,,,
+590,,25/03/2020,,,,Bhilwara,,Rajasthan,Hospitalized,Infected by the Doctor who was tested positive a few days back,,,25/03/2020,https://twitter.com/PIBJaipur/status/1242713952913518592,,,
+591,,25/03/2020,,,F,Jodhpur,,Rajasthan,Hospitalized,Travelled from Mumbai to Jodhpur in same coupe along with two other positive patients,,,25/03/2020,https://twitter.com/PIBJaipur/status/1242713952913518592,,,
+592,,25/03/2020,,57,M,Navi Mumbai,,Maharashtra,Hospitalized,"Contact Transmission,Details awaited",,,25/03/2020,https://twitter.com/rajeshtope11/status/1242721865144995840,Greater Mumbai Health Department Update,,
+593,,25/03/2020,,27,M,Mumbai City,,Maharashtra,Hospitalized,Travelled from USA,,,25/03/2020,https://twitter.com/rajeshtope11/status/1242721865144995840,Greater Mumbai Health Department Update,,
+594,,25/03/2020,,39,M,Mumbai City,,Maharashtra,Hospitalized,Travelled from UAE,,,25/03/2020,https://twitter.com/rajeshtope11/status/1242721865144995840,Greater Mumbai Health Department Update,,
+595,,25/03/2020,,38,M,Kamothe Raigad,,Maharashtra,Hospitalized,Travelled from Trinidad,,,25/03/2020,https://twitter.com/rajeshtope11/status/1242721865144995840,Greater Mumbai Health Department Update,,
+596,TN-P19,25/03/2020,,,,,Salem,Tamil Nadu,Hospitalized,Indonesian Tourist,,Indonesia,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242743473708486657,,,
+597,TN-P20,25/03/2020,,,,,Salem,Tamil Nadu,Hospitalized,Indonesian Tourist,P596,Indonesia,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242743473708486657,,,
+598,TN-P21,25/03/2020,,,,,Salem,Tamil Nadu,Hospitalized,Indonesian Tourist,P596,Indonesia,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242743473708486657,,,
+599,TN-P22,25/03/2020,,,,,Salem,Tamil Nadu,Hospitalized,Indonesian Tourist,P596,Indonesia,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242743473708486657,,,
+600,TN-P23,25/03/2020,,63,M,,Salem,Tamil Nadu,Hospitalized,Guide to Indonesian Tourist; Resident of Chennai,P596,India,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242743473708486657,,,
+601,KA-P51,25/03/2020,,34,M,Udupi,Udupi,Karnataka,Hospitalized,Travelled from Dubai on 18.03.2020,,India,25/03/2020,https://www.deccanherald.com/state/mangaluru/34-year-old-man-tests-positive-for-covid-19-in-udupi-817473.html,https://www.thehindu.com/news/national/karnataka/coronavirus-udupi-records-first-positive-case/article31161050.ece,State Health Bulletin,
+602,,25/03/2020,,21,F,,Gurugram,Haryana,Hospitalized,Private Hospital Nurse,,India,25/03/2020,http://www.nhmharyana.gov.in/WriteReadData/userfiles/file/CoronaVirus/Bulletin%20of%20Haryana%20as%20on%2025%20March1.pdf,https://twitter.com/PTI_News/status/1242797792604475392,,
+603,,25/03/2020,,,,,Shivpuri,Madhya Pradesh,Hospitalized,Details awaited,,,24/03/2020,https://timesofindia.indiatimes.com/city/bhopal/madhya-pradesh-coronavirus-count-touches-9-curfew-in-gwalior/articleshow/74802791.cms,,,
+604,,25/03/2020,,,,,Bandipora,Jammu and Kashmir,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/kansalrohit69/status/1242775064287698944,,,
+605,,25/03/2020,,,,,Bandipora,Jammu and Kashmir,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/kansalrohit69/status/1242775064287698944,,,
+606,,25/03/2020,,,,,Bandipora,Jammu and Kashmir,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/kansalrohit69/status/1242775064287698944,,,
+607,,25/03/2020,,,,,Bandipora,Jammu and Kashmir,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/kansalrohit69/status/1242775064287698944,,,
+608,,25/03/2020,,,,,,Jammu and Kashmir,Hospitalized,Details awaited,,,25/03/2020,,,,
+609,,25/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242777280985747456,,,
+610,,25/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242777280985747456,,,
+611,,25/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242777280985747456,,,
+612,,25/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242777280985747456,,,
+613,,25/03/2020,,,,Mumbai,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242777280985747456,,,
+614,,25/03/2020,,,,Thane,,Maharashtra,Hospitalized,Details awaited,,,25/03/2020,https://twitter.com/ANI/status/1242777280985747456,,,
+615,,25/03/2020,,,,,Kozhikode,Kerala,Hospitalized,Travelled from Brazil via Dubai  Air India AI 425,,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/CollectorKKD/posts/2597771657126265,,
+616,,25/03/2020,,,,,Palakkad,Kerala,Hospitalized,Travelled from Dubai,,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,,,
+617,,25/03/2020,,,,,Palakkad,Kerala,Hospitalized,Travelled from Dubai,,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,,,
+618,,25/03/2020,,,,,Pathanamthitta,Kerala,Hospitalized,Travelled from UK,,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/dc.pathanamthitta/posts/3735798426461727:0,,
+619,,25/03/2020,,,,,Pathanamthitta,Kerala,Hospitalized,Travelled from Dubai,,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/dc.pathanamthitta/posts/3735798426461727:0,,
+620,,25/03/2020,,,,,Idukki,Kerala,Hospitalized,Travelled from Dubai SG 18 ,,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/watch/?v=265340351150463,,
+621,,25/03/2020,,22,M,,Ernakulam,Kerala,Hospitalized,"Travelled from France via Delhi, Kochi",,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/dcekm/posts/967275457003611,,
+622,,25/03/2020,,23,M,,Ernakulam,Kerala,Hospitalized,"Travelled from France via Delhi, Kochi",,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/dcekm/posts/967275457003611,,
+623,,25/03/2020,,37,M,,Ernakulam,Kerala,Hospitalized,"Contact Transmission,Details awaited",,,25/03/2020,https://english.mathrubhumi.com/news/kerala/9-new-covid-19-positive-cases-in-kerala-112-under-treatment-1.4643353,https://www.facebook.com/dcekm/posts/967275457003611,,
+624,,25/03/2020,,,,,Delhi,Delhi,Hospitalized,Travel History Abroad (details awaited),,,25/03/2020,https://twitter.com/EconomicTimes/status/1242793777774776320,,,
+625,,25/03/2020,,,,,Delhi,Delhi,Hospitalized,No Travel History ( details awaited),,,25/03/2020,https://twitter.com/EconomicTimes/status/1242793777774776320,,,
+626,,25/03/2020,,,,,Delhi,Delhi,Hospitalized,No Travel History ( details awaited),,,25/03/2020,https://twitter.com/EconomicTimes/status/1242793777774776320,,,
+627,,25/03/2020,,,,,Delhi,Delhi,Hospitalized,No Travel History ( details awaited),,,25/03/2020,https://twitter.com/EconomicTimes/status/1242793777774776320,,,
+628,,25/03/2020,,,,,Delhi,Delhi,Hospitalized,No Travel History ( details awaited),,,25/03/2020,https://twitter.com/EconomicTimes/status/1242793777774776320,,,
+629,KA-P42,25/03/2020,,37,F,Chitradurga,Chitradurga,Karnataka,Hospitalized,Travel history to Guyana and arrived in Bangalore via Delhi on Mar 20,,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+630,KA-P43,25/03/2020,,63,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Travel History to Brazil, Argentina and arrived in Bangalore on Mar 19",,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+631,KA-P44,25/03/2020,,59,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Travel History to Brazil, Argentina and arrived in Bangalore on Mar 19. Wife of P630",P630,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+632,KA-P45,25/03/2020,,26,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travel History to Spain and arrived in Bangalore via Dubai on Mar 14,,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+633,KA-P46,25/03/2020,,26,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travel History to Spain and arrived in Bangalore via Dubai on Mar 14. Travelled with P632,P632,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+634,KA-P47,25/03/2020,,63,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travel History to Athens and London and arrived in Bangalore on Mar 18.,,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+635,KA-P48,25/03/2020,,69,M,Bengaluru,Bengaluru,Karnataka,Hospitalized,Travel History to Athens and London and arrived in Bangalore on Mar 18. Husband of P634,P634,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+636,KA-P49,25/03/2020,,9,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Daughter of P297, KA-P17",P297,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+637,KA-P50,25/03/2020,,7,F,Bengaluru,Bengaluru,Karnataka,Hospitalized,"Daughter of P297, KA-P17",P297,,25/03/2020,https://twitter.com/DHFWKA/status/1242804663147266048,State Health Bulletin,,
+638,,25/03/2020,,55,F,Ludhiana,Ludhiana,Punjab,Hospitalized,"No Travel History (Husband, Son and 2 servants in isolation)",,India,25/03/2020,https://twitter.com/PTI_News/status/1242807440455774208,https://www.outlookindia.com/newsscroll/coronavirus-2-more-test-positive-total-confirmed-cases-rises-to-31-in-punjab/1779858,https://www.tribuneindia.com/news/ludhiana-patient-has-no-travel-history-60658,
+639,,25/03/2020,,31,M,Garhshankar,Hoshiarpur,Punjab,Hospitalized,Son of P311,P311,India,25/03/2020,https://twitter.com/PTI_News/status/1242807440455774208,https://www.outlookindia.com/newsscroll/coronavirus-2-more-test-positive-total-confirmed-cases-rises-to-31-in-punjab/1779858,,
+640,,25/03/2020,,26,M,Dugadda,Pauri,Uttarakhand,Hospitalized,Travel History to Spain (admitted in Kotdwar),,India,25/03/2020,https://twitter.com/PTI_News/status/1242811383743315970,https://www.outlookindia.com/newsscroll/one-more-tests-positive-for-coronavirus-in-uttarakhand/1779873,,
+641,CH-P2,25/03/2020,,,,,,Chhattisgarh,Hospitalized,Details Awaited,,,25/03/2020, https://timesofindia.indiatimes.com/city/raipur/two-more-positive-cases-reported-in-chhattisgarh-taking-total-number-of-covid-19-to-3-in-state/articleshow/74814186.cms,,,
+642,CH-P3,25/03/2020,,,,,,Chhattisgarh,Hospitalized,Details Awaited ,,,25/03/2020, https://timesofindia.indiatimes.com/city/raipur/two-more-positive-cases-reported-in-chhattisgarh-taking-total-number-of-covid-19-to-3-in-state/articleshow/74814186.cms,,,
+643,,25/03/2020,,,M,Noida,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,Details awaited (  husband of P644 ),,India,25/03/2020,https://www.deccanherald.com/national/north-and-central/three-more-cases-in-uttar-pradesh-toll-jumps-to-38-817588.html,https://timesofindia.indiatimes.com/city/agra/three-tested-positive-at-aligarhs-jnmc/articleshow/74799052.cms?from=mdr,,
+644,,25/03/2020,,,F,Noida,Gautam Buddh Nagar,Uttar Pradesh,Hospitalized,Details awaited ( Wife of P643 ),,India,25/03/2020,https://www.deccanherald.com/national/north-and-central/three-more-cases-in-uttar-pradesh-toll-jumps-to-38-817588.html,https://timesofindia.indiatimes.com/city/agra/three-tested-positive-at-aligarhs-jnmc/articleshow/74799052.cms?from=mdr,,
+645,,25/03/2020,,,M,Pilibhit,Pilibhit,Uttar Pradesh,Hospitalized,"No Travel History (Contact Transmission, Details Awaited)",,India,25/03/2020,https://www.deccanherald.com/national/north-and-central/three-more-cases-in-uttar-pradesh-toll-jumps-to-38-817588.html,https://timesofindia.indiatimes.com/city/agra/three-tested-positive-at-aligarhs-jnmc/articleshow/74799052.cms?from=mdr,,
+646,TS-P40,25/03/2020,,43,F,,Hyderabad,Telangana,Hospitalized,Contact with TS-P34,P525,,25/03/2020,https://twitter.com/TelanganaHealth/status/1242852870526922752,,,
+647,TS-P41,25/03/2020,,3,M,,,Telangana,Hospitalized,"Travelled from Saudi Arabia, along with his parents",,,25/03/2020,https://twitter.com/TelanganaHealth/status/1242852870526922752,https://www.ndtv.com/hyderabad-news/covid-19-three-year-old-boy-in-hyderabad-tests-positive-for-coronavirus-2200789,,
+648,,25/03/2020,,,,Bhilwara,Bhilwara,Rajasthan,Hospitalized,Details Awaited,,India,25/03/2020,https://www.outlookindia.com/newsscroll/six-fresh-covid19-cases-reported-in-rajasthan/1780122,https://www.indiatv.in/india/national-coronavirus-6-new-positive-cases-in-24-hours-in-rajasthan-total-patients-38-698186,,
+649,,25/03/2020,,,,Jhunjhunu,Jhunjhunu,Rajasthan,Hospitalized,Contact Transmission from other patients in jhunjhunu,,India,25/03/2020,https://www.outlookindia.com/newsscroll/six-fresh-covid19-cases-reported-in-rajasthan/1780122,https://www.indiatv.in/india/national-coronavirus-6-new-positive-cases-in-24-hours-in-rajasthan-total-patients-38-698186,,
+650,AP-P9,25/03/2020,,22,M,Vijayawada,Vijayawada,Andhra Pradesh,Hospitalized,"Travelled from Washington, USA to Delhi on 20.03.2020, Delhi to Vijayawada on 22.03.2020. Hospitalised on 23.03.2020",,India,25/03/2020,https://twitter.com/ArogyaAndhra/status/1242855271216619522?s=20,,,
+651,,25/03/2020,,18,M,,,Tamil Nadu,Hospitalized,"Contact of second patient at RGGH (ID Unknown, Possibly P154)",,,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242867032091058176,,,
+652,,25/03/2020,,63,M,,,Tamil Nadu,Hospitalized,Travelled from Dubai,,,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242867032091058176,,,
+653,,25/03/2020,,66,M,,,Tamil Nadu,Hospitalized,"Contact of Thai Tourist (ID Unknown, Possibly P301 or P302)",,,25/03/2020,https://twitter.com/Vijayabaskarofl/status/1242867032091058176,,,
+654,AP-P10,25/03/2020,,52,M,,Guntur,Andhra Pradesh,Hospitalized,No foreign travel. Attended meeting at Delhi Nizamuddin mosque from 14.03.2020 and returned to Vijayawada by train on 19.03.2020. ,,India,25/03/2020,https://twitter.com/ArogyaAndhra/status/1242856239492730881?s=20,,,
+655,,25/03/2020,,25,M,Goa,Goa,Goa,Hospitalized,Travel History to Spain,,India,25/03/2020,UT Health Bulletin,,,
+656,,25/03/2020,,29,M,Goa,Goa,Goa,Hospitalized,Travel History to Australia,,India,25/03/2020,UT Health Bulletin,,,
+657,,25/03/2020,,55,M,Goa,Goa,Goa,Hospitalized,Travel History to US,,India,25/03/2020,UT Health Bulletin,,,
+658,,25/03/2020,,,,,,Maharashtra,Hospitalized,"Details awaited, Matched to 128 in MOHFW",,,,,,,
+659,,25/03/2020,,,,,,Maharashtra,Hospitalized,"Details awaited, Matched to 128 in MOHFW",,,,,,,
+660,,25/03/2020,,,,,,Maharashtra,Hospitalized,"Details awaited, Matched to 128 in MOHFW",,,,,,,
+661,,25/03/2020,,,,,,Maharashtra,Hospitalized,"Details awaited, Matched to 128 in MOHFW",,,,,,,
+662,,25/03/2020,,,,,,Maharashtra,Hospitalized,"Details awaited, Matched to 128 in MOHFW",,,,,,,
+663,,25/03/2020,,,,,,Maharashtra,Hospitalized,"Details awaited, Matched to 128 in MOHFW",,,,,,,
+664,,26/03/2020,,66,M,,,West Bengal,Hospitalized,Details Awaited,,,,https://twitter.com/ANI/status/1243000880439255042,,,
+665,,,,,,,,,,,,,,,,,
+666,,,,,,,,,,,,,,,,,
+667,,,,,,,,,,,,,,,,,
+668,,,,,,,,,,,,,,,,,
+669,,,,,,,,,,,,,,,,,
+670,,,,,,,,,,,,,,,,,
+671,,,,,,,,,,,,,,,,,
+672,,,,,,,,,,,,,,,,,
+673,,,,,,,,,,,,,,,,,
+674,,,,,,,,,,,,,,,,,
+675,,,,,,,,,,,,,,,,,
+676,,,,,,,,,,,,,,,,,
+677,,,,,,,,,,,,,,,,,
+678,,,,,,,,,,,,,,,,,
+679,,,,,,,,,,,,,,,,,
+680,,,,,,,,,,,,,,,,,
+681,,,,,,,,,,,,,,,,,
+682,,,,,,,,,,,,,,,,,
+683,,,,,,,,,,,,,,,,,
+684,,,,,,,,,,,,,,,,,
+685,,,,,,,,,,,,,,,,,
+686,,,,,,,,,,,,,,,,,
+687,,,,,,,,,,,,,,,,,
+688,,,,,,,,,,,,,,,,,
+689,,,,,,,,,,,,,,,,,
+690,,,,,,,,,,,,,,,,,
+691,,,,,,,,,,,,,,,,,
+692,,,,,,,,,,,,,,,,,
+693,,,,,,,,,,,,,,,,,
+694,,,,,,,,,,,,,,,,,
+695,,,,,,,,,,,,,,,,,
+696,,,,,,,,,,,,,,,,,
+697,,,,,,,,,,,,,,,,,
+698,,,,,,,,,,,,,,,,,
+699,,,,,,,,,,,,,,,,,
+700,,,,,,,,,,,,,,,,,
+701,,,,,,,,,,,,,,,,,
+702,,,,,,,,,,,,,,,,,
+703,,,,,,,,,,,,,,,,,
+704,,,,,,,,,,,,,,,,,
+705,,,,,,,,,,,,,,,,,
+706,,,,,,,,,,,,,,,,,
+707,,,,,,,,,,,,,,,,,
+708,,,,,,,,,,,,,,,,,
+709,,,,,,,,,,,,,,,,,
+710,,,,,,,,,,,,,,,,,
+711,,,,,,,,,,,,,,,,,
+712,,,,,,,,,,,,,,,,,
+713,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,
