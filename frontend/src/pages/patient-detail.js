@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import SmallCard from "../components/SmallCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SourcesListItem from "../components/SourcesListItem";
 
 function PatientDetail({ patients }) {
   const { id } = useParams();
@@ -55,17 +56,7 @@ function PatientDetail({ patients }) {
               <li className="list-group-item">
                 <strong>Notes:</strong> {patient.notes}
               </li>
-
-              <li className="list-group-item">
-                <h5 className="h5">Sources</h5>
-                <ol>
-                  <li className="my-2">
-                    <a href="#">
-                    </a>
-                  </li>
-                </ol>
-              </li>
-
+              <SourcesListItem id={patient.id} />
             </ul>
           </div>
         </div>
