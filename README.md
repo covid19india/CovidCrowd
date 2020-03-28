@@ -29,7 +29,7 @@ brew install spatialite-tools
 brew install gdal
 ```
 
-1. Setup virtual environment
+2. Setup virtual environment
 
 ```shell script
 python3 -m venv env
