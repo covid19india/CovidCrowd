@@ -227,4 +227,7 @@ Temporary Items
 # Visual Studio Code
 .vscode
 
+# Intellij
+CovidCrowd.iml
+
 # End of https://www.gitignore.io/api/linux,macos,django,python
