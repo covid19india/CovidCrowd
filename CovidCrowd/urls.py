@@ -19,8 +19,8 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path("", include("patients.urls")),
-    path("", include("social_django.urls", namespace="social")),
+    path("patients/", include("patients.urls")),
+    path("social/", include("social_django.urls", namespace="social")),
     path("admin/", admin.site.urls),
     path("api/", include('rest_framework.urls'))
 ]
