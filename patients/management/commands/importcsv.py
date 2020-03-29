@@ -11,7 +11,7 @@ from patients.models import Patient, PatientHistory, Source
 from patients.constants import Gender, PatientStatus
 
 columns = [
-    "Patient number",
+    "Patient Number",
     "State Patient Number",
     "Date Announced",
     "Estimated Onset Date",
@@ -70,11 +70,11 @@ class Command(BaseCommand):
         updates = 0
         skipped = 0
         for row in reader:
-            if not row["Date Announced"] or not row["Patient number"]:
+            if not row["Date Announced"] or not row["Patient Number"]:
                 skipped += 1
                 continue
             try:
-                existing = Patient.objects.get(unique_id=row["Patient number"])
+                existing = Patient.objects.get(unique_id=row["Patient Number"])
                 print(f"Updating Patient #{existing.id}")
                 self._update_patient(existing, row)
                 updates += 1
@@ -87,12 +87,12 @@ class Command(BaseCommand):
         )
 
     def _create_new_patient(self, row):
-        print(f"Adding patient {row['Patient number']}")
+        print(f"Adding patient {row['Patient Number']}")
         patient = Patient()
         self._update_patient(patient, row, new=True)
 
     def _update_patient(self, patient, row, new=False):
-        patient.unique_id = row["Patient number"]
+        patient.unique_id = row["Patient Number"]
         patient.government_id = row["State Patient Number"]
         patient.diagnosed_date = datetime.strptime(row["Date Announced"], "%d/%m/%Y")
         if row["Age Bracket"].strip():
